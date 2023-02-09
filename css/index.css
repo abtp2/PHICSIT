@@ -689,6 +689,7 @@ display: flex;
 width: 100%;
 overflow: auto;
 white-space: nowrap;
+margin: 1rem 0;
 }
 marquee{
 display: flex; 			
@@ -755,6 +756,20 @@ background: linear-gradient(150deg, #a355f6, #6b64f2);
 #test-div5{
 background: linear-gradient(150deg, #f9c316, #f97c16);
 }
+#test-div6{
+background: linear-gradient(150deg, #ec4793, #f44065);
+}
+#test-div7{
+background: linear-gradient(150deg, #3bb6f7, #5d73f2);
+}
+#test-div8{
+background: linear-gradient(150deg, #20cfee, #0fa8e9);
+}
+
+
+
+
+
 .testimonial:nth-child(1){
 transform: rotate(1deg);		
 }
@@ -767,9 +782,20 @@ transform: rotate(2deg);
 .testimonial:nth-child(4){
 transform: rotate(-1.2deg);		
 }
-.testimonial:nth-chilva5){
+.testimonial:nth-child(5){
 transform: rotate(2.2deg);		
 }
+.testimonial:nth-child(6){
+transform: rotate(-2deg);		
+}
+.testimonial:nth-child(7){
+transform: rotate(1.2deg);		
+}
+.testimonial:nth-child(8){
+transform: rotate(-2deg);		
+}
+
+
 .testimonial:hover{
 transform: none;
 }
