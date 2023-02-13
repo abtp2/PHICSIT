@@ -132,6 +132,114 @@ if(value > -100){
 anime1.style.scale =`${value}%`; 
 anime2.style.scale =`${value}%`; 
 }
-console.log(value);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+/* codes */
+
+var editor = ace.edit("code-box"); 
+editor.setTheme("ace/theme/github_dark");
+editor.setReadOnly(true);
+editor.renderer.setShowGutter(false);
+editor.getSession().setMode("ace/mode/javascript");
+editor.setValue(`const validationRules = (value, rules, form) => {
+  let valid = true;
+  var keywords = "jelo"
+  keywords.toLocaleLowerCase()
+  }
+
+  return valid;
+};` ,1);				
+
+
+
+
+document.getElementsByTagName("select")[0].onchange = function(){
+if(this.value ==="javascript"){
+editor.getSession().setMode("ace/mode/javascript");
+editor.setValue(`const validationRules = (value, rules, form) => {
+  let valid = true;
+  var keywords = "jelo"
+  keywords.toLocaleLowerCase()
+  }
+
+  return valid;
+};` ,1);				
+}		
+
+else if(this.value ==="python"){
+editor.getSession().setMode("ace/mode/python");
+editor.setValue(`import pygal
+
+data = [
+  ["Python", 30.3],
+  ["Java", 22.2],
+  ["C++", 13],
+  ["Ruby", 10.6],
+  ["Javascript", 5.2],
+  ["C#", 5],
+  ["C", 4.1]
+]
+# Make a Pygal chart
+pie_chart = pygal.Pie()
+
+# add a title
+pie_chart.title = "CodeEval Most Popular Coding Languages of 2014"
+
+# add the data
+for label, data_points in data:
+    pie_chart.add(label, data_points)
+
+# Render the chart    
+pie_chart.render()` ,1);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* num_toggle */
+document.getElementById("num_toggle").onclick = function(){
+var x = document.getElementById("num_toggle");
+if(x.style.justifyContent ==="flex-end"){
+x.style.justifyContent ="flex-start";
+editor.renderer.setShowGutter(false);
+}
+else{
+x.style.justifyContent ="flex-end";
+editor.renderer.setShowGutter(true);
+}}
+
 
