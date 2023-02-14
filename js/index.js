@@ -334,28 +334,15 @@ VALUES (1, 'John Doe', 'johndoe@example.com', 30),
 
 else if(this.value ==="kotlin"){
 editor.getSession().setMode("ace/mode/kotlin");				
-editor.setValue(`class Person(val name: String, var age: Int) {
-    fun isAdult(): Boolean {
-        return age >= 18
-    }
-}
+editor.setValue(`fun main() {
+    print("Enter a number: ")
+    val num = readLine()!!.toInt()
 
-fun main(args: Array<String>) {
-    val person1 = Person("John", 25)
-    val person2 = Person("Jane", 17)
-    
-    val persons = listOf(person1, person2)
-    
-    for (person in persons) {
-        if (person.isAdult()) {
-            println("${person.name} is an adult")
-        } else {
-            println("${person.name} is not an adult")
-        }
+    if (num % 2 == 0) {
+        println("$num is even.")
+    } else {
+        println("$num is odd.")
     }
-    
-    val oldestPerson = persons.maxByOrNull { it.age }
-    println("The oldest person is ${oldestPerson?.name}")
 }
 ` ,1);
 }
