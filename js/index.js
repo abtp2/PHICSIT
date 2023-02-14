@@ -179,29 +179,207 @@ editor.setValue(`const validationRules = (value, rules, form) => {
 
 else if(this.value ==="python"){
 editor.getSession().setMode("ace/mode/python");
-editor.setValue(`import pygal
+editor.setValue(`num = float(input("Enter a number: "))
+if num > 0:
+   print("Positive number")
+elif num == 0:
+   print("Zero")
+else:
+   print("Negative number")
+` ,1);
+}
 
-data = [
-  ["Python", 30.3],
-  ["Java", 22.2],
-  ["C++", 13],
-  ["Ruby", 10.6],
-  ["Javascript", 5.2],
-  ["C#", 5],
-  ["C", 4.1]
-]
-# Make a Pygal chart
-pie_chart = pygal.Pie()
+else if(this.value ==="c++"){
+editor.getSession().setMode("ace/mode/c_cpp");
+editor.setValue(`#include <iostream>
+using namespace std; 
+int main() { 
+float a, b, c; 
+cin >> a >> b >> c; 
+if(a >= b && a >= c) 
+  cout << "Largest number: " << a; 
+if(b >= a && b >= c) 
+  cout << "Largest number: " << b; 
+if(c >= a && c >= b) 
+  cout << "Largest number: " << c; 
+return 0; 
+}` ,1);				
+}
 
-# add a title
-pie_chart.title = "CodeEval Most Popular Coding Languages of 2014"
+else if(this.value ==="c#"){
+editor.getSession().setMode("ace/mode/csharp");				
+editor.setValue(`using System; 
+namespace HelloWorld{ 
+class Program { 
+static void Main(string[] args) { 
+Console.WriteLine("Hello World!"); 
+} 
+} 
+}` ,1);
+}
 
-# add the data
-for label, data_points in data:
-    pie_chart.add(label, data_points)
+else if(this.value ==="c"){
+editor.getSession().setMode("ace/mode/c_cpp");				
+editor.setValue(`#include <stdio.h>
+int main() {  
+    char c;
+    printf("Enter a character: ");
+    scanf("%c", &c);  
+    
+    // %d displays the integer value of a character
+    // %c displays the actual character
+    printf("ASCII value of %c = %d", c, c);
+    
+    return 0;
+}
+` ,1);
+}
 
-# Render the chart    
-pie_chart.render()` ,1);
+else if(this.value ==="java"){
+editor.getSession().setMode("ace/mode/java");				
+editor.setValue(`public class QuotientRemainder { 
+public static void main(String[] args) { 
+int dividend = 25, divisor = 4; 
+int quotient = dividend / divisor; 
+int remainder = dividend % divisor; System.out.println("Quotient = " + quotient); System.out.println("Remainder = " + remainder); 
+} 
+}` ,1);
+}
+
+else if(this.value ==="swift"){
+editor.getSession().setMode("ace/mode/swift");				
+editor.setValue(`var capitalCity = ["Nepal": "Kathmandu", "England": "London"]
+print("Initial Dictionary: ",capitalCity)
+
+capitalCity["Japan"] = "Tokyo"
+
+print("Updated Dictionary: ",capitalCity)
+print(capitalCity["Japan"])` ,1);
+}
+
+else if(this.value ==="ruby"){
+editor.getSession().setMode("ace/mode/ruby");				
+editor.setValue(`# Ruby program to demonstrate 
+# the nested if statement
+
+print "Enter number1: ";
+num1 = gets.chomp.to_i;  
+
+print "Enter number2: ";
+num2 = gets.chomp.to_i;  
+
+print "Enter number3: ";
+num3 = gets.chomp.to_i;  
+
+if(num1>num2)
+    if(num1>num3)
+        large=num1;
+    else
+        large=num3;
+    end
+elsif(num2>num3)
+    large=num2;
+else
+    large=num3;
+end
+
+print "Largest number is: ",large;
+` ,1);
+}
+
+else if(this.value ==="php"){
+editor.getSession().setMode("ace/mode/php");				
+editor.setValue(`<?php
+$t = date("H");
+
+if ($t < "20") {
+  echo "Have a good day!";
+}
+?>` ,1);
+}
+
+else if(this.value ==="matlab"){
+editor.getSession().setMode("ace/mode/MATLAB");				
+editor.setValue(`% Define time vector
+t = 0:0.1:10;
+
+% Calculate sine wave
+y = sin(t);
+
+% Generate plot
+plot(t, y);
+
+% Label axes and add title
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('Sine Wave');
+` ,1);
+}
+
+else if(this.value ==="sql"){
+editor.getSession().setMode("ace/mode/SQL");				
+editor.setValue(`CREATE TABLE users (
+  id INT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  age INT
+);
+
+INSERT INTO users (id, name, email, age)
+VALUES (1, 'John Doe', 'johndoe@example.com', 30),
+       (2, 'Jane Smith', 'janesmith@example.com', 25),
+       (3, 'Bob Johnson', 'bobjohnson@example.com', 40);
+` ,1);
+}
+
+else if(this.value ==="kotlin"){
+editor.getSession().setMode("ace/mode/kotlin");				
+editor.setValue(`class Person(val name: String, var age: Int) {
+    fun isAdult(): Boolean {
+        return age >= 18
+    }
+}
+
+fun main(args: Array<String>) {
+    val person1 = Person("John", 25)
+    val person2 = Person("Jane", 17)
+    
+    val persons = listOf(person1, person2)
+    
+    for (person in persons) {
+        if (person.isAdult()) {
+            println("${person.name} is an adult")
+        } else {
+            println("${person.name} is not an adult")
+        }
+    }
+    
+    val oldestPerson = persons.maxByOrNull { it.age }
+    println("The oldest person is ${oldestPerson?.name}")
+}
+` ,1);
+}
+
+else if(this.value ==="typescript"){
+editor.getSession().setMode("ace/mode/typescript");				
+let myTypeScriptCode = `class Person {
+    private name: string;
+    private age: number;
+
+    constructor(name: string, age: number) {
+      this.name = name;
+      this.age = age;
+    }
+
+    getDetails(): string {
+      return \`\${this.name} is \${this.age} years old.\`;
+    }
+  }
+
+  let john = new Person("John", 30);
+  console.log(john.getDetails());
+`;
+editor.setValue(myTypeScriptCode ,1);
 }
 }
 
