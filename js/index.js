@@ -25,6 +25,13 @@ menuCloseBtn.onclick = function() {
 navLinks.style.left = "-100%";
 }
 
+document.addEventListener('mouseup', function(e) {
+var container = navLinks;
+if (!container.contains(e.target)){
+navLinks.style.left = "-100%"; 
+}});	
+
+
 
 // sidebar submenu open close js code
 let htmlcssArrow = document.querySelector(".htmlcss-arrow");
@@ -128,9 +135,9 @@ const value = 100 - val;
 var anime1 = document.getElementsByClassName("anime")[0];
 var anime2 = document.getElementsByClassName("anime")[1];
 
-if(value > -100){
+if(value > -100/100){
 anime1.style.scale =`${value}%`; 
-anime2.style.scale =`${value}%`; 
+anime2.style.scale =`${value}%`;
 }
 };
 
