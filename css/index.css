@@ -905,12 +905,20 @@ justify-content: space-between;
 margin: 0 0 12px 0;
 }
 #coding-one select{
+width: 98px;
 color: var(--dfont);
-padding: 5px;
+padding: 5px 6px;
 outline: none;
-background: var(--dbg);
+background: var(--carddbg);
 border-radius: 3px;
 font-size: 14px;
+-webkit-appearance: none; 
+-moz-appearance: none; 
+appearance: none;
+background-image: url("../img/down-arrow.png");
+background-size: 11px 14px;
+background-repeat: no-repeat;
+background-position: 79px center;
 }
 #coding-one span h1{
 font-size: 15px;
@@ -928,8 +936,8 @@ align-items: center;
 justify-content: flex-start;
 }
 #num_toggle div{
-width: 18px;	
-height: 18px;			
+width: 19px;	
+height: 19px;			
 border-radius: 100%;
 background: #fff;
 }
