@@ -46,6 +46,35 @@ color: var(--font);
 width: 100%;
 overflow-x: hidden;
 }
+*::-webkit-scrollbar{
+background: transparent;
+width: 0px !important;
+height: 0px !important;
+display: none;
+position: absolute;
+z-index: -99999999;
+}
+*::-webkit-scrollbar-thumb{
+background: transparent;
+width: 0px !important;
+height: 0px !important;
+display: none;
+position: absolute;
+z-index: -99999999;
+}
+*::-webkit-scrollbar-track{
+background: transparent;
+width: 0px !important;
+height: 0px !important;
+display: none;
+position: absolute;
+z-index: -99999999;
+}
+
+
+
+
+
 
 
 
@@ -63,7 +92,7 @@ nav{
   height: 70px;
   background: var(--bg);
   z-index: 99;
-  box-shadow: 0px 2px 20px -5px var(--sdw);
+  box-shadow: 0px 2px 20px -5px var(--lsdw), 0px 2px 5px -2px var(--dsdw);
 }
 nav .navbar{
   height: 100%;
@@ -182,8 +211,8 @@ nav .navbar .links li:hover .js-sub-menu{
 .bx-moon{
 font-size: 22px;	
 }
-.bx-sun{
-font-size: 30px;
+.bxs-sun{
+font-size: 27px;
 }
 .navbar .search-box .input-box{
   position: absolute;
@@ -623,7 +652,7 @@ margin-top: 6px;
 display: flex;
 flex-wrap: wrap;
 width: 100%;		
-max-width: 66rem;
+max-width: 78rem;
 margin: 0 auto 2rem auto;
 }
 
@@ -646,8 +675,13 @@ border-radius: 6px;
 @media(min-width: 350px){
 .card{
 width: 20rem;
-}
-}
+}}
+@media(min-width: 1400px){
+.card{
+width: 22rem;
+}}
+
+
 
 .card img{
 width: 90%;
