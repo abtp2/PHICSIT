@@ -79,10 +79,9 @@ nav .navbar{
 width: 60px;		
 height: 60px;	
 border-radius: 100%;
-background: #111111;
-padding: 5px;
 margin-top: 6px;
-box-shadow: 0px 0px 2px #888;
+padding: 8px;
+box-shadow: 0px 0.5px 3px 0.5px rgba(0,0,0,0.25), 0px 0.5px 2px 0.5px rgba(255,255,255,0.4);
 }
 
 nav .navbar .nav-links{
@@ -479,8 +478,7 @@ width: 140px;
 height: 140px;
 border-radius: 100%;
 padding: 8px;
-background: #111111;
-box-shadow: 0px 0px 2px #888;
+box-shadow: 0px 0.5px 3px 0.5px rgba(0,0,0,0.25), 0px 0.5px 2px 0.5px rgba(255,255,255,0.4);
 }
 #first-card h1{
 font-size: 24px;
