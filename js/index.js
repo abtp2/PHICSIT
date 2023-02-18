@@ -8,9 +8,9 @@ let navbar = document.querySelector(".navbar");
 searchBox.addEventListener("click", ()=>{
   navbar.classList.toggle("showInput");
   if(navbar.classList.contains("showInput")){
-    searchBox.classList.replace("bx-moon" ,"bx-sun");
+    searchBox.classList.replace("bx-moon" ,"bxs-sun");
   }else {
-    searchBox.classList.replace("bx-sun" ,"bx-moon");
+    searchBox.classList.replace("bxs-sun" ,"bx-moon");
   }
 }); */
 
@@ -59,17 +59,17 @@ var x = document.getElementById("bx-moon");
 if(y =="dark"){
 document.body.classList.add("dark-theme");
 document.body.classList.remove("light-theme");
-x.classList.replace("bx-moon", "bx-sun");
+x.classList.replace("bx-moon", "bxs-sun");
 }	
 else if(y =="light"){
 document.body.classList.add("light-theme");
 document.body.classList.remove("dark-theme");
-x.classList.replace("bx-sun", "bx-moon");
+x.classList.replace("bxs-sun", "bx-moon");
 }	
 else{
 document.body.classList.add("light-theme");
 document.body.classList.remove("dark-theme");
-x.classList.replace("bx-sun", "bx-moon");
+x.classList.replace("bxs-sun", "bx-moon");
 }				
 }
 
@@ -85,13 +85,13 @@ var body = document.body;
 if(x.classList.contains("bx-moon")){
 body.classList.remove("light-theme");
 body.classList.add("dark-theme"); 			
-x.classList.replace("bx-moon", "bx-sun");
+x.classList.replace("bx-moon", "bxs-sun");
 localStorage.setItem("theme", "dark");
 }
 else{
 body.classList.remove("dark-theme");
 body.classList.add("light-theme"); 			
-x.classList.replace("bx-sun", "bx-moon");
+x.classList.replace("bxs-sun", "bx-moon");
 localStorage.setItem("theme", "light");
 }
 }
