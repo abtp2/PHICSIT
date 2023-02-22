@@ -9,7 +9,7 @@ font-family: arial;
 --lfont: #111111;
 --dbg: #111520;
 --dfont: #d9dce3;
---lsdw: rgba(0,0,0,0.2);
+--lsdw: rgba(0,0,0,0.18);
 --dsdw: rgba(255,255,255,0.1);
 /* card bg */
 --clbg: rgba(255, 255, 255, 0.26); 
@@ -503,8 +503,8 @@ width: 60%;
 
 
 #first-card img{
-width: 140px;
-height: 140px;
+width: 120px;
+height: 120px;
 border-radius: 100%;
 padding: 8px;
 box-shadow: 0px 0.5px 3px 0.5px rgba(0,0,0,0.25), 0px 0.5px 2px 0.5px rgba(255,255,255,0.4);
@@ -568,20 +568,20 @@ padding: 0 11rem;
 
 
 
-#first-card div{
+#first-card #first-card-buts{
 display: flex; 
 flex-direction: column;
 width: auto;
-margin: 2rem auto 0 auto;
+margin: 1.5rem auto 0 auto;
 }
 @media(min-width: 800px){
-#first-card div{
+#first-card #first-card-buts{
 flex-direction: row;
 }
 }
 #first-card button{
 width: auto;
-padding: 10px 20px;
+padding: 11px 26px;
 border-radius: 6px;
 font-size: 16px;
 font-weight: 401;
@@ -604,6 +604,47 @@ color: #fff;
 background: transparent;
 color: var(--font);
 box-shadow: 0 0 1px #888;
+border: 0.5px solid rgba(0,0,0,0.2);
+}
+
+#first-social-icons{
+width: auto;
+margin: 2.2rem auto 0 auto;
+display: flex; 
+flex-direction: row;
+align-items: center;
+}
+#first-social-icons a{
+text-decoration: none;
+font-size: 23px;
+color: var(--font);
+margin: 0 6px;
+background: var(--cardbg);
+border-radius: 100%;
+padding: 10px;
+box-shadow: 0px 3px 6px 0.1px rgba(0,0,0,0.14);
+transform: scale(0.9);
+transition: all 0.3s;
+}
+.bxl-facebook:hover{
+background: #1077f0 !important;
+color: #fff !important;
+}
+.bxl-discord-alt:hover{
+color: #fff !important;
+background: #5865f2 !important;
+}
+.bxl-instagram-alt:hover{
+color: #fff !important;
+background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+}
+.bxl-twitter:hover{
+color: #fff !important;	
+background: #229af0 !important;			
+}
+.bxl-linkedin:hover{
+color: #fff !important;
+background: #2c67b3 !important;
 }
 
 
@@ -611,6 +652,35 @@ box-shadow: 0 0 1px #888;
 
 
 
+
+@media(min-width: 400px){
+#first-social-icons a{
+transform: scale(1);				
+margin: 0 8px;
+}}
+@media(min-width: 500px){
+#first-social-icons a{		
+margin: 0 10px;
+}}
+@media(min-width: 600px){
+#first-social-icons a{		
+margin: 0 11px;
+}}
+@media(min-width: 800px){
+#first-social-icons a{		
+margin: 0 12px;
+}
+#first-social-icons{
+width: auto;
+margin: 2.5rem auto 0 auto;}}
+@media(min-width: 1000px){
+#first-social-icons a{		
+margin: 0 13px;
+}}
+@media(min-width: 1200px){
+#first-social-icons a{		
+margin: 0 14px;
+}}
 
 
 
