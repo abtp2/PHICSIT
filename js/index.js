@@ -42,12 +42,13 @@ let moreArrow = document.querySelector(".more-arrow");
 moreArrow.onclick = function() {
  navLinks.classList.toggle("show2");
 }
+
+/*  
 let jsArrow = document.querySelector(".js-arrow");
 jsArrow.onclick = function() {
  navLinks.classList.toggle("show3");
 }
-
-
+ */
 
 
 
@@ -56,6 +57,8 @@ jsArrow.onclick = function() {
 window.onload = function(){
 var y = localStorage.getItem("theme");
 var x = document.getElementById("bx-moon");
+document.getElementById("first-card-logo").classList.add("animate__rollIn");
+
 if(y =="dark"){
 document.body.classList.add("dark-theme");
 document.body.classList.remove("light-theme");
