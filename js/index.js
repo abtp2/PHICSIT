@@ -418,3 +418,52 @@ editor.renderer.setShowGutter(true);
 }}
 
 
+
+
+
+
+
+
+
+
+
+/* elastic email */
+function newsMail(){
+event.preventDefault();
+  var params = {
+    email_id: document.getElementById("news-email").value,
+  };
+document.getElementById("news-submit").innerHTML =`<i class="bx bx-spin bx-loader-circle"></i>`; 
+document.querySelector("#foot-news form button").style.padding ="6px 0";
+
+
+  const serviceID = "service_jogdt1q";
+  const templateID = "template_ber1dwg";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        console.log(res);
+ document.getElementById("news-submit").innerHTML =`<i class="bx bx-check-circle"></i>`; 
+ document.querySelector("#foot-news form button").style.padding ="6px 0";
+ 
+ 
+     setTimeout(function(){
+document.getElementById("news-submit").innerHTML ="Go";	
+document.querySelector("#foot-news form button").style.padding ="10px 0";
+document.getElementById("news-email").value ="";
+}, 3000);
+    })
+    .catch(err=> newsError());
+}
+
+
+function newsError(){
+setTimeout(function(){ 	document.getElementById("news-submit").innerHTML =`<i class="bx bx-error-circle"></i>`;			
+document.querySelector("#foot-news form button").style.padding ="6px 0";
+ }, 1500);
+ 
+ setTimeout(function(){
+document.getElementById("news-submit").innerHTML ="Go";	}, 3000);				
+document.querySelector("#foot-news form button").style.padding ="10px 0";
+}
+
