@@ -1341,7 +1341,7 @@ padding: 0 1rem !important;
 text-align: center !important;
 }
 #foot-lg-row{
-width: 63rem;
+max-width: 53rem !important;
 margin: 3rem auto 0 auto !important;
 flex-direction: row !important;
 justify-content: space-between !important;
@@ -1356,6 +1356,7 @@ align-items: center !important;
 align-items: center !important;
 }
 .foot-pp{
+width: 15rem !important;
 margin: 0 0 0 0 !important;
 }
 #foot-news form{
@@ -1392,12 +1393,12 @@ footer{
 flex-direction: row !important;
 align-items: center !important;
 justify-content: center !important;
-padding: 18px 18px 3rem 18px;
+padding: 18px 18px 3rem 18px !important;
 }
 #foot-head{
 width: 18rem !important;
 margin: 0 auto;
-padding: 0 1rem !important;
+padding: 5rem 1rem 0 1rem !important;
 align-items: center;
 }
 #foot-head div a{
@@ -1422,6 +1423,7 @@ align-items: center;
 align-items: center;
 }
 .foot-pp{
+width: 18rem !important;
 margin: 0 0 0 0 !important;
 padding: 5rem 1rem 0 1rem !important;
 }
@@ -1468,7 +1470,7 @@ padding: 5rem 1.5rem 0 1.5rem !important;
 }
 #foot-head{
 width: 18rem !important;
-padding: 0 0rem !important;
+padding: 5rem 1rem 0 1rem !important;
 }}
 @media(min-width: 1300px){
 #foot-lg-row{
