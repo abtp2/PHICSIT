@@ -315,6 +315,7 @@ font-size: 27px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    align-items: flex-start;
     margin-top: 20px;
   }
   .sidebar-logo .logo-name{
@@ -326,9 +327,11 @@ font-size: 27px;
     width: 80px;
     height: 80px;
     border-radius: 100%;
-    padding: 5px;
-    box-shadow: 0px 0px 2px #888;
-    background: #111111;
+    padding: 8px;
+    box-shadow: 0px 0.5px 3px 0.5px rgba(0,0,0,0.25), 0px 0.5px 2px 0.5px rgba(255,255,255,0.4);
+  }
+  .sidebar-logo  i{
+  	font-size: 35px !important;
   }
     .sidebar-logo  i,
     .navbar .bx-menu{
@@ -1182,7 +1185,6 @@ transition: background 0.3s;
 
 #foot-lg-row{
 width: 100%;
-max-width: 63rem;
 display: flex; 
 flex-direction: column;
 }
@@ -1327,19 +1329,86 @@ text-align: left;
 
 @media(min-width: 800px){
 #foot-head{
-width: 26rem;
+width: 26rem !important;
+margin: 0 auto !important;
+align-items: center !important;
+}
+#foot-head div a{
+margin: 0 6px 0 6px !important;
+}
+#foot-head p{
+padding: 0 1rem !important;
+text-align: center !important;
+}
+#foot-lg-row{
+width: 63rem;
+margin: 3rem auto 0 auto !important;
+flex-direction: row !important;
+justify-content: space-between !important;
+}
+#foot-links{
+align-items: center !important;
+}
+#foot-contact{
+align-items: center !important;
+}
+#foot-news{
+align-items: center !important;
+}
+.foot-pp{
+margin: 0 0 0 0 !important;
+}
+#foot-news form{
+margin: 0.5rem auto 0 auto !important;
+}
+#foot-contact span{
+display: flex !important;
+flex-direction: column !important;
+align-items: center !important;
+}
+#foot-contact span a{
+line-height: 3 !important;				
+}
+#foot-news form{
+width: 15rem !important;
+}
+#foot-news form input[type="email"]{
+width: 11.5rem !important;
+}
+#foot-news form button{
+width: 3.5rem !important;
+}
+#foot-copy{
+justify-content: center !important;
+}
+}
+
+
+
+
+
+@media(min-width: 1100px){
+footer{
+flex-direction: row !important;
+align-items: center !important;
+justify-content: center !important;
+padding: 18px 18px 3rem 18px;
+}
+#foot-head{
+width: 18rem !important;
 margin: 0 auto;
+padding: 0 1rem !important;
 align-items: center;
 }
 #foot-head div a{
-margin: 0 6px 0 6px;
+margin: 0 6px 0 0;
 }
 #foot-head p{
-padding: 0 1rem;
 text-align: center;
 }
 #foot-lg-row{
-margin: 3rem auto 0 auto;
+width: 45rem !important;
+margin: 0rem auto 0 auto !important;
 flex-direction: row;
 justify-content: space-between;
 }
@@ -1354,6 +1423,7 @@ align-items: center;
 }
 .foot-pp{
 margin: 0 0 0 0 !important;
+padding: 5rem 1rem 0 1rem !important;
 }
 #foot-news form{
 margin: 0.5rem auto 0 auto;
@@ -1365,8 +1435,10 @@ align-items: center;
 }
 #foot-contact span a{
 line-height: 3 !important;				
+padding: 0 1rem;
 }
 #foot-news form{
+margin: 0.4rem 0 0 0;
 width: 15rem;
 }
 #foot-news form input[type="email"]{
@@ -1375,7 +1447,30 @@ width: 11.5rem;
 #foot-news form button{
 width: 3.5rem;
 }
+#foot-news p{
+margin: 0.8rem 0 0 0;
+}
 #foot-copy{
 justify-content: center;
 }
 }
+
+
+@media(min-width: 1200px){
+footer{
+padding: 18px 18px 2.5rem 18px;	
+}
+#foot-lg-row{
+width: 50rem !important;
+}
+.foot-pp{
+padding: 5rem 1.5rem 0 1.5rem !important;
+}
+#foot-head{
+width: 18rem !important;
+padding: 0 0rem !important;
+}}
+@media(min-width: 1300px){
+#foot-lg-row{
+width: 55rem !important;
+}}
