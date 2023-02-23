@@ -51,16 +51,16 @@ color: var(--font);
 width: 100%;
 overflow-x: hidden;
 }
-::-webkit-scrollbar{
+body::-webkit-scrollbar{
 width: 18px;
 background: var(--footbg);
 }
-::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb{
 background: #5865f2;
 border-radius: 6px;
 border: 2.5px solid var(--footbg);
 }
-::-webkit-scrollbar-button{
+body::-webkit-scrollbar-button{
 color: var(--font);
 }
 
@@ -1091,8 +1091,30 @@ letter-spacing: 0 !important;
 }
 .ace_mobile-menu { display: none !important; }
 
-#coding-lang > *{
-scrollbar-width: none;
+
+#coding-lang > *::-webkit-scrollbar{
+background: transparent;
+width: 0px !important;
+height: 0px !important;
+display: none;
+position: absolute;
+z-index: -99999999;
+}
+#coding-lang > *::-webkit-scrollbar-track{
+background: transparent;
+width: 0px !important;
+height: 0px !important;
+display: none;
+position: absolute;
+z-index: -99999999;
+}
+#coding-lang > *::-webkit-scrollbar-thumb{
+background: transparent;
+width: 0px !important;
+height: 0px !important;
+display: none;
+position: absolute;
+z-index: -99999999;
 }
 
 
