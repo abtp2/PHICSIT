@@ -447,25 +447,72 @@ document.querySelector("#foot-news form button").style.padding ="6px 0";
         console.log(res);
  document.getElementById("news-submit").innerHTML =`<i class="bx bx-check-circle"></i>`; 
  document.querySelector("#foot-news form button").style.padding ="6px 0";
+newsSuccess();
  
  
-     setTimeout(function(){
+  /*  setTimeout(function(){
 document.getElementById("news-submit").innerHTML ="Go";	
 document.querySelector("#foot-news form button").style.padding ="10px 0";
 document.getElementById("news-email").value ="";
-}, 3000);
+}, 3000); */
     })
     .catch(err=> newsError());
 }
 
 
+
+
+
+
+
+
+function newsSuccess(){
+Swal.fire({
+title: '<h1 style="font-size: 20px;margin:0;padding: 0;line-height: 1;">Thank you !</h1>', 
+html: '<p>Form submitted successfully</p>', 
+icon: 'success', 
+background: 'var(--cardbg)',
+color: 'var(--font)',
+confirmButtonText: 'Ok, done',
+focusConfirm: true,
+}).	then(function(){ 
+document.getElementById("news-submit").innerHTML ="Go";	
+document.querySelector("#foot-news form button").style.padding ="10px 0";
+document.getElementById("news-email").value ="";
+});	 
+}
+
+
+
 function newsError(){
+Swal.fire({
+title: '<h1 style="font-size: 20px;margin:0;padding: 0;line-height: 1;">Oh! Error</h1>', 
+html: '<p>Form not submitted, </p>', 
+icon: 'error', 
+background: 'var(--cardbg)',
+color: 'var(--font)',
+confirmButtonText: 'Ok, retry',
+focusConfirm: true,
+}).	then(function(){ 
+document.getElementById("news-submit").innerHTML ="Go";				
+document.getElementById("news-email").value ="";
+document.querySelector("#foot-news form button").style.padding ="10px 0";
+});	 
+
+document.getElementById("news-submit").innerHTML =`<i class="bx bx-error-circle"></i>`;			
+document.querySelector("#foot-news form button").style.padding ="6px 0";
+
+
+
+
+
+/*  
 setTimeout(function(){ 	document.getElementById("news-submit").innerHTML =`<i class="bx bx-error-circle"></i>`;			
 document.querySelector("#foot-news form button").style.padding ="6px 0";
  }, 1500);
  
  setTimeout(function(){
 document.getElementById("news-submit").innerHTML ="Go";	}, 3000);				
-document.querySelector("#foot-news form button").style.padding ="10px 0";
+document.querySelector("#foot-news form button").style.padding ="10px 0"; */
 }
 

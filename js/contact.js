@@ -128,25 +128,61 @@ document.getElementById("sub-icon").innerHTML =`<i class="bx bx-spin bx-loader-c
     emailjs.send(serviceID, templateID, params)
     .then(res=>{
         console.log(res);
- document.getElementById("sub-icon").innerHTML =`<i class="bx bx-check-circle"></i>`; 
+ document.getElementById("sub-icon").innerHTML =`<i class="bx bx-check-circle"></i>`;
+ newsSuccess();
  
- 
-     setTimeout(function(){
+   /*   setTimeout(function(){
 document.getElementById("sub-icon").innerHTML =`<i class="bx bx-send"></i>`;	
-
-}, 4000);
+document.getElementById("contact-form").reset();
+}, 4000); */
 
     })
-    .catch(err=> newsError());
+    .catch(err=> newsError(err));
 }
 
 
-function newsError(){
+
+
+function newsSuccess(){
+Swal.fire({
+title: '<h1 style="font-size: 20px;margin:0;padding: 0;line-height: 1;">Thank you !</h1>', 
+html: '<p>Form submitted successfully</p>', 
+icon: 'success', 
+background: 'var(--cardbg)',
+color: 'var(--font)',
+confirmButtonText: 'Ok, done',
+focusConfirm: true,
+}).	then(function(){ 
+document.getElementById("sub-icon").innerHTML =`<i class="bx bx-send"></i>`;	
+document.getElementById("contact-form").reset();
+});	 
+}
+
+
+
+
+function newsError(x){
+Swal.fire({
+title: '<h1 style="font-size: 20px;margin:0;padding: 0;line-height: 1;">Oh! Error</h1>', 
+html: '<p>Form not submitted, </p>', 
+icon: 'error', 
+background: 'var(--cardbg)',
+color: 'var(--font)',
+confirmButtonText: 'Ok, retry',
+focusConfirm: true,
+}).	then(function(){ 
+document.getElementById("sub-icon").innerHTML =`<i class="bx bx-send"></i>`;	
+document.getElementById("contact-form").reset();
+});	 
+
+document.getElementById("sub-icon").innerHTML =`<i class="bx bx-error-circle"></i>`;	
+
+
+/*  
 setTimeout(function(){ 	document.getElementById("sub-icon").innerHTML =`<i class="bx bx-error-circle"></i>`;			
  }, 1500);
- 
+
  setTimeout(function(){
-document.getElementById("sub-icon").innerHTML =`<i class="bx bx-send"></i>`;}, 3000);				
-
-
+document.getElementById("sub-icon").innerHTML =`<i class="bx bx-send"></i>`;
+document.getElementById("contact-form").reset();}, 3000); */
 }
