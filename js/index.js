@@ -428,6 +428,8 @@ editor.renderer.setShowGutter(true);
 
 
 /* elastic email */
+document.getElementById("copy-date").innerHTML = new Date().getFullYear();
+
 function newsMail(){
 event.preventDefault();
   var params = {
