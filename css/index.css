@@ -520,6 +520,9 @@ border-radius: 100%;
 padding: 8px;
 box-shadow: 0px 0.5px 3px 0.5px rgba(0,0,0,0.25), 0px 0.5px 2px 0.5px rgba(255,255,255,0.4);
 }
+#first-card-logo{
+visibility: hidden;			
+}
 #first-card h1{
 font-size: 24px;
 margin-top: 0.8rem;
@@ -1224,7 +1227,7 @@ align-items: center;
 text-decoration: none;
 font-size: 23px;
 color: var(--font);
-margin: 0 6px 0 0;
+margin: 0 5px 0 0;
 background: var(--bg);
 border-radius: 100%;
 padding: 10px;
@@ -1385,7 +1388,7 @@ margin: 0 auto !important;
 align-items: center !important;
 }
 #foot-head div a{
-margin: 0 6px 0 6px !important;
+margin: 0 4px 0 4px !important;
 }
 #foot-head p{
 padding: 0 1rem !important;
@@ -1453,7 +1456,7 @@ padding: 5rem 1rem 0 1rem !important;
 align-items: center;
 }
 #foot-head div a{
-margin: 0 6px 0 0;
+margin: 0 4px 0 0;
 }
 #foot-head p{
 text-align: center;
@@ -1501,7 +1504,7 @@ width: 11.5rem;
 width: 3.5rem;
 }
 #foot-news p{
-margin: 0.8rem 0 0 0;
+margin: 0.4rem 0 0 0;
 }
 #foot-copy{
 justify-content: center;
