@@ -730,11 +730,63 @@ margin-top: 6px;
 
 
 #second-sec-row{
-display: flex;
-flex-wrap: wrap;
 width: 100%;		
 max-width: 78rem;
 margin: 0 auto 2rem auto;
+display: flex; 
+flex-direction: column;
+justify-content: center;
+}
+
+ 
+ 
+
+.swiper-slide {
+background: transparent;
+/* Center slide text vertically */
+display: -webkit-box; display: -ms-flexbox;
+display: -webkit-flex; display: flex; 
+-webkit-box-pack: center; -ms-flex-pack: center; 
+-webkit-justify-content: center;justify-content: center; 
+-webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; 
+width: 100% !important;
+}
+
+
+
+@media(min-width: 800px){
+.swiper-slide{
+width: 40% !important;
+}}
+@media(min-width: 900px){
+.swiper-slide{
+width: 35% !important;
+}} 
+@media(min-width:1000px){
+.swiper-slide{
+width: 30% !important;
+}} 
+
+
+.swiper{
+overflow: visible !important;
+}
+.swiper-pagination{
+position: relative !important;
+top: 1.8rem !important;
+}
+.swiper-pagination-bullet{
+width: 12px !important;
+height: 12px !important;
+opacity: 1;
+background: var(--font) !important;
+}
+.swiper-pagination-bullet:hover{
+border: 1px solid var(--font) !important;
+}
+
+.swiper-pagination-bullet-active{
+background: #5865f2 !important;
 }
 
 
@@ -744,24 +796,25 @@ flex-direction:column;
 min-width:0;
 word-wrap:break-word;				
 padding:1.5rem;
-margin: 2.5rem auto 0 auto;
+margin: 2.5rem auto 0 auto !important;
 background: var(--cardbg);
 box-shadow: 0 1.5px 5px 0.6px rgba(0, 0, 0, 0.08);
 border: 1px solid rgba(0,0,0,0.09);
 backdrop-filter: blur(4px);
 -webkit-backdrop-filter: blur(4px);
-width: 18rem;
 border-radius: 6px;
+width: 18rem;
 }
+
 @media(min-width: 350px){
 .card{
-width: 20rem;
+width: 20rem !important;
 }}
 @media(min-width: 1400px){
 .card{
-width: 22rem;
+width: 22rem !important;
 }}
-
+ 
 
 
 .card img{
