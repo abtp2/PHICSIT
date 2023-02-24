@@ -736,6 +736,7 @@ margin: 0 auto 2rem auto;
 display: flex; 
 flex-direction: column;
 justify-content: center;
+padding-bottom: 4rem;
 }
 
  
@@ -768,12 +769,9 @@ width: 30% !important;
 }} 
 
 
-.swiper{
-overflow: visible !important;
-}
+
 .swiper-pagination{
-position: relative !important;
-top: 1.8rem !important;
+margin-top: 4rem;
 }
 .swiper-pagination-bullet{
 width: 12px !important;
