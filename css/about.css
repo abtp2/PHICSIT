@@ -443,6 +443,50 @@ width: 70%;
 width: 60%;		
 }}
 
+.anime{
+width: 200px;
+height: 200px;
+border-radius: 100%;
+background: #03aaab;
+filter: blur(0px) opacity(0.85);
+box-shadow: 0px 0px 100px 5px #03aaab;
+position: fixed;
+z-index: -99;
+}
+
+#anime-left{
+top: 80px;
+left: -100px;
+}
+#anime-right{
+bottom: 20px;
+right: -100px;
+}
+@media(min-width: 800px){
+.anime{
+transform: scale(1.2);
+}	
+#anime-left{
+left: -80px; 
+}
+#anime-right{
+right: -80px;
+}}
+@media(min-width: 1200px){
+.anime{
+transform: scale(1.5);
+}	
+#anime-left{
+left: -70px; 
+top: 140px;
+}
+#anime-right{
+right: -70px;
+bottom: 40px;
+}}
+
+
+
 
 
 
@@ -689,13 +733,13 @@ border-radius: 100%;
 border: 5px solid var(--cbg);
 }
 #first-four-one div h2{
-font-size: 18px;
+font-size: 18.5px;
 font-weight: 500;
 margin-top: 0.8rem;
 opacity: 0.88;
 }
 #first-four-one div p{
-font-size: 15.5px;
+font-size: 15.4px;
 margin-top: 0.28rem;
 opacity: 0.75;
 }
@@ -1109,11 +1153,12 @@ align-items: center;
 justify-content: center;
 border-radius: 100%;
 position: fixed;
-bottom: 0.8rem;
-right: 0.8rem;
+bottom: 0.4rem;
+right: 0.4rem;
 z-index: 99;
 transition: all 0.3s;
 box-shadow: 0 0 10px 0.1px var(--sdw), 0 0 1px 0.5px var(--font);
+transform: scale(0.9);
 }
 #back-to-top i{
 font-size: 20px;
@@ -1129,6 +1174,13 @@ background: var(--font);
 color: var(--footbg);
 }
 
+
+@media(min-width: 800px){
+#back-to-top{
+bottom: 0.7rem;
+right: 0.8rem;
+transform: scale(0.98);
+}}
 
 
 
