@@ -143,6 +143,15 @@ if(value > -100/100){
 anime1.style.scale =`${value}%`; 
 anime2.style.scale =`${value}%`;
 }
+
+
+/* for back to top button */
+if(val > 150){
+document.getElementById("back-to-top").style.display ="flex";	
+}
+else{
+document.getElementById("back-to-top").style.display ="none";	
+}
 };
 
 
@@ -162,15 +171,19 @@ var editor = ace.edit("code-box");
 editor.setTheme("ace/theme/github_dark");
 editor.setReadOnly(true);
 editor.renderer.setShowGutter(false);
-editor.getSession().setMode("ace/mode/javascript");
-editor.setValue(`const validationRules = (value, rules, form) => {
-  let valid = true;
-  var keywords = "jelo"
-  keywords.toLocaleLowerCase()
-  }
-
-  return valid;
-};` ,1);				
+editor.getSession().setMode("ace/mode/c_cpp");
+editor.setValue(`#include <stdio.h>
+int main() {  
+    char c;
+    printf("Enter a character: ");
+    scanf("%c", &c);  
+    
+    // %d displays the integer value of a character
+    // %c displays the actual character
+    printf("ASCII value of %c = %d", c, c);
+    
+    return 0;
+}` ,1);				
 
 
 
