@@ -122,11 +122,7 @@ nav .navbar .links li{
   padding: 0 14px;
   margin: 0 0.6rem;
 }
-@media(max-width: 1020px){
-nav .navbar .links li{
-  margin: 0 0.4rem;
-}}
-@media(max-width: 900px){
+@media(max-width: 1080px){
 nav .navbar .links li{
   margin: 0 0.2rem;
 }}
