@@ -63,6 +63,10 @@ border: 2.5px solid var(--footbg);
 body::-webkit-scrollbar-button{
 color: var(--font);
 }
+.overlay-dark > *:not(nav){
+filter: blur(2px);
+opacity: 0.8;
+}
 
 
 
