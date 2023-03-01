@@ -18,17 +18,21 @@ searchBox.addEventListener("click", ()=>{
 let navLinks = document.querySelector(".nav-links");
 let menuOpenBtn = document.querySelector(".navbar .bx-menu");
 let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+
 menuOpenBtn.onclick = function() {
 navLinks.style.left = "0";
+document.body.classList.add("overlay-dark");
 }
 menuCloseBtn.onclick = function() {
 navLinks.style.left = "-100%";
+document.body.classList.remove("overlay-dark");
 }
 
 document.addEventListener('mouseup', function(e) {
 var container = navLinks;
 if (!container.contains(e.target)){
 navLinks.style.left = "-100%"; 
+document.body.classList.remove("overlay-dark");
 }});	
 
 
@@ -530,3 +534,20 @@ document.getElementById("news-submit").innerHTML ="Go";	}, 3000);
 document.querySelector("#foot-news form button").style.padding ="10px 0"; */
 }
 
+
+
+
+
+
+
+
+
+
+
+function goHide(x){
+document.querySelector(x).style.top = "-200%";				
+document.getElementById("nav-closer").click();
+}
+function goShow(x){
+document.querySelector(x).style.top = "0px";	document.getElementById("nav-closer").click();		
+}
