@@ -57,7 +57,7 @@ jsArrow.onclick = function() {
 window.onload = function(){
 var y = localStorage.getItem("theme");
 var x = document.getElementById("bx-moon");
-
+document.getElementById("copy-date").innerHTML = new Date().getFullYear();
 
 if(y =="dark"){
 document.body.classList.add("dark-theme");

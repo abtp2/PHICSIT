@@ -425,6 +425,26 @@ color: #ba55ff !important;
 color: #ba55ff !important;
 }
 
+.bxl-facebook:hover{
+background: #1077f0 !important;
+color: #fff !important;
+}
+.bxl-discord-alt:hover{
+color: #fff !important;
+background: #5865f2 !important;
+}
+.bxl-instagram-alt:hover{
+color: #fff !important;
+background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+}
+.bxl-twitter:hover{
+color: #fff !important;	
+background: #229af0 !important;			
+}
+.bxl-linkedin:hover{
+color: #fff !important;
+background: #2c67b3 !important;
+}
 
 
 
