@@ -123,6 +123,7 @@ document.getElementById("back-to-top").style.display ="none";
 /* Categories select */
 document.getElementById("cat-select").onchange = function(){
 window.location = this.value;
+this.value ="#";
 }
 
 
