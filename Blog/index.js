@@ -106,7 +106,6 @@ function goTo(x){
 window.location = x;
 }
 
-
 /* for back to top button */
 window.onscroll  = () =>{
 const val = window.scrollY / 8;
@@ -116,3 +115,14 @@ document.getElementById("back-to-top").style.display ="flex";
 else{
 document.getElementById("back-to-top").style.display ="none";	
 }}
+
+
+
+
+
+/* Categories select */
+document.getElementById("cat-select").onchange = function(){
+window.location = this.value;
+}
+
+

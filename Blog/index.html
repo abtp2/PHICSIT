@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>				
+				<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+				<title>PHICSIT</title>
 				<link rel="icon" type="image/jpg" href="../img/logo.jpg">
 				<link rel="stylesheet" href="../icons/boxicons.css">
 				<link rel="stylesheet" href="../css/animate.min.css">
@@ -11,9 +12,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
 </head>
-<body class="light-theme">
+<body>
 <!-- anime balls -->				
-<div class="anime"></div>		
+<div class="anime" id="anime2"></div>
+<div class="anime" id="anime1"></div>		
 				
 				
 
@@ -77,7 +79,25 @@
   </nav>		
 				
 				
-				
+
+
+
+
+<!-- first main heading -->
+<div id="first-main-head">
+ <form>
+ <input type="text" placeholder="Search Articles..." required>
+ <button type="submit"><i class="bx bx-search"></i></button>
+ </form>
+ 
+ <select id="cat-select">
+ 	<option value="#">Categories</option>
+ 	<option value="cat-WebDev.html">Web Development</option>
+ 	<option value="#">Web Design</option>
+ 	<option value="#">Programming</option>
+ 	<option value="#">Vimal Masala</option>
+ </select>
+</div>				
 				
 				
 
@@ -90,7 +110,7 @@
 	</div>
 </div>
  -->
-<br><br><br><br><br>
+
 
 
 
@@ -260,7 +280,7 @@ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s of 
 
 
 <!-- back to top button -->
-<div id="back-to-top" onclick="goTo('#nav')" title="Back to top">
+<div id="back-to-top" onclick="goTo('#first-main-head')" title="Back to top">
  <i class="bx bxs-up-arrow"></i>
 </div>
 
