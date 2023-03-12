@@ -1147,7 +1147,7 @@ width: 55rem !important;
 #back-to-top{
 width: 48px;
 height: 48px;
-background: var(--footbg);
+background: transparent;
 display: none; 
 align-items: center;
 justify-content: center;
