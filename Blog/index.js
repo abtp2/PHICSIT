@@ -127,3 +127,30 @@ this.value ="#";
 }
 
 
+
+
+
+/* author */
+var DeependraAuthor = {
+Name:"Deependra Gaur",
+Img:"../img/logo.jpg",
+About:"Jamstack Developer / Technical Content Writer. After all is said and done, structure + order = fun."
+}
+
+
+function author(x){
+document.getElementById("author-detail").style.display ="block";
+document.body.classList.add("author-overlay");
+
+
+document.querySelector("#author-detail div img").src = x.Img;
+document.querySelector("#author-detail div h1").innerHTML = x.Name;
+document.getElementById("author-detail-p").innerHTML = x.About;
+}
+
+/* close author details div */
+document.querySelector("#author-detail .bx-x").onclick  = () =>{
+document.getElementById("author-detail").style.display ="none";
+document.body.classList.remove("author-overlay");
+}
+
