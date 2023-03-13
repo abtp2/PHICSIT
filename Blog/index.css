@@ -680,7 +680,7 @@ max-width: 420px;
 border-radius: 10px;
 background: var(--bg);
 position: fixed;
-top: 8rem;
+top: 5rem;
 left: 50%;
 transform: translateX(-50%);
 z-index: 9999;
@@ -706,7 +706,7 @@ top: 0;
 right: -4rem;				
 }
 #author-detail{
-top: 6rem;
+top: 5rem;
 }}
 
 
@@ -775,7 +775,17 @@ padding: 10px;
 box-shadow: 0px 3px 6px 0.1px rgba(0,0,0,0.14), 0px 0px 0px 0.5px #949494;
 transform: scale(0.8);
 }
-
+@media(max-width: 340px){
+#author-detail #author-img img{
+width: 60px;
+height: 60px;
+}
+#author-detail #author-img span h1{
+font-size: 18px;
+}
+#author-detail #author-img span p{
+font-size: 14.5px;
+}}
 
 
 
