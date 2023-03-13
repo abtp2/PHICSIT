@@ -651,7 +651,6 @@ margin-left: 12px;
 .author-box span h1{
 line-height: 1.5;
 font-size: 16px;
-font-weight: 900;
 opacity: 0.9;
 font-family: fantasy;
 color: #5865f2;
@@ -731,7 +730,6 @@ margin-left: 14px;
 #author-detail #author-img span h1{
 line-height: 1.5;
 font-size: 20px;
-font-weight: 900;
 opacity: 0.9;
 font-family: fantasy;
 color: #5865f2;	
@@ -889,6 +887,7 @@ text-align: left;
 .sec-head h1{
 font-size: 27px;
 font-family: fantasy;
+font-weight: 600;
 background: linear-gradient(20deg, #00d1d1, #5865f2);
 -webkit-text-fill-color: transparent; 
 -webkit-background-clip: text;
