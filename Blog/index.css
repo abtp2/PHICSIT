@@ -546,7 +546,7 @@ height: 48px;
 display: flex;
 flex-wrap: nowrap;
 border-radius: 10px;
-margin: 0 auto;
+margin: 0;
 outline: 1.5px solid var(--sdw);
 }
 #first-main-head form input{
@@ -599,7 +599,7 @@ background-position: 148px center;
 color: var(--font);
 opacity: 0.7;
 }
-@media(min-width: 800px){
+@media(min-width: 660px){
 #first-main-head{
 flex-direction: row;
 align-items: center;
