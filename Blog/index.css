@@ -865,6 +865,83 @@ right: 10vw;
 
 
 
+.mt-1{
+margin-top: 5px;
+}
+.mt-2{
+margin-top: 10px;
+}
+.mt-3{
+margin-top: 15px;
+}
+.mt-4{
+margin-top: 20px;
+}
+.mt-5{
+margin-top: 25px;
+}
+.mt-6{
+margin-top: 30px;
+}
+.mt-7{
+margin-top: 35px;
+}
+.mt-8{
+margin-top: 40px;
+}
+.mt-9{
+margin-top: 45px;
+}
+.mt-10{
+margin-top: 50px;
+}
+
+
+
+.code-box{
+width: 100%;
+border-radius: 8px;
+border: 0.5px solid var(--sdw);
+background: #1a1b26;
+overflow: hidden;
+}
+.code-box div{
+background: var(--footdbg);
+width: 100%;
+padding: 8px 1rem;
+display: flex; 
+align-items: center;
+justify-content: space-between;
+}
+.code-box div p{
+color: var(--dfont);
+opacity: 0.8;
+font-size: 14.5px;
+}
+.code-box div p i{
+position: relative;
+bottom: -2px;
+font-size: 17px;
+margin-left: 2px;
+}
+.code-box div p .bx-check-circle{
+color: #03aaab;		
+}
+
+.code-box pre{
+width: 100%;
+padding: 0;
+}
+.code-box pre code{
+width: 100%;
+padding: 0;
+overflow: scroll;
+font-size: 14.5px;
+line-height: 1.6;
+letter-spacing: 0.2px;
+}
+
+
 
 
 
