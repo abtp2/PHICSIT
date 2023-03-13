@@ -153,4 +153,3 @@ document.querySelector("#author-detail .bx-x").onclick  = () =>{
 document.getElementById("author-detail").style.display ="none";
 document.body.classList.remove("author-overlay");
 }
-
