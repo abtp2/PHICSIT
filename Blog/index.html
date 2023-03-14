@@ -144,51 +144,115 @@
 
 <!-- first section -->
 <section id="first" class="section">
-<div class="author-box" onclick="author(DeependraAuthor)">
- <img src="../img/logo.jpg">
+<div class="author-box" onclick="author(AshutoshAuthor)">
+ <img src="../img/ashu.jpg">
  <span>
-  <h1>Deependra Gaur <i class="bx bx-link-external"></i></h1>
+  <h1>Ashutosh Pandey <i class="bx bx-link-external"></i></h1>
   <p>----- Author</p>
  </span>
 </div>
 				
 <div class="date-box">
-	<p><i class="bx bx-calendar"></i><span>Date : </span>12-06-2020</p>
-	<p><i class="bx bx-book-content"></i><span>Title : </span>How to create a better UI for website</p>		
+	<p><i class="bx bx-calendar"></i><span>Date : </span>14-03-2023</p>
+	<p><i class="bx bx-book-content"></i><span>Title : </span>Simplifying Asynchronous Code with Promises and Async/Await in JavaScript</p>		
 </div>			
 
 
-<h1 class="main-heading">
-A Startup that is Promoting and Helping Individuals in Creating Smart Ideas</h1>
+<h1 class="main-heading">Unlock the Power of Asynchronous Code</h1>
 <p class="main-para">
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s of the this website given by our members of staff and the flexWrap properties of their respective owners and their respective owners of the this website given by our members of staff and members of the obstacle from the crowd of the obstacle let obstacle Position have been the 	industry of other people who want.
+Asynchronous programming is an essential concept in JavaScript that allows us to write code that can handle multiple tasks simultaneously, without blocking the main execution thread. JavaScript provides several ways to work with asynchronous code, including callbacks, promises, and async/await. In this blog post, we will explore how to work with asynchronous code using Promises and Async/Await in JavaScript.
 </p>
 
 
-<h1 class="main-heading">Seriously not bro, i was joking 🎉</h1>
+<h1 class="main-heading">Benefits of using Promises and Async/Await :</h1>
 <p class="main-para">
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s of the this website given by our members of staff and the flexWrap properties of their respective owners and their respective owners of the this website given by our members of staff and members of the obstacle from the crowd of the obstacle let obstacle Position have been the 	industry of other people who want.
+There are several benefits to using Promises and Async/Await in your JavaScript code:
+
+<ul class="main-li">
+	<li>Better error handling: Promises provide a built-in way to handle errors, making it easier to write code that is robust and reliable.	</li>
+	<li>More readable code: By using Promises and Async/Await, you can write code that is more concise and easier to read, improving its overall quality.</li>
+	<li>Improved performance: Asynchronous code can significantly improve the performance of your applications, especially when dealing with I/O operations.</li>
+</ul>
+</p>
+
+
+
+
+<h1 class="main-heading">Promises in JavaScript :</h1>
+<p class="main-para">
+Promises are an essential feature of modern JavaScript, providing a more elegant way to handle asynchronous operations. Promises represent a value that may not be available yet but will be resolved at some point in the future. We can create a Promise in JavaScript using the Promise constructor, which takes a single argument, a function that accepts two parameters, resolve, and reject. Here's an example:
 </p>
 
 
 <!-- code box -->
-<div class="code-box mt-8">
+<div class="code-box mt-6">
  <div>
  <p>Javascript</p>
  <p class="copy-code">Copy <i class="bx bx-copy"></i></p>
  </div>				
-<pre><code class="language-javascript code">var name ="Ashutosh Pandey";
-console.log(name);
+<pre><code class="language-javascript code">const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Data resolved successfully!");
+  }, 2000);
+});
+</code></pre>
+</div>
+<!-- code box ended -->
 
-//output: Ashutosh Pandey
+<p class="main-para">
+The code above creates a Promise that will resolve after 2 seconds, returning the string "Data resolved successfully!". We can then use the then() method to handle the resolved value of the Promise:
+</p>
+
+<!-- code box -->
+<div class="code-box mt-6">
+ <div>
+ <p>Javascript</p>
+ <p class="copy-code">Copy <i class="bx bx-copy"></i></p>
+ </div>				
+<pre><code class="language-javascript code">myPromise.then(data => {
+  console.log(data);
+}).catch(error => {
+  console.error(error);
+});
 </code></pre>
 </div>
 <!-- code box ended -->
 
 
-<h1 class="main-heading">Again i am writing same content 🤭</h1>
+<h1 class="main-heading">Async/Await in JavaScript :</h1>
 <p class="main-para">
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s of the this website given by our members of staff and the flexWrap properties of their respective owners and their respective owners of the this website given by our members of staff and members of the obstacle from the crowd of the obstacle let obstacle Position have been the 	industry of other people who want.
+Async/Await is a newer feature in JavaScript that provides a more concise way to work with Promises. Async functions return a Promise by default, and we can use the await keyword to pause the function execution until the Promise is resolved. Here's an example:
+</p>
+
+
+<!-- code box -->
+<div class="code-box mt-6">
+ <div>
+ <p>Javascript</p>
+ <p class="copy-code">Copy <i class="bx bx-copy"></i></p>
+ </div>				
+<pre><code class="language-javascript code">async function getData() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+  const data = await response.json();
+  return data;
+}
+
+getData().then(data => {
+  console.log(data);
+}).catch(error => {
+  console.error(error);
+});
+</code></pre>
+</div>
+<!-- code box ended -->
+
+<p class="main-para">
+The code above defines an async function that fetches data from a remote API using the fetch() method. We use the await keyword to pause the function execution until the Promise returned by the fetch() method is resolved. Once the Promise is resolved, we can access the response data using the json() method.
+</p>
+
+<h1 class="main-heading">Conclusion :</h1>
+<p class="main-para">
+Asynchronous programming is an essential concept in JavaScript that allows us to write code that can handle multiple tasks simultaneously. Promises and Async/Await provide a more elegant and concise way to work with asynchronous code, making our code more readable and maintainable. By mastering these concepts, you can write more efficient and robust JavaScript code.
 </p>
 </section>
 

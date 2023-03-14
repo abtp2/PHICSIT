@@ -826,7 +826,18 @@ font-size: 15px;
 font-weight: 399;
 font-family: sans-serif;
 }
-
+.main-li{
+width: 90%;
+margin: 0.8rem 0 0 auto;
+text-align: left;
+line-height: 1.7;
+font-size: 15px;	
+font-weight: 399;
+font-family: sans-serif;
+}
+.main-li li{
+margin: 5px 0;
+}
 @media(min-width: 1000px){
 .section{
 border-radius: 10px;		
@@ -904,9 +915,10 @@ border-radius: 8px;
 border: 0.5px solid var(--sdw);
 background: #1a1b26;
 overflow: hidden;
+margin-bottom: 1.5rem;
 }
 .code-box div{
-background: var(--footdbg);
+background: var(--carddbg);
 width: 100%;
 padding: 8px 1rem;
 display: flex; 
@@ -916,7 +928,7 @@ justify-content: space-between;
 .code-box div p{
 color: var(--dfont);
 opacity: 0.8;
-font-size: 14.5px;
+font-size: 14px;
 }
 .code-box div p i{
 position: relative;
@@ -931,12 +943,14 @@ color: #03aaab;
 .code-box pre{
 width: 100%;
 padding: 0;
+opacity: 0.9;
 }
 .code-box pre code{
 width: 100%;
 padding: 0;
 overflow: scroll;
-font-size: 14.5px;
+font-size: 14.4px;
+font-weight: 400;
 line-height: 1.6;
 letter-spacing: 0.2px;
 }

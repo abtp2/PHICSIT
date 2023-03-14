@@ -136,6 +136,11 @@ Name:"Deependra Gaur",
 Img:"../img/logo.jpg",
 About:"Jamstack Developer / Technical Content Writer. After all is said and done, structure + order = fun."
 }
+var AshutoshAuthor = {
+Name:"Ashutosh Pandey",
+Img:"../img/ashu.jpg",
+About:"Aspiring front-end developer and self-taught coder. Dedicated to building websites that not only look great but also function flawlessly."
+}
 
 
 function author(x){
