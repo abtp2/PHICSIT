@@ -1,0 +1,47 @@
+/* first */
+#first{
+width: 100%;
+background: var(--footbg);
+overflow-x: hidden;
+padding: 130px 0 12rem 0;
+text-align: center;
+border-bottom: 0.5px solid var(--sdw);
+}
+#first div{
+width: 85%;
+max-width: calc(var(--secmax) - 24rem);
+margin: 0 auto;
+}
+#first h1{
+font-family: arial;
+font-weight: 800;
+font-size: 25px;
+line-height: 1.55;
+text-align: center;
+font-family: 'Source Serif Pro', serif;
+letter-spacing: 0.2px;
+clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+#first p{
+font-family: arial;
+font-weight: 400;
+font-size: 15px;
+line-height: 1.75;
+text-align: center;
+margin-top: 1rem;
+margin-bottom: 2rem;
+}
+#first button{
+width: 170px;
+padding: 14px 0;
+background: #5865f2;
+color: #fff;
+border-radius: 6px;
+font-size: 15px;
+font-weight: 500;
+letter-spacing: 0.2px;
+border: none;
+}
+
+
+
