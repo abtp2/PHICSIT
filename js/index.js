@@ -411,7 +411,10 @@ editor.setValue(myTypeScriptCode ,1);
 
 
 
-
+/* custom function */
+function goTo(x){
+window.location = x;
+}
 
 
 
