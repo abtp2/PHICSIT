@@ -5,14 +5,15 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
 				<link rel="icon" type="image/jpg" href="img/logo.jpg">
 				<link rel="stylesheet" href="css/components.css">
-				<link rel="stylesheet" href="css/contact.css">
-				<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-				<script type="text/javascript">
-				(function(){emailjs.init("6QG32tZ_YqRJ19Tf7");})();</script>
+				<link rel="stylesheet" href="css/webinars.css">
+				<link rel="preconnect" href="https://fonts.googleapis.com">
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+				<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
 				<title>PHICSIT</title>
 </head>
 <body>
-  <nav>
+				
+ <nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
       <div class="logo"><a href="index.html"><img src="img/logo.jpg"></a></div>
@@ -56,11 +57,11 @@
           </li> -->
           <li><a href="Blog/index.html">Blogs</a></li>                    
           <li><a href="#">Services</a></li>
-          <li><a href="webinars.html">Webinars</a></li>
+          <li><a href="#" class="active-link">Webinars</a></li>
           
           
           <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html" class="active-link">Contact Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="search-box" title="Toggle Theme">
@@ -68,38 +69,21 @@
       </div>      
     </div>
   </nav>
-
-	
-
-<div id="container">
-<div id="first">
-<img src="img/contact.svg" id="pp">
- <div id="first-social-icons">
-	<a href="#" class="bx bxl-facebook"></a>
-	<a href="#" class="bx bxl-twitter"></a>
-	<a href="#" class="bx bxl-instagram-alt"></a>
-	<a href="#" class="bx bxl-linkedin"></a>
-	<a href="#" class="bx bxl-discord-alt"></a>
-	</div>
+  
+  
+  
+  
+  
+<!-- first section -->
+<section id="first">
+<div>
+ <h1>Unleashing Innovation : Discover the Future with us</h1>
+ <p>Join us for an exciting webinar as we explore the innovative solutions and technologies.</p>
+ <button onclick="goTo('Blog/index.html')">Our Blogs</button>
 </div>
-
-<form id="contact-form" onsubmit="contactMail()">
-<h1>Send a message to us <span>!</span></h1>
-<input type="text" id="name" placeholder="Your Name*" required>	
-<input type="email" id="email" placeholder="Your Email*" required>	
-<textarea id="message" placeholder="Your Message*" required></textarea>		
-<button type="submit">Send Message <span id="sub-icon"><i class="bx bx-send"></i></span></button>
-</form>
-</div>			
-
-
-<!-- anime balls -->
-<div id="anime-left" class="anime"></div>
-<div id="anime-right" class="anime"></div>
-
-
-
-<script src="js/contact.js"></script>
-<script src="js/sweetalert2@11.js"></script>
+</section>  
+  
+  
+<script src="js/webinars.js"></script>
 </body>
 </html>
