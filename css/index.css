@@ -195,6 +195,18 @@ box-shadow: 0 0 1px #888;
 border: 0.5px solid rgba(0,0,0,0.2);
 }
 
+.new-bulb::after{
+content: "";
+width: 10px;
+height: 10px;
+border-radius: 100%;
+position: relative;
+top: -20px;
+right: -30px;
+background: #5865f2;
+border: 2px solid var(--bg);
+}
+
 #first-social-icons{
 width: auto;
 margin: 2.2rem auto 0 auto;

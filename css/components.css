@@ -23,7 +23,12 @@ font-family: arial;
 
 --footlbg: #f6f6f6;
 --footdbg: #192232;
+--secmax: 1000px;
 }
+@media(min-width: 1440px){
+:root{--secmax: 1100px;
+}}
+
 .light-theme{
 --bg: var(--lbg);
 --font: var(--lfont);
