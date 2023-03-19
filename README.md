@@ -1,10 +1,14 @@
 # PHICSIT
-<img src="https://abtp2.github.io/PHICSIT/img/logo.jpg">
 
-*A Startup that is Promoting and Helping Individuals in Creating Smart and Impressive Thinking.*
+<div style="width: 100px;">
+<img src="https://abtp2.github.io/PHICSIT/img/logo.jpg">
+</div>
+<b>
+A Startup that is Promoting and Helping Individuals in Creating Smart and Impressive Thinking.
+<b>
 <br>
 <br>
-[CHECK LIVE HERE](https://abtp2.github.io/PHICSIT)
+<a href="https://abtp2.github.io/PHICSIT">Check Live Here</a>
 
 
 
