@@ -447,6 +447,13 @@ align-items: flex-start;
 padding: 18px 18px 3.5rem 18px;
 margin-top: 10rem;
 }
+footer main{
+width: 100%;
+max-width: var(--secmax);
+display: flex; 
+flex-direction: column;
+margin: 0 auto;
+}
 #foot-head{
 width: 20rem;
 display: flex; 
@@ -701,6 +708,9 @@ flex-direction: row !important;
 align-items: center !important;
 justify-content: center !important;
 padding: 18px 18px 3rem 18px !important;
+}
+footer main{
+flex-direction: row !important;
 }
 #foot-head{
 width: 18rem !important;
