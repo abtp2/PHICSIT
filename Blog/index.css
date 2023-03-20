@@ -387,7 +387,6 @@ font-weight: 600;
 
 
 .main-heading{
-margin: 2.6rem 0 0 0;
 text-align: left;
 line-height: 1.5;
 font-size: 26px;
@@ -396,7 +395,6 @@ font-weight: 400 !important;
 letter-spacing: 0.5px;
 }
 .main-para{
-margin: 0.6rem 0 0 0;
 text-align: left;
 line-height: 1.7;
 font-size: 15px;	
@@ -405,7 +403,7 @@ font-family: sans-serif;
 }
 .main-li{
 width: 90%;
-margin: 0.8rem 0 0 auto;
+margin-left: 2.5rem;
 text-align: left;
 line-height: 1.7;
 font-size: 15px;	
@@ -413,7 +411,7 @@ font-weight: 399;
 font-family: sans-serif;
 }
 .main-li li{
-margin: 5px 0;
+margin: 8px 0;
 }
 @media(min-width: 1000px){
 .section{
@@ -492,7 +490,6 @@ border-radius: 8px;
 border: 0.5px solid var(--sdw);
 background: #1a1b26;
 overflow: hidden;
-margin-bottom: 1.5rem;
 }
 .code-box div{
 background: var(--carddbg);
@@ -531,6 +528,79 @@ font-weight: 400;
 line-height: 1.6;
 letter-spacing: 0.2px;
 }
+
+
+
+
+/* for table ❤ */
+.table {
+  --table-color: var(--font);
+  background: var(--bg);
+  --table-accent-bg: transparent;
+  --table-striped-color: var(--font);
+  --table-striped-bg: var(--footbg);
+  border-radius: 8px;
+  border: 0.5px solid var(--sdw);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--table-color);
+  vertical-align: top;
+}
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: var(--table-bg);
+  border-bottom-width: var(--border-width);
+  box-shadow: inset 0 0 0 9999px var(--table-accent-bg);
+}
+.table > tbody {
+  vertical-align: inherit;
+}
+.table > thead {
+  vertical-align: bottom;
+}
+
+.caption-top {
+  caption-side: top;
+}
+
+.table-sm > :not(caption) > * > * {
+  padding: 0.25rem 0.25rem;
+}
+
+.table-bordered > :not(caption) > * {
+  border-width: var(--border-width) 0;
+}
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 var(--border-width);
+}
+
+.table-borderless > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+.table-borderless > :not(:first-child) {
+  border-top-width: 0;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --table-accent-bg: var(--table-striped-bg);
+  color: var(--table-striped-color);
+}
+
+.table-striped-columns > :not(caption) > tr > :nth-child(even) {
+  --table-accent-bg: var(--table-striped-bg);
+  color: var(--table-striped-color);
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+
+
+
 
 
 
@@ -680,6 +750,5 @@ flex-basis: 30%;
 .row{
 width: 100%;
 }}
-
 
 
