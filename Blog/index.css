@@ -534,68 +534,34 @@ letter-spacing: 0.2px;
 
 /* for table ❤ */
 .table {
-  --table-color: var(--font);
-  background: var(--bg);
-  --table-accent-bg: transparent;
-  --table-striped-color: var(--font);
-  --table-striped-bg: var(--footbg);
   border-radius: 8px;
   border: 0.5px solid var(--sdw);
   width: 100%;
   margin-bottom: 1rem;
   color: var(--table-color);
-  vertical-align: top;
+  vertical-align: middle;
 }
-.table > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
-  background-color: var(--table-bg);
-  border-bottom-width: var(--border-width);
-  box-shadow: inset 0 0 0 9999px var(--table-accent-bg);
-}
-.table > tbody {
-  vertical-align: inherit;
-}
-.table > thead {
-  vertical-align: bottom;
+.table thead tr th{
+text-align: left;
+padding: 12px 2vw;
+background: var(--footbg);
+vertical-align: middle;
 }
 
-.caption-top {
-  caption-side: top;
+.table tbody tr td{
+text-align: left;
+padding: 5px 2vw;
+line-height: 1.7;
+font-size: 15px;	
+font-weight: 399;
+font-family: sans-serif;
+border: 0.5px solid var(--sdw);
+vertical-align: middle;
 }
-
-.table-sm > :not(caption) > * > * {
-  padding: 0.25rem 0.25rem;
-}
-
-.table-bordered > :not(caption) > * {
-  border-width: var(--border-width) 0;
-}
-.table-bordered > :not(caption) > * > * {
-  border-width: 0 var(--border-width);
-}
-
-.table-borderless > :not(caption) > * > * {
-  border-bottom-width: 0;
-}
-.table-borderless > :not(:first-child) {
-  border-top-width: 0;
-}
-
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-  --table-accent-bg: var(--table-striped-bg);
-  color: var(--table-striped-color);
-}
-
-.table-striped-columns > :not(caption) > tr > :nth-child(even) {
-  --table-accent-bg: var(--table-striped-bg);
-  color: var(--table-striped-color);
-}
-
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-
 
 
 
