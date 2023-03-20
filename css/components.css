@@ -449,7 +449,7 @@ margin-top: 10rem;
 }
 footer main{
 width: 100%;
-max-width: var(--secmax);
+max-width: 1200px;
 display: flex; 
 flex-direction: column;
 margin: 0 auto;
