@@ -182,3 +182,14 @@ setTimeout(() => copiedText.classList.replace("bx-check-circle", "bx-copy"), 300
   });
 });
 
+
+/* page scroll progress bar */
+function progressBarScroll(){
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+      height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+      scrolled = (winScroll / height) * 100;
+  document.querySelector("#scroll-progress div").style.width = scrolled + "%";
+}
+window.onscroll = () =>{
+progressBarScroll();		
+}

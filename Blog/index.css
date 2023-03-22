@@ -105,6 +105,26 @@ margin: 0 8px;
 
 
 
+/* page scroll progress bar */
+#scroll-progress{
+width: 100%;
+position: 100%;	
+position: fixed;
+top: 70px;
+height: 5px;
+background: transparent;
+z-index: 99;
+}
+#scroll-progress div{
+width: 0%;
+height: 100%;
+background: linear-gradient(20deg, #00d1d1, #5865f2);
+border-radius: 0 10px 10px 0;
+}
+
+
+
+
 
 
 /* first main head */
@@ -523,9 +543,9 @@ opacity: 0.9;
 width: 100%;
 padding: 0;
 overflow: scroll;
-font-size: 14.4px;
+font-size: 13px;
 font-weight: 400;
-line-height: 1.6;
+line-height: 1.65;
 letter-spacing: 0.2px;
 }
 
@@ -716,5 +736,4 @@ flex-basis: 30%;
 .row{
 width: 100%;
 }}
-
 
