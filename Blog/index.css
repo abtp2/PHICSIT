@@ -701,6 +701,13 @@ border: none;
 }
 
 
+@media(min-width: 700px){
+.card{
+width: 22rem;		
+margin: 1.5rem 0.4rem 0 0.4rem;
+flex-basis: 45%;
+}}
+
 @media(min-width: 1000px){
 .card{
 width: 22rem;		
@@ -736,4 +743,124 @@ flex-basis: 30%;
 .row{
 width: 100%;
 }}
+
+
+
+
+
+
+
+/* comment box */
+#comment-box{
+width: 100%;
+max-width: var(--secmax) !important;
+padding: 2rem 6vw;
+margin: 3rem auto 0 auto;
+}
+#HCB_comment_box{
+width: 100%;
+max-width: var(--secmax) !important;
+background: var(--bg);
+padding: 1.8rem 6vw;
+margin: 2rem auto 0 auto;
+border: 0.5px solid var(--sdw);
+box-shadow: 0 0 20px 0.5px var(--lsdw);
+border-radius: 6px;
+}
+#HCB_comment_box h3{
+display: none !important;
+}
+#HCB_comment_form_box{
+width: 100% !important;
+padding: 0 !important;
+margin: 0 !important;
+}
+.home-desc{
+display: none !important;
+}
+#hcb_file_label{
+display: none !important;
+}
+.admin-link{
+display: none !important;
+}
+#HCB_comment_box a{
+display: none !important;
+}
+
+
+
+
+#hcb_form_name{
+background: var(--footbg) !important;
+color: var(--font) !important;
+border: none !important;
+border-radius: 4px !important;
+padding: 13px 0.8rem !important;
+box-shadow: none !important;
+outline: 2px solid rgba(0,0,0,0.06) !important;
+}
+input [type="hidden"]{
+display: none !important;
+}
+#hcb_form_name::placeholder{
+color: var(--font) !important;
+opacity: 0.8 !important;
+}
+#hcb_form_name:focus{
+outline: 1px solid #5865f2 !important;
+}
+#hcb_form_content{
+background: var(--footbg) !important;
+color: var(--font) !important;
+border: none !important;
+border-radius: 4px !important;
+padding: 13px 0.8rem !important;
+resize: none !important;
+height: 180px !important;
+box-shadow: none !important;
+outline: 2px solid rgba(0,0,0,0.06) !important;
+margin-top: 5px !important;
+}
+#hcb_form_content:focus{
+outline: 1px solid #5865f2 !important;
+}
+#hcb_form_content::placeholder{
+color: var(--font) !important;
+opacity: 0.8 !important;
+}
+#hcb_submit{
+background: #5865f2 !important;
+color: #fff !important;
+padding: 10px 1rem !important;
+}
+#hcb_msg{
+margin-bottom: 8px;
+}
+.author-name{
+display: inline-block !important;
+align-items: center !important;
+text-overflow: ellipsis !important;
+overflow: hidden !important;
+white-space: nowrap !important;
+max-width: 14ch !important;
+font-size: 15px !Important;
+}
+.hcb-comment-body{
+opacity: 0.78 !important;
+margin-top: 2px !important;
+}
+
+
+@media(min-width: 1000px){
+#HCB_comment_box{
+padding: 2.2rem 3.5rem !important;
+}}	
+
+
+
+
+
+
+
 
