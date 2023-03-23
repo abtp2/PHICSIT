@@ -113,7 +113,7 @@ position: fixed;
 top: 70px;
 height: 5px;
 background: transparent;
-z-index: 99;
+z-index: 98;
 }
 #scroll-progress div{
 width: 0%;
@@ -584,7 +584,58 @@ vertical-align: middle;
 }
 
 
+#like-button-box{
+margin-top: 3rem;
+}
+#like-button-box h1{
+font-size: 17px;
+margin-bottom: 15px;
+font-family: fantasy;
+}
+#like-button-box main{
+display: flex;
+align-items: center;
+border: 2px solid var(--sdw);
+padding: 0 2px;
+border-radius: 10px;
+margin-top: 10px;
+width: fit-content;
+}
+#like-button-box main span{
+display: flex;
+align-items: center;
+padding: 0 12px;
+}
+#like-button-box main i{
+font-size: 20px;
+}
+#like-button-box main span p{
+font-size: 15px !important;
+color: var(--font) !important;
+font-weight: 600 !important;
+margin-left: 12px !important;
+}
+#like-button{
+font-size: 14px !important;
+margin-left: -6px !important;
+}
+#like-button div div{
+font-size: 15px !important;
+color: var(--font) !important;
+font-weight: 600 !important;
+margin-left: 6px !important;	
+}
 
+.css-1ukx6ls{
+border-right: 2px solid var(--sdw) !important;
+padding: 8px 12px !important;
+}
+.css-fih1bd{
+font-size: 15px !important;
+color: var(--font) !important;
+font-weight: 600 !important;
+margin-left: 6px !important;
+}
 
 
 
@@ -754,8 +805,7 @@ width: 100%;
 #comment-box{
 width: 100%;
 max-width: var(--secmax) !important;
-padding: 2rem 6vw;
-margin: 3rem auto 0 auto;
+padding: 6rem 6vw 2rem 6vw;
 }
 #HCB_comment_box{
 width: 100%;
@@ -850,7 +900,13 @@ font-size: 15px !Important;
 opacity: 0.78 !important;
 margin-top: 2px !important;
 }
-
+.likes span{
+font-size: 14px;
+}
+.likes img{
+filter: sepia(100%) invert(5) saturate(10) !important;
+pointer-events: none !important;
+}
 
 @media(min-width: 1000px){
 #HCB_comment_box{
