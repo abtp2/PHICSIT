@@ -17,6 +17,9 @@ font-family: arial;
 /* card bg */
 --clbg: rgba(255, 255, 255, 0.26); 
 --cdbg: rgba(17, 21, 32, 0.29);
+/* like bg */
+--likelbg: rgba(0,0,0,0.1);
+--likedbg: rgba(255,255,255,0.15);
 
 --cardlbg: #fff;
 --carddbg: #192232;
@@ -35,6 +38,8 @@ font-family: arial;
 --sdw: var(--lsdw);
 /* card */
 --cbg: var(--clbg);
+/* like bg */
+--likebg: var(--likelbg);
 
 --cardbg: var(--cardlbg);
 --footbg: var(--footlbg);
@@ -45,6 +50,8 @@ font-family: arial;
 --sdw: var(--dsdw);
 /* card */
 --cbg: var(--cdbg);
+/* like bg */
+--likebg: var(--likedbg);
 
 --cardbg: var(--carddbg);
 --footbg: var(--footdbg);
