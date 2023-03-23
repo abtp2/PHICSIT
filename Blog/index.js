@@ -108,6 +108,7 @@ window.location = x;
 
 /* for back to top button */
 window.onscroll  = () =>{
+progressBarScroll();
 const val = window.scrollY / 8;
 if(val > 90){
 document.getElementById("back-to-top").style.display ="flex";	
@@ -189,7 +190,4 @@ function progressBarScroll(){
       height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
       scrolled = (winScroll / height) * 100;
   document.querySelector("#scroll-progress div").style.width = scrolled + "%";
-}
-window.onscroll = () =>{
-progressBarScroll();		
 }
