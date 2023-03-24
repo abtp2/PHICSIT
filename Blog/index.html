@@ -91,9 +91,17 @@
 <!-- first main heading -->
 <div id="first-main-head">
  <form>
- <input type="text" placeholder="Search Articles..." required>
+ <span>
+ <input type="text" id="search-int" placeholder="Search Articles..." required>
  <button type="submit"><i class="bx bx-search"></i></button>
+ </span>
+<!-- search results --> 
+ <div id="search-result">
+ <!--  -->
+ </div>
  </form>
+
+
  
  <select id="cat-select">
  	<option value="#">Categories</option>
@@ -476,6 +484,7 @@ data-lyket-color-secondary="var(--likebg)" data-lyket-color-highlight="#5865f2" 
 
 
 <script src="index.js"></script>
+<script src="search.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 </body>

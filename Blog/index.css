@@ -2,6 +2,10 @@
 filter: blur(6px);
 opacity: 0.4;
 }
+.search-overlay > *:not(#first-main-head, #nav){
+filter: blur(2px);
+opacity: 0.4;
+}
 
 .bxl-facebook:hover{
 background: #1077f0 !important;
@@ -141,12 +145,21 @@ width: 100%;
 max-width: 370px;
 height: 48px;
 display: flex;
+flex-direction: column;
 flex-wrap: nowrap;
 border-radius: 10px;
 margin: 0;
 outline: 1.5px solid var(--sdw);
+overflow: hidden;
 }
-#first-main-head form input{
+#first-main-head form span{
+width: 100%;
+max-width: 370px;
+height: 48px;
+display: flex;
+flex-wrap: nowrap;
+}
+#first-main-head form span input{
 width: calc(100% - 70px);
 height: 100%;
 border: none;
@@ -157,7 +170,7 @@ padding: 0 1rem;
 color: var(--font);
 background: var(--bg);
 }
-#first-main-head form button{
+#first-main-head form span button{
 width: 70px;
 color: var(--dfont);
 font-size: 22px;
@@ -166,7 +179,7 @@ background: linear-gradient(20deg, #00d1d1, #5865f2);
 border: none;
 border-radius: 0 10px 10px 0;
 }
-#first-main-head form button i{
+#first-main-head form span button i{
 padding-top: 4px;
 }
 #first-main-head select{
@@ -196,6 +209,59 @@ background-position: 148px center;
 color: var(--font);
 opacity: 0.7;
 }
+
+
+/* search result */
+#first-main-head form #search-result{
+width: 87.83%;
+max-width: 370px;
+background: var(--bg);
+display: none;
+flex-direction: column;
+align-content: space-between;
+position: absolute;
+margin-top: 48px;
+z-index: 5;
+border-radius: 0 0 10px 10px;
+overflow: hidden;
+padding: 0 0;
+outline: 1.5px solid var(--sdw); 
+}
+
+.search-res-div{
+width: 100%;
+max-height: 500px;
+overflow-y: scroll;
+display: flex;
+align-items: center;
+padding: 8px 12px;
+border-bottom:1.5px solid var(--sdw); 
+}
+.v-space{
+width: 100%;
+background: transparent;
+height: 10px;
+}
+.search-res-div img{
+width: 50px !important;
+height: 50px !important;
+border-radius: 100%;
+outline: 2px solid var(--sdw);
+}
+.search-res-div h1{
+font-size: 13.5px;
+font-weight: 400;
+opacity: 0.83;
+margin-left: 10px;
+line-height: 1.42;
+}
+.search-res-div h1 i{
+font-size: 15px;
+font-weight: 400;
+margin-left: 5px;
+}
+
+
 @media(min-width: 660px){
 #first-main-head{
 flex-direction: row;
@@ -514,7 +580,7 @@ overflow: hidden;
 .code-box div{
 background: var(--carddbg);
 width: 100%;
-padding: 8px 1rem;
+padding: 8px 2vw;
 display: flex; 
 align-items: center;
 justify-content: space-between;
@@ -912,7 +978,6 @@ pointer-events: none !important;
 #HCB_comment_box{
 padding: 2.2rem 3.5rem !important;
 }}	
-
 
 
 
