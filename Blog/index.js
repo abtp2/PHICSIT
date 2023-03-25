@@ -168,20 +168,31 @@ document.body.classList.remove("author-overlay");
 
 /* copy code */
 var copyCodes = document.getElementsByClassName("copy-code");
-Array.prototype.forEach.call(copyCodes, function(copyCode, index) {
-  copyCode.addEventListener("click", function() {
-    var codes = document.getElementsByClassName("code");
-    if (codes[index]){
-     var codeText =  codes[index].innerText;
-     navigator.clipboard.writeText(codeText).then( 
-        () => { 
-        var copiedText = copyCode.querySelector(".bx-copy");
+Array.prototype.forEach.call(copyCodes, function(copyCode, index){
+copyCode.onclick = () => {
+ if(!navigator.clipboard){
+alert("Copying to clipboard is not supported on this browser.");
+return;
+ }
+ 
+var codes = document.getElementsByClassName("code");
+if (codes[index]){
+var codeText =  codes[index].innerText;
+navigator.clipboard.writeText(codeText).then(() => { 
+var copiedText = copyCode.querySelector(".bx-copy");
 copiedText.classList.replace("bx-copy", "bx-check-circle");
 setTimeout(() => copiedText.classList.replace("bx-check-circle", "bx-copy"), 3000);
-        });
-    }
+  }).catch((error) => {
+  console.error(error);
+  alert("Failed to copy code to clipboard.");
   });
+}
+  }//onclick function ended
 });
+
+
+
+
 
 
 /* page scroll progress bar */

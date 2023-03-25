@@ -1,19 +1,35 @@
-const b2 ={
-  text: "Hello I am Jyoti Bhasin and I Impressive Thinking about the latest",
+const concateSearch = [
+{
+text: "Hello I am Jyoti Bhasin and I Impressive Thinking about the latest",
   img: "../img/jyoti.jpg", 
-  link: "b2.html"	
-};
-const b3 ={
-  text: "Hello I am Deependra Gaur, i am founder of PHICSIT",
+  link: "b2.html"
+},
+{
+  text: "Hello I am Deependra Gaur, i am founder of phicsit",
   img: "../img/deependraGaur.jpeg", 
   link: "b3.html"	
-};
-const b4 ={
-  text: "Hello I am PHICSIT and I Impressive Thinking about the latest",
+},
+{
+  text: "Hello I am phicsit and I Impressive Thinking about the latest",
   img: "../img/logo.jpg", 
   link: "b2.html"	
-};
-const concateSearch = [b2,b3,b4];
+},
+{
+  text: "Hello I am Ashutosh Pandey, from wideQutar",
+  img: "../img/ashu.jpg", 
+  link: "b3.html"	
+},
+{
+  text: "VimalX, bolo zubaan kesari",
+  img: "../img/vimal.jpg", 
+  link: "b3.html"	
+},
+];
+
+
+
+
+
 
 
 
@@ -35,10 +51,10 @@ function updateSearchResults(){
     addedDivs.forEach(div => div.remove());
     addedDivs = [];
     document.querySelector("#first-main-head form").style.borderRadius ="10px";
-document.querySelector("#first-main-head form span input").style.borderRadius ="0 0 10px 10px";
-document.querySelector("#first-main-head form span button").style.borderRadius ="0 10px 10px 0";
-document.querySelector("#first-main-head form #search-result").style.display ="none";
-document.body.classList.remove("search-overlay");
+    document.querySelector("#first-main-head form span input").style.borderRadius ="0 0 10px 10px";
+    document.querySelector("#first-main-head form span button").style.borderRadius ="0 10px 10px 0";
+    document.querySelector("#first-main-head form #search-result").style.display ="none";
+    document.body.classList.remove("search-overlay");
     return;
   }
 
@@ -47,10 +63,16 @@ document.body.classList.remove("search-overlay");
     let text = div.querySelector('h1').getAttribute('text').toLowerCase().trim();
     if (!text.includes(userInput)) {
       div.remove();
-    }else{
+    } else {
       matchedDivs.push(div);
     }
   });
+
+  // Remove the "no matches" div if it exists
+  let noMatchDiv = document.getElementById("no-match-div");
+  if (noMatchDiv) {
+    noMatchDiv.remove();
+  }
 
   // Add new div elements for matched objects
   concateSearch.forEach((obj) => {
@@ -63,7 +85,7 @@ document.body.classList.remove("search-overlay");
       if (!matchingDiv) {
         let div = document.createElement("div");
         div.classList.add("search-res-div");
-        div.onclick = () =>{window.location = obj.link};
+        div.onclick = () => {window.location = obj.link};
         div.innerHTML = `<img src="${obj.img}">
                           <h1 text="${obj.text}">${obj.text}<i class="bx bx-link-external"></i></h1>`;
         box.appendChild(div);
@@ -71,16 +93,32 @@ document.body.classList.remove("search-overlay");
         addedDivs.push(div);
         document.body.classList.add("search-overlay");
         document.querySelector("#first-main-head form").style.borderRadius ="10px 10px 0 0";
-document.querySelector("#first-main-head form span input").style.borderRadius ="10px 0 0 0";
-document.querySelector("#first-main-head form span button").style.borderRadius ="0 10px 0 0";
-document.querySelector("#first-main-head form #search-result").style.display ="flex";
+        document.querySelector("#first-main-head form span input").style.borderRadius ="10px 0 0 0";
+        document.querySelector("#first-main-head form span button").style.borderRadius ="0 10px 0 0";
+        document.querySelector("#first-main-head form #search-result").style.display ="flex";
       }
     }
   });
 
+  // If no matches were found, add a "no matches" div
+    if (matchedDivs.length === 0) {
+    let noMatchDiv = document.createElement("div");
+    noMatchDiv.id = "no-match-div";
+    noMatchDiv.classList.add("search-res-div");
+    noMatchDiv.innerHTML = `<h1>No matches for '${userInput}'</h1>`;
+    box.appendChild(noMatchDiv);
+  }
+  
   // Update array of added div elements
   addedDivs = matchedDivs;
 }
+
+
+
+
+
+
+
 
 
 // Define a debounce function to delay the function call
@@ -97,3 +135,5 @@ function debounce(func, wait) {
 }
 
 document.getElementById("search-int").addEventListener("input", debounce(updateSearchResults, 50));
+document.getElementById("search-form").onsubmit = (e) =>{e.preventDefault();}
+

@@ -3,8 +3,7 @@ filter: blur(6px);
 opacity: 0.4;
 }
 .search-overlay > *:not(#first-main-head, #nav){
-filter: blur(2px);
-opacity: 0.4;
+/*  */
 }
 
 .bxl-facebook:hover{
@@ -212,9 +211,11 @@ opacity: 0.7;
 
 
 /* search result */
-#first-main-head form #search-result{
+#search-result{
 width: 87.83%;
 max-width: 370px;
+max-height: calc(67px * 4);
+overflow-y: auto;
 background: var(--bg);
 display: none;
 flex-direction: column;
@@ -223,24 +224,18 @@ position: absolute;
 margin-top: 48px;
 z-index: 5;
 border-radius: 0 0 10px 10px;
-overflow: hidden;
 padding: 0 0;
-outline: 1.5px solid var(--sdw); 
+outline: 1.6px solid var(--sdw); 
+
+box-shadow: 0 12px 12px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(255,255,255,0.05); 
 }
 
 .search-res-div{
 width: 100%;
-max-height: 500px;
-overflow-y: scroll;
 display: flex;
 align-items: center;
 padding: 8px 12px;
-border-bottom:1.5px solid var(--sdw); 
-}
-.v-space{
-width: 100%;
-background: transparent;
-height: 10px;
+border-bottom: 1.2px solid var(--sdw); 
 }
 .search-res-div img{
 width: 50px !important;
@@ -257,9 +252,29 @@ line-height: 1.42;
 }
 .search-res-div h1 i{
 font-size: 15px;
-font-weight: 400;
+font-weight: 800;
 margin-left: 5px;
+color: #5865f2;
 }
+#search-result::-webkit-scrollbar{
+width: 8px;
+background: var(--bg);
+border-radius: 0 10px 10px 0;
+}
+#search-result::-webkit-scrollbar-thumb{
+background: #5865f2;
+border-radius: 10px;
+border: 1px solid var(--bg);
+}
+#search-result::-webkit-scrollbar-button{
+color: var(--font);
+padding: 10px 0 !important;
+display: none;
+}
+
+
+
+
 
 
 @media(min-width: 660px){
@@ -580,7 +595,7 @@ overflow: hidden;
 .code-box div{
 background: var(--carddbg);
 width: 100%;
-padding: 8px 2vw;
+padding: 8px 1rem;
 display: flex; 
 align-items: center;
 justify-content: space-between;
@@ -602,12 +617,11 @@ color: #03aaab;
 
 .code-box pre{
 width: 100%;
-padding: 0;
 opacity: 0.9;
 }
 .code-box pre code{
-width: 100%;
-padding: 0;
+width: calc(100% - 0.4rem);
+margin: 0 auto;
 overflow: scroll;
 font-size: 13px;
 font-weight: 400;
@@ -872,6 +886,7 @@ width: 100%;
 width: 100%;
 max-width: var(--secmax) !important;
 padding: 6rem 6vw 2rem 6vw;
+margin: 0 auto;
 }
 #HCB_comment_box{
 width: 100%;
