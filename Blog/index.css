@@ -606,8 +606,6 @@ opacity: 0.8;
 font-size: 14px;
 }
 .code-box div p i{
-position: relative;
-bottom: -2px;
 font-size: 17px;
 margin-left: 2px;
 }
@@ -831,6 +829,18 @@ padding: 8px 15px;
 border: none;
 }
 
+@media(min-width: 600px){
+.sec-head{
+text-align: center;
+}
+.sec-head h1{
+position: relative;
+transform: translateX(-50%);
+left: 50%;
+border-right: 3px solid #5865f2;
+border-left: 3px solid #03aaab;
+padding: 0 10px;
+}}
 
 @media(min-width: 700px){
 .card{
