@@ -104,46 +104,11 @@ localStorage.setItem("theme", "light");
 }
 
 
-window.onscroll = () =>{
-const val = window.scrollY / 8;
-const value = 100 - val;
-var anime1 = document.getElementsByClassName("anime")[0];
-var anime2 = document.getElementsByClassName("anime")[1];
 
-if(value > -100/100){
-anime1.style.scale =`${value}%`; 
-anime2.style.scale =`${value}%`;
+/* custom function */
+function goTo(x){
+window.location = x;
 }
-
-
-/* for back to top button */
-if(val > 80){
-document.getElementById("back-to-top").style.display ="flex";	
-}
-else{
-document.getElementById("back-to-top").style.display ="none";	
-}
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
