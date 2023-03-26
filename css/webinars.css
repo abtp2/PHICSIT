@@ -136,11 +136,11 @@ margin: 4.2rem auto 3rem auto;
 
 
 
-
+/* second section */
 #second{
 width: 100%;
 max-width: calc(var(--secmax) + 1rem);
-padding: 2rem 6vw;
+padding: 2rem 2rem;
 margin: 3rem auto 0 auto;
 }
 #second .row{
@@ -151,9 +151,38 @@ align-items: center;
 flex-wrap: wrap;
 margin: 2rem auto;
 }
+
+
+
+
+/* third section */
+#third{
+width: 100%;
+max-width: calc(var(--secmax) + 1rem);
+padding: 2rem 2rem;
+margin: 3rem auto 0 auto;
+}
+#third .row{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+margin: 2rem auto;
+}
+
+
+
+
+
+
+
+
+
+/* card component */
 .card{
 width: 19rem;
-margin: 12px 2vw;
+margin: 12px 14px;
 border-radius: 8px;
 background: var(--cardbg);
 box-shadow: 0 1.5px 3px 2px rgba(0, 0, 0, 0.08);
@@ -214,10 +243,18 @@ color: var(--font);
 outline: 1px solid var(--font);
 opacity: 0.85;
 margin: 0 0 0 auto;
-transform: rotateY(180deg);
 display: flex;
 align-items: center;
 justify-content: center;
 }
+@media(min-width: 600px){
+.card{
+width: 18rem;
+}}
+@media(min-width: 1400px){
+.card{
+width: 19rem;
+}}
+
 
 
