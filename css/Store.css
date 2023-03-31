@@ -95,6 +95,11 @@ max-width: calc(var(--secmax) + 2rem);
 overflow-x: hidden;
 margin: 2rem auto 0 auto;
 }
+#second h4{
+font-weight: 500;
+font-size: 17px;
+text-align: center;		
+}
 .row{
 width: 100%;
 max-width: calc(var(--secmax) + 2rem);
