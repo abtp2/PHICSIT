@@ -121,11 +121,9 @@
 <div id="cart-nav"><span id="cart-close"><i class="bx bx-arrow-from-right"></i><p>Back</p></span>
 <h1>Your Cart<h1>			
 </div>				
-<h4 style="">No items in the cart 🤥</h4>
+<h4 style="display:none;">No items in the cart 🤥</h4>
 
-<div class="row">
-<!--  -->
-</div>
+<div class="row"></div>
 </div>
 
 
@@ -156,6 +154,7 @@ selector.onclick = () =>{
 const cardInner = event.currentTarget.closest(".card").innerHTML;
 const cartInner = cardInner.replace("Add to cart", "Remove item").replace("addcart-btn","removecart-btn");
 
+
 if(!document.getElementsByClassName("row")[1].innerHTML.includes(`<div class="card">${cartInner}</div>`)){
 document.getElementsByClassName("row")[1].innerHTML +=`<div class="card">${cartInner}</div>`;
 localStorage.setItem("cartData", document.getElementsByClassName("row")[1].innerHTML);
@@ -165,7 +164,7 @@ Toast.fire({
 	title: '<h1 style="font-size: 15px;opacity: 0.75; ">Item added to cart</h1>',
 	background: 'var(--footbg)',
 	color: 'var(--font)',
-});
+});toCheckNull();
 }
 else{
 Toast.fire({
@@ -173,7 +172,7 @@ Toast.fire({
 	title: '<h1 style="font-size: 15px;opacity: 0.75; ">Item already added</h1>',
 	background: 'var(--footbg)',
 	color: 'var(--font)',
-});
+});toCheckNull();
 }
 }}); // add to cart add button ended
 
@@ -184,28 +183,31 @@ Toast.fire({
 
 
 
+/* To check row innerHTML */
+function toCheckNull(){
+if(document.getElementsByClassName("row")[1].innerHTML ==""){
+document.querySelector("#cart-box h4").style.display ="block";
+document.getElementById("cart-open").classList.remove("cart-have-items");
+}
+else{
+document.querySelector("#cart-box h4").style.display ="none"; 
+document.getElementById("cart-open").classList.add("cart-have-items");
+}}
+
+
+
+
 
 function removeCart(){
 "use strict";
 const removeButtons = document.querySelectorAll(".removecart-btn");
-
-
-function toCheckNull(){
-if(document.getElementsByClassName("row")[1].innerHTML ==""){
-document.querySelector("#cart-box h4").style.display ="block"; 
-}
-else{
-document.querySelector("#cart-box h4").style.display ="none"; 
-}
-}
-setInterval(toCheckNull, 200);
-
+toCheckNull();
 
 
 removeButtons.forEach(button => {
   button.onclick = () => {
   const card = event.currentTarget.closest(".card"); 
-    
+  toCheckNull();
   Swal.fire({
 	title: '<h1 style="font-size: 22px;opacity: 0.75; ">Are you sure ?</h1>',
 	text: "You won't be able to revert this!",
@@ -213,15 +215,19 @@ removeButtons.forEach(button => {
 	background: 'var(--footbg)',
 	color: 'var(--font)',
 	showCancelButton: true,
-	confirmButtonText: 'Yes, delete it!',
+	confirmButtonText: 'Yes, remove it!',
 	cancelButtonText: 'No, cancel!',
 	reverseButtons: true
 }).then((result) => {
 if(result.isConfirmed){
   /* main removal */
-  card.style.display ="none";
-  document.getElementsByClassName("row")[1].innerHTML.replace(`<div class="card">${card.innerHTML}</div>`, "");
+  
+  var child = card;
+  var parent = child.parentNode;
+  parent.removeChild(child);
+  toCheckNull();
   localStorage.setItem("cartData", document.getElementsByClassName("row")[1].innerHTML);
+  toCheckNull();
   /* main removal */ 
 
   Swal.fire({
@@ -230,21 +236,11 @@ if(result.isConfirmed){
 	text: 'Item removed from cart.',
 	background: 'var(--footbg)',
 	color: 'var(--font)',
-	});}
+	}); toCheckNull();}
   }) //swal ended
   }// Remove button onclick ended
 });
 }
-
-
-
-
-
-
-
-
-
-
 </script>
 </body>
 </html>
