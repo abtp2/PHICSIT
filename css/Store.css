@@ -313,9 +313,12 @@ box-shadow: 0 5px 12px -5px var(--lsdw);
 #cart-box h4{
 font-weight: 500;
 font-size: 17px;
-padding-top: 5rem;
 display: none;
 text-align: center;
+position: relative;
+top: 15%;
+left: 50%;
+transform: translateX(-50%);
 }
 
 @media(min-width: 1100px){
