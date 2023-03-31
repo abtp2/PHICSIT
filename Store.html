@@ -85,8 +85,8 @@
  </span>
 </div>	
 
-<form>
-<input type="search" placeholder="search books...">
+<form onsubmit="event.preventDefault();">
+<input type="search" id="search-int" placeholder="search books...">
 </form>			
 </section>
 
@@ -96,6 +96,8 @@
 
 <!-- second section -->
 <section id="second">
+<h4 style="display: none;">No items founded 😌</h4>
+
 <div class="row">
 <!--<div class="card">
 		<div><img src="img/book.png" class="available"></div>
