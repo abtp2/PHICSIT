@@ -37,6 +37,14 @@ border-radius: 100%;
 #first div i:hover{
 box-shadow: inset 0 0 0 50px rgba(0,0,0,0.08), inset 0 0 0 50px rgba(255,255,255,0.15);	
 }
+.cart-have-items::after{
+content: "•";
+position: absolute;
+margin-top: -12px;
+margin-left: -2px;
+font-size: 25px;
+color: #5865f2;
+}
 #first form{
 display: none;
 width: calc(100% - 70px);
