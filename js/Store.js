@@ -80,41 +80,14 @@ x.classList.replace("bxs-sun", "bx-moon");
 
 
 
-/*  
-var localget = localStorage.getItem("cart");
-if(localget != null){
-const cartBooks =[localget];
-document.getElementsByClassName("row")[1].innerHTML = cartBooks;
-} */
 
-
-/*  
-  // Get the div where the stored cards should be displayed
-  const displayDiv = document.getElementsByClassName("row")[1];
-
-  // Loop through all the stored items in localStorage
-  for (let i = 0; i < localStorage.length; i++) {
-    // Get the card data from localStorage
-    const cardData = localStorage.getItem(localStorage.key(i));
-
-    // Create a new card element with removecart-btn and Remove item
-    const cardDiv = document.createElement('div');
-    cardDiv.classList.add("card");
-    cardDiv.innerHTML = cardData;
-    console.log(cardData);  
-    // Add the card to the displayDiv
-    displayDiv.appendChild(cardDiv);
-}
- */
- 
  
 
 var cartInner = localStorage.getItem("cartData");
 if(document.getElementsByClassName("row")[1]){
-document.getElementsByClassName("row")[1].innerHTML = cartInner;		
+document.getElementsByClassName("row")[1].innerHTML = cartInner;
+toCheckNull();
 }
-
-
 }//window.onload ended
 
 
