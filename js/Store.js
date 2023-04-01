@@ -61,6 +61,7 @@ jsArrow.onclick = function() {
 window.onload = function(){
 var y = localStorage.getItem("theme");
 var x = document.getElementById("bx-moon");
+initSlider();
 
 if(y =="dark"){
 document.body.classList.add("dark-theme");
@@ -139,6 +140,7 @@ document.querySelector("#first form input").click();
 document.onmouseup = (e) =>{
 var container = document.querySelector("#first form");
 if(!container.contains(e.target) && !document.getElementById("search-toggle").contains(e.target) && !document.querySelector("nav").contains(e.target) && !document.getElementsByClassName("row")[0].contains(e.target)){
+initSlider();
 showCards();
 slideUp(document.querySelector("#first form") , 100, searchBack());
 }}
@@ -162,7 +164,7 @@ document.querySelector("#first form input").value ="";
 /* 🔥🔥🔥🔥🔥🔥🔥 */
 const books =[
 {
-image: "img/book.png",
+image: ["img/book.png", "img/book.png", "img/book.png"],
 title:"Harry Potter and the Philosopher's Stone of Marry Reen",
 actualPrice: "219",
 offPrice: "399",
@@ -171,7 +173,7 @@ availability: "available",
 },
 
 {
-image: "img/book.png",
+image: ["img/book.png", "img/book.png", "img/book.png"],
 title:"Mario is a dummy text to illustrate the testimonials of the this website",
 actualPrice: "500",
 offPrice: "999",
@@ -180,7 +182,7 @@ availability: "available",
 },
 
 {
-image: "img/book.png",
+image: ["img/book.png", "img/book.png", "img/book.png"],
 title:"Looking for candidates with specific tech skills needed",
 actualPrice: "340",
 offPrice: "555",
@@ -189,7 +191,7 @@ availability: "available",
 },
 
 {
-image: "img/book.png",
+image: ["img/book.png", "img/book.png", "img/book.png"],
 title:"Phicsit is a community dedicated to helping people learn the tech skills",
 actualPrice: "280",
 offPrice: "499",
@@ -198,7 +200,7 @@ availability: "available",
 },
 
 {
-image: "img/book.png",
+image: ["img/book.png", "img/book.png", "img/book.png"],
 title:"Harry Potter and the Philosopher's Stone of Marry Reen",
 actualPrice: "219",
 offPrice: "399",
@@ -207,7 +209,7 @@ availability: "available",
 },
 
 {
-image: "img/book.png",
+image: ["img/book.png", "img/book.png", "img/book.png"],
 title:"Mario is a dummy text to illustrate the testimonials of the this website",
 actualPrice: "500",
 offPrice: "999",
@@ -226,7 +228,11 @@ const elem = document.createElement("div");
 const discount = Math.trunc((parseInt(books[i].offPrice) - parseInt(books[i].actualPrice))/books[i].offPrice*100);
 
 elem.classList.add("card");
-elem.innerHTML =`<div class="${i}"><img src="${books[i].image}" class="${books[i].availability}"></div>
+elem.innerHTML =`<div class="${i} main-carousel">
+				<img src="${books[i].image[0]}" class="carousel-cell">
+				<img src="${books[i].image[1]}" class="carousel-cell">
+				<img src="${books[i].image[2]}" class="carousel-cell">
+				</div>
 		<h1>${books[i].title}</h1>		
 		<span><p>-${discount}%</p><p>₹${books[i].actualPrice}</p><p>${books[i].offPrice}</p></span>		
 		<main class="review star${books[i].rate}">
@@ -253,13 +259,16 @@ document.getElementById("search-int").oninput=(e)=>{
 		const title = books[i].title.toLowerCase();
 		const elem = document.getElementsByClassName(`${i}`)[0].closest(".card");
 		if(e.target.value ===""){
-	 	elem.style.display = "block";
+	 	//elem.style.display = "block";
+	 	h_w_full(elem);
 		}
 		else{
 		   if (title.includes(query)) {
-			 elem.style.display = "block";
+			 //elem.style.display = "block";
+			 h_w_full(elem);
 			 }else{
-			 elem.style.display = "none";
+			 //elem.style.display = "none";
+			 h_w_0(elem);
 			 document.querySelector("#second h4").style.display ="block";}
 		}
 		
@@ -267,7 +276,7 @@ document.getElementById("search-int").oninput=(e)=>{
  
  
 /* Show/hide 'No matching books' message */
-const matchingCards = document.getElementsByClassName("row")[0].querySelectorAll(".card[style='display: block;']");
+const matchingCards = document.getElementsByClassName("row")[0].querySelectorAll('.card.matched');
 if(matchingCards.length === 0){
 document.querySelector("#second h4").style.display = "block";
 } else{
@@ -276,14 +285,24 @@ document.querySelector("#second h4").style.display = "none";}
 
 
 
-
+/* initialize Slider */
+function initSlider(){
+var imageSlider = document.querySelectorAll('.main-carousel');
+imageSlider.forEach(elem => {
+var flkty = new Flickity( elem, { 
+cellAlign: 'center', 
+wrapAround: true,
+});
+});
+}
 
 
 /* function to display all the cards */
 function showCards(){
 var cards = document.getElementsByClassName("row")[0].querySelectorAll(".card");
 cards.forEach(card => {
-card.style.display ="block";
+//card.style.display ="block";
+h_w_full(card);
 });
 document.querySelector("#second h4").style.display = "none";
 }
