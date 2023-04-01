@@ -6,6 +6,8 @@
 				<link rel="icon" type="image/jpg" href="img/logo.jpg">
 				<link rel="stylesheet" href="css/components.css">				
 				<link rel="stylesheet" href="css/Store.css">
+				<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+				<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>	
 				<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 				<script type="text/javascript">
 				(function(){emailjs.init("6QG32tZ_YqRJ19Tf7");})();</script>
@@ -86,7 +88,7 @@
 </div>	
 
 <form onsubmit="event.preventDefault();">
-<input type="search" id="search-int" placeholder="search books...">
+<input type="search" id="search-int" placeholder="Search books...">
 </form>			
 </section>
 
@@ -100,7 +102,12 @@
 
 <div class="row">
 <!--<div class="card">
-		<div><img src="img/book.png" class="available"></div>
+		<div class="main-carousel">
+		<img src="img/book.png" class="available carousel-cell">
+		<img src="img/book.png" class="available carousel-cell">
+		<img src="img/book.png" class="available carousel-cell">
+		</div>		
+		
 		<h1>Harry Potter and the Philosopher's Stone of Marry Reen</h1>		
 		<span><p>-45%</p><p>₹219</p><p>399</p></span>		
 		<main class="review star5">
@@ -160,7 +167,6 @@ const cartInner = cardInner.replace("Add to cart", "Remove item").replace("addca
 if(!document.getElementsByClassName("row")[1].innerHTML.includes(`<div class="card">${cartInner}</div>`)){
 document.getElementsByClassName("row")[1].innerHTML +=`<div class="card">${cartInner}</div>`;
 localStorage.setItem("cartData", document.getElementsByClassName("row")[1].innerHTML);
-
 Toast.fire({
 	icon: 'success',
 	title: '<h1 style="font-size: 15px;opacity: 0.75; ">Item added to cart</h1>',
@@ -243,6 +249,9 @@ if(result.isConfirmed){
   }// Remove button onclick ended
 });
 }
+</script>	
+<script>
+
 </script>
 </body>
 </html>
