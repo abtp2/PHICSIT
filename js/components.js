@@ -92,7 +92,7 @@ classes.style.ouline ="2px solid red";
 
 
 
-
+/* localStorage */
 function checkLocalStorageValue(value) {
   for (var i = 0; i < localStorage.length; i++) {
     var key = localStorage.key(i);
@@ -111,3 +111,26 @@ function getLocalStorageKeyByValue(value) {
   }
   return null;
 }
+/* localStorage */
+
+
+
+
+
+
+
+
+/* do height,width = 0 */
+function h_w_0(x){
+x.style.position ="absolute"; 
+x.style.top ="-9999px";
+x.classList.remove("matched");
+}
+/* do height,width = full */
+function h_w_full(x){
+x.style.position ="static";
+x.style.top ="0px";
+x.classList.add("matched");
+}
+
+
