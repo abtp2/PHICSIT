@@ -113,7 +113,7 @@ margin: 0 auto;
 .card{
 width: 19rem;
 margin: 12px 12px;
-padding: 0.9rem 0.9rem 0.85rem 0.9rem;
+padding: 0.9rem;
 border-radius: 8px;
 background: var(--cardbg);
 box-shadow: 0 1.5px 3px 2px rgba(0, 0, 0, 0.08);
@@ -122,19 +122,55 @@ display: flex;
 flex-direction: column;
 overflow: hidden;
 }
+
+/* flickity carousel */
+.main-carousel{
+width: 100%;
+}
+.main-carousel img{
+width: 100%;
+}
+.flickity-button{
+background: transparent; display: none !important;
+}
+.flickity-page-dots{ 
+bottom: 4px !important; 
+}
+.flickity-page-dots .dot{
+width: 9px !important;
+height: 9px !important;
+margin: 0 4px !important;
+opacity: 1;
+border: 1.5px solid var(--dbg) !important;
+background: transparent !important;
+}
+.flickity-page-dots .dot.is-selected{
+background: var(--dbg) !important;
+}
+
+.row:nth-of-type(2) .card div .flickity-page-dots{
+display: none !important;
+}
+.row:nth-of-type(2) .card div{
+padding-bottom: 0 !important;
+}
+/* flickity carousel */
+
+
 .card div{
 width: 100%;
-overflow: hidden;
+border-radius: 8px;
+padding-bottom: 10px;
+background: #fff;
 }
 .card div img{
 width: 100%;
-border-radius: 8px;
 }
 .card h1{
 font-size: 16px;
 font-weight: 500;
 line-height: 1.45;
-margin: 6px 0 4px 0;
+margin: 14px 0 4px 0;
 opacity: 0.8;
 }
 .card span:nth-of-type(1){
