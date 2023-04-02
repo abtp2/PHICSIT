@@ -165,35 +165,17 @@ document.querySelector("#first form input").value ="";
 const books =[
 {
 image: ["img/book.png", "img/book.png", "img/book.png"],
-title:"Harry Potter and the Philosopher's Stone of Marry Reen",
-actualPrice: "219",
-offPrice: "399",
+title:"Rich Dad Poor Dad ~ Robert Kiyodaki",
+actualPrice: "375",
+offPrice: "450",
 rate: "4-5",
 availability: "available",
 },
 
 {
 image: ["img/book.png", "img/book.png", "img/book.png"],
-title:"Mario is a dummy text to illustrate the testimonials of the this website",
-actualPrice: "500",
-offPrice: "999",
-rate: "3",
-availability: "available",
-},
-
-{
-image: ["img/book.png", "img/book.png", "img/book.png"],
-title:"Looking for candidates with specific tech skills needed",
-actualPrice: "340",
-offPrice: "555",
-rate: "5",
-availability: "available",
-},
-
-{
-image: ["img/book.png", "img/book.png", "img/book.png"],
-title:"Phicsit is a community dedicated to helping people learn the tech skills",
-actualPrice: "280",
+title:"Doglapan: The Hard Truth about Life and Start-Ups",
+actualPrice: "362",
 offPrice: "499",
 rate: "3",
 availability: "available",
@@ -201,8 +183,80 @@ availability: "available",
 
 {
 image: ["img/book.png", "img/book.png", "img/book.png"],
-title:"Harry Potter and the Philosopher's Stone of Marry Reen",
-actualPrice: "219",
+title:"Steve Jobs: The Exclusive Biography",
+actualPrice: "599",
+offPrice: "699",
+rate: "5",
+availability: "available",
+},
+
+{
+image: ["img/book.png", "img/book.png", "img/book.png"],
+title:"Elon Musk",
+actualPrice: "394",
+offPrice: "499",
+rate: "3",
+availability: "available",
+},
+
+{
+image: ["img/book.png", "img/book.png", "img/book.png"],
+title:"Atomic Habits: The life-changing million copy ~ James Clear",
+actualPrice: "436",
+offPrice: "500",
+rate: "4-5",
+availability: "available",
+},
+
+{
+image: ["img/book.png", "img/book.png", "img/book.png"],
+title:"The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life",
+actualPrice: "333",
+offPrice: "499",
+rate: "3",
+availability: "available",
+},
+
+{
+image: ["img/book.png", "img/book.png", "img/book.png"],
+title:"The Lean Startup: How Constant Innovation creates Radically Successful Businesses Eric",
+actualPrice: "646",
+offPrice: "799",
+rate: "3",
+availability: "available",
+},
+
+{
+image: ["img/book.png", "img/book.png", "img/book.png"],
+title:"Sapiens: A Brief History of Humankind",
+actualPrice: "309",
+offPrice: "399",
+rate: "3",
+availability: "available",
+},
+
+{
+image: ["img/book.png", "img/book.png", "img/book.png"],
+title:"The Hard Thing about Hard Thing: Building a Business When There are No Easy Awswers",
+actualPrice: "505",
+offPrice: "599",
+rate: "3",
+availability: "available",
+},
+
+{
+image: ["img/book.png", "img/book.png", "img/book.png"],
+title:"EINSTEIN: His Life and Universe",
+actualPrice: "445",
+offPrice: "599",
+rate: "3",
+availability: "available",
+},
+
+{
+image: ["img/book.png", "img/book.png", "img/book.png"],
+title:"Ikigai: The Japanese secret to a long and happy life [Hardcover] García, Héctor and Miralles, Francesc",
+actualPrice: "269",
 offPrice: "399",
 rate: "4-5",
 availability: "available",
@@ -210,15 +264,23 @@ availability: "available",
 
 {
 image: ["img/book.png", "img/book.png", "img/book.png"],
-title:"Mario is a dummy text to illustrate the testimonials of the this website",
-actualPrice: "500",
-offPrice: "999",
+title:"The Psychology of Money",
+actualPrice: "185",
+offPrice: "205",
 rate: "3",
 availability: "available",
 },
 ]
 //console.log(books[0].title);
 //discount: (parseInt(this.offPrice) - parseInt(this.actualPrice))/this.offPrice*100,
+
+
+
+
+
+
+
+
 
 
 
