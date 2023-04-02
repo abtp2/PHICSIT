@@ -160,11 +160,11 @@ const Toast = Swal.mixin({
 				
 document.querySelectorAll(".addcart-btn").forEach((selector) =>{
 selector.onclick = () =>{
-const cardInner = event.currentTarget.closest(".card").innerHTML;
-const cartInner = cardInner.replace("Add to cart", "Remove item").replace("addcart-btn","removecart-btn");
+const cardInner = event.currentTarget.closest(".card");
+const cartInner = cardInner.innerHTML.replace("Add to cart", "Remove item").replace("addcart-btn","removecart-btn");
 
 
-if(!document.getElementsByClassName("row")[1].innerHTML.includes(`<div class="card">${cartInner}</div>`)){
+if(!document.getElementsByClassName("row")[1].innerHTML.includes(cardInner.querySelector("h1").innerHTML)){
 document.getElementsByClassName("row")[1].innerHTML +=`<div class="card">${cartInner}</div>`;
 localStorage.setItem("cartData", document.getElementsByClassName("row")[1].innerHTML);
 Toast.fire({
