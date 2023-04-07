@@ -16,7 +16,7 @@
 <body>
 <!-- <div id="overlay"></div> -->					
 				
-  <nav>
+<nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
       <div class="logo"><a href="index.html"><img src="img/logo.jpg"></a></div>
@@ -26,7 +26,7 @@
           <i class="bx bx-x" id="nav-closer"></i>
         </div>
         <ul class="links">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
       
           
           <li>
@@ -34,8 +34,8 @@
             <i class='bx bxs-chevron-down htmlcss-arrow arrow'></i>
             <ul class="htmlCss-sub-menu sub-menu">
               <li><a href="jobs.html">Jobs</a></li>
-              <li><a href="#">Internships</a></li>
-              <li><a href="#">Freelance</a></li>
+              <li><a href="internships.html">Internships</a></li>
+         <!-- <li><a href="#">Freelance</a></li> -->
               <li class="more">
                 <span><a href="#">More</a>
                 <i class='bx bxs-chevron-right arrow more-arrow'></i>
@@ -72,6 +72,7 @@
       </div>      
     </div>
   </nav>
+
 
 
 
@@ -168,11 +169,11 @@
 </div><!-- buy body ended -->
 </main>
 
-
+<form>
 <div id="buy-form">
 <h1>Order Summary :</h1>	
 <span>
- <select id="states">
+ <select id="states" required>
  <option>Select State</option>
  <option value="up">Uttar Pradesh</option>
  <option value="uk">Uttarakhand</option>
@@ -185,7 +186,7 @@
  <option value="jha">Jharkhand</option>
  </select>	
  
- <select id="quantity">
+ <select id="quantity" required>
  <option>Quantity</option>
  <option value="1">1</option>
  <option value="2">2</option>
@@ -196,23 +197,24 @@
 </span>
 
 <span>
-<input type="text" placeholder="Enter your full name">
-<input type="email" placeholder="Enter your email (optional)">
+<input type="text" placeholder="Enter your full name" required>
+<input type="email" placeholder="Enter your email" required>
 </span>
 
 <span>
-<input type="number" placeholder="Enter your mobile number">
-<input type="email" placeholder="Any alternative number (optional)">
+<input type="number" placeholder="Enter contact number" required>
+<input type="number" placeholder="Any alternative number (optional)">
 </span>
 
-<input type="text" id="address" placeholder="Enter your full address">
+<input type="text" id="address" placeholder="Enter your full address" required>
 
 <span id="mode-span">
-<div><input type="radio" name="mode" id="mode-pay" checked><p>Online Payment</p></div>
-<div><input type="radio" name="mode" id="mode-cod"><p>Cash On Delivery</p></div>
+<div><input type="radio" name="mode" id="mode-pay" checked required><p>Online Payment</p></div>
+<div><input type="radio" name="mode" id="mode-cod" required><p>Cash On Delivery</p></div>
 </span>
-<button id="buy-btn">Proceed to Buy <i class="bx bx-link-external"></i></button>
+<button id="buy-btn" type="submit">Proceed to Buy <i class="bx bx-link-external"></i></button>
 </div>
+</form>
 </div>
 
 
