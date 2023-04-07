@@ -1,0 +1,265 @@
+.sec-head{
+width: 100%;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+.sec-head h1{
+font-size: 27px;
+font-family: fantasy;
+font-weight: 600;
+background: linear-gradient(20deg, #00d1d1, #5865f2);
+-webkit-text-fill-color: transparent; 
+-webkit-background-clip: text;
+width: fit-content;
+margin: 0 auto;
+border-right: 3px solid #5865f2;
+border-left: 3px solid #03aaab;
+padding: 0 10px;
+}
+.sec-head p{
+font-size: 19px;
+color: var(--font);
+line-height: 1.7;
+margin-top: 4px;
+font-weight: 500;
+font-family: cursive;
+}
+
+
+
+
+
+
+/* first */
+#first{
+width: 100%;
+background: var(--footbg);
+overflow-x: hidden;
+padding: 100px 0 30px 0;
+border-bottom: 0.5px solid var(--sdw);
+}
+#first-head{
+width: 100%;
+max-width: var(--secmax);
+display: flex;
+flex-direction: column;
+padding: 0 1.5rem;
+margin: 0 auto;
+}
+#first-head main{
+width: 80%;
+margin: 0 auto;
+position: relative;
+overflow: hidden;
+}
+
+#first-head img{
+width: 100%;
+height: 100%;
+margin: 0 auto;
+filter: drop-shadow(0 0 2px var(--sdw));
+}
+#first-head span{
+width: 100%;
+display: flex; 
+flex-direction: column;
+text-align: left;
+margin: 2rem 0 0 0;
+}
+#first-head span h1{
+font-size: 28px;		
+color: #5865f2;
+font-family: fantasy;
+line-height: 1.5;
+}
+#first-head span p{
+font-size: 15px;		
+color: var(--font);
+font-family: fantasy;
+line-height: 1.6;
+margin-top: 10px;
+}
+#first-head span button{
+width: 170px;
+padding: 12px 0;
+background: #5865f2;
+color: #fff;
+border-radius: 6px;
+font-size: 15px;
+font-weight: 500;
+letter-spacing: 0.2px;
+border: none;
+margin-top: 30px;
+}
+@media(min-width: 800px){
+#first{
+padding: 130px 0 50px 0;
+}
+#first-head{
+flex-direction: row-reverse;
+justify-content: space-between;
+}				
+#first-head main{
+width: 40%;
+margin: 0 0 0 1.2rem;
+}
+#first-head main img{
+width: 100%;
+}
+#first-head span{
+width: 45%;
+margin: 0 1.2rem 0 0;
+justify-content: center;
+}}
+
+
+
+
+
+
+
+
+
+/* second section */
+#second{
+width: 100%;
+max-width: var(--secmax);
+padding: 7rem 1.5rem 0 1.5rem;
+margin: 0 auto;
+}
+#second-head{
+width: 100%;
+display: flex;
+flex-direction: column;
+jjustify-content: space-between;
+}
+#second-head span{
+display: flex;
+flex-direction: column;
+}
+#second-head span h1{
+font-size: 27px;
+font-family: fantasy;
+font-weight: 600;
+color: var(--font);
+}
+#second-head span p{
+font-size: 19px;
+color: var(--font);
+line-height: 1.7;
+margin-top: 4px;
+font-weight: 500;
+font-family: cursive;
+}
+#second-head button{
+background: var(--font);
+color: var(--bg);
+padding: 10px 1rem;
+border-radius: 6px;
+font-size: 15px;
+border: none;
+width: 150px;
+height: 40px;
+margin-top: 1rem;
+}
+
+.row{
+width: 100%;
+margin: 3rem auto 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+}
+.card{
+width: 20rem;
+background: var(--cardbg);
+box-shadow: 0 1px 2px 1px var(--sdw);
+margin: 14px;
+border-radius: 6px;
+padding: 1rem;
+}
+.card .card-head{
+width: 100%;
+display: flex;
+align-items: center;
+box-shadow: 0 0.5px 2px 1px var(--sdw);
+padding: 0.9rem;
+border-radius: 6px;
+}
+.card .card-head img{
+width: 35px;
+height: 35px;
+border-radius: 100%;
+}
+img[src="img/facebook.png"]{
+background: #fff;
+}
+.card .card-head span{
+display: flex;
+align-items: center;
+flex-direction: column;
+margin-left: 12px;
+}
+.card .card-head span h1{
+font-size: 16px;
+}
+.card .card-head span h1 p{
+font-size: 14px;
+opacity: 0.8;
+line-height: 1.5;
+font-weight: 400;
+}
+
+.card-body{
+width: 100%;
+display: flex; 
+align-items: flex-start;
+justify-content: space-between;
+flex-direction: column;
+margin-top: 12px;
+}
+.card ul{
+margin-left: 1.05rem;
+margin-top: 12px;
+}
+.card ul li{
+font-size: 14.5px;
+opacity: 0.8;
+line-height: 1.6;
+font-weight: 401;
+}
+.card button{
+background: var(--font);
+color: var(--bg);
+padding: 10px 1rem;
+border-radius: 6px;
+font-size: 15px;
+border: none;
+width: 140px;
+height: 38px;
+margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 800px){
+#second-head{
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+#second-head button{
+margin: 0;
+}
+.card{
+width: 18rem;
+}}
