@@ -142,6 +142,82 @@
 
 
 
+<!-- buy-box -->
+<div id="buy-box">				
+<div id="buy-nav"><span id="buy-close"><i class="bx bx-arrow-from-right"></i><p>Back</p></span>
+<h1>Buy Now<h1>			
+</div>				
+
+<main>
+<div id="buy-head">
+<div><img src=""></div>			
+<span><img onclick="cgImg(this.getAttribute('src'))"><img onclick="cgImg(this.getAttribute('src'))"><img onclick="cgImg(this.getAttribute('src'))"></span>
+</div>
+
+<div id="buy-body">
+<h1></h1>		
+		<span><p></p><p></p><p></p></span>		
+		<main class="review">
+		<p>Review :</p>
+		<i class="bx bxs-star"></i>
+		<i class="bx bxs-star"></i>
+		<i class="bx bxs-star"></i>
+		<i class="bx bxs-star"></i>
+		<i class="bx bxs-star"></i>		
+		</main>
+</div><!-- buy body ended -->
+</main>
+
+
+<div id="buy-form">
+<h1>Order Summary :</h1>	
+<span>
+ <select id="states">
+ <option>Select State</option>
+ <option value="up">Uttar Pradesh</option>
+ <option value="uk">Uttarakhand</option>
+ <option value="him">Himanchal Pradesh</option>
+ <option value="pun">Punjab</option>
+ <option value="del">Delhi</option>
+ <option value="har">Haryana</option>
+ <option value="raj">Rajasthan</option>
+ <option value="guj">Gujrat</option>
+ <option value="jha">Jharkhand</option>
+ </select>	
+ 
+ <select id="quantity">
+ <option>Quantity</option>
+ <option value="1">1</option>
+ <option value="2">2</option>
+ <option value="3">3</option>
+ <option value="4">4</option>
+ <option value="5">5</option>
+ </select>
+</span>
+
+<span>
+<input type="text" placeholder="Enter your full name">
+<input type="email" placeholder="Enter your email (optional)">
+</span>
+
+<span>
+<input type="number" placeholder="Enter your mobile number">
+<input type="email" placeholder="Any alternative number (optional)">
+</span>
+
+<input type="text" id="address" placeholder="Enter your full address">
+
+<span id="mode-span">
+<div><input type="radio" name="mode" id="mode-pay" checked><p>Online Payment</p></div>
+<div><input type="radio" name="mode" id="mode-cod"><p>Cash On Delivery</p></div>
+</span>
+<button id="buy-btn">Proceed to Buy <i class="bx bx-link-external"></i></button>
+</div>
+</div>
+
+
+
+
 
 
 
@@ -172,7 +248,7 @@ Toast.fire({
 	title: '<h1 style="font-size: 15px;opacity: 0.75; ">Item added to cart</h1>',
 	background: 'var(--footbg)',
 	color: 'var(--font)',
-});toCheckNull();
+});toCheckNull(); setBuyBtn();
 }
 else{
 Toast.fire({
@@ -180,7 +256,7 @@ Toast.fire({
 	title: '<h1 style="font-size: 15px;opacity: 0.75; ">Item already added</h1>',
 	background: 'var(--footbg)',
 	color: 'var(--font)',
-});toCheckNull();
+});toCheckNull(); setBuyBtn();
 }
 }}); // add to cart add button ended
 
@@ -210,7 +286,7 @@ function removeCart(){
 "use strict";
 const removeButtons = document.querySelectorAll(".removecart-btn");
 toCheckNull();
-
+setBuyBtn();
 
 removeButtons.forEach(button => {
   button.onclick = () => {
