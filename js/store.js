@@ -138,6 +138,7 @@ document.querySelector("#first form input").focus();
 document.querySelector("#first form input").click();
 }
 
+if(window.matchMedia("(max-width: 700px)").matches){
 document.onmouseup = (e) =>{
 var container = document.querySelector("#first form");
 if(!container.contains(e.target) && !document.getElementById("search-toggle").contains(e.target) && !document.querySelector("nav").contains(e.target) && !document.getElementsByClassName("row")[0].contains(e.target)){
@@ -145,6 +146,8 @@ initSlider();
 showCards();
 slideUp(document.querySelector("#first form") , 100, searchBack());
 }}
+} // if condition 
+
 
 function searchBack(){
 showCards();
