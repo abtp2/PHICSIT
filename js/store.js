@@ -62,6 +62,7 @@ window.onload = function(){
 var y = localStorage.getItem("theme");
 var x = document.getElementById("bx-moon");
 initSlider();
+setBuyBtn();
 
 if(y =="dark"){
 document.body.classList.add("dark-theme");
@@ -394,11 +395,64 @@ slideUp(document.querySelector("#cart-box") , 400);
 
 
 
+/* buy btn set opening and closing */
+function setBuyBtn(){
+document.getElementsByClassName("row")[0].querySelectorAll(".buy-btn").forEach(button => {
+button.onclick = () => {
+buy();
+}
+});
+document.getElementsByClassName("row")[1].querySelectorAll(".buy-btn").forEach(button => {
+button.onclick = () => {
+buy();
+} 
+});
+} // function ended
+
+
+
+
+
+/* buy box closing */
+document.getElementById("buy-close").onclick = () =>{
+document.body.style.overflowY ="auto";
+slideUp(document.querySelector("#buy-box") , 400);
+}
 
 
 
 
 
 
+/* buy function  */
+function buy(){
+document.body.style.overflowY ="hidden";
+slideDown(document.querySelector("#buy-box") , 400);
+document.getElementById("buy-box").scrollTo(0,0);
+
+// for buy carousel 
+document.querySelector("#buy-head div img").src = event.currentTarget.closest(".card").querySelector("img:nth-of-type(1)").getAttribute("src");
+document.querySelector("#buy-head span img:nth-of-type(1)").src = event.currentTarget.closest(".card").querySelector("img:nth-of-type(1)").getAttribute("src");
+document.querySelector("#buy-head span img:nth-of-type(2)").src = event.currentTarget.closest(".card").querySelector("img:nth-of-type(2)").getAttribute("src");
+document.querySelector("#buy-head span img:nth-of-type(3)").src = event.currentTarget.closest(".card").querySelector("img:nth-of-type(3)").getAttribute("src");
 
 
+// for h1
+document.querySelector("#buy-body h1").innerHTML = event.currentTarget.closest(".card").querySelector("h1").innerHTML;
+// for discount 
+document.querySelector("#buy-body span p:nth-of-type(1)").innerHTML = event.currentTarget.closest(".card").querySelector("span p:nth-of-type(1)").innerHTML;
+// for actualPrice
+document.querySelector("#buy-body span p:nth-of-type(2)").innerHTML = event.currentTarget.closest(".card").querySelector("span p:nth-of-type(2)").innerHTML;
+// for offPrice 
+document.querySelector("#buy-body span p:nth-of-type(3)").innerHTML = event.currentTarget.closest(".card").querySelector("span p:nth-of-type(3)").innerHTML;
+// for rate 
+document.querySelector("#buy-body main").className = event.currentTarget.closest(".card").querySelector("main").getAttribute("class");
+}
+
+function cgImg(x){
+document.querySelector("#buy-head div img").src = x;
+document.querySelectorAll("#buy-head span img").forEach(i => {
+i.style.opacity = 0.5;
+});
+event.currentTarget.closest("img").style.opacity = 1;
+}
