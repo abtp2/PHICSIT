@@ -82,7 +82,29 @@ pointer-events: all;
 color: #fff;
 opacity: 0.9;
 }
-
+@media(min-width: 700px){
+#first form{
+display: block;
+width: 300px;
+background: transparent;
+margin: -52px 70px 0 auto;
+border: 2px solid #5865f2;
+border-radius: 8px;
+}
+#first form input{
+color: var(--font);
+padding: 0 1rem;
+}
+input[type="search"]::-webkit-search-cancel-button{
+filter: var(--invert);
+}
+#search-toggle{
+display: none;
+}
+#first form input::placeholder{
+color: var(--font);
+opacity: 0.8;
+}}
 
 
 
@@ -612,7 +634,7 @@ outline: 0.1px solid var(--dsdw);
 box-shadow: 0 2px 5px 1px var(--sdw);
 margin: 2rem auto;
 border-radius: 6px;
-padding: 10px 1rem;
+padding: 12px 1rem;
 display: flex; 
 align-items: center;
 justify-content: center;
@@ -623,6 +645,7 @@ font-size: 18px;
 font-weight: 500;
 line-height: 1.5;
 opacity: 0.8;
+margin-bottom: 5px;
 }
 #buy-form span{
 width: 100%;
@@ -657,7 +680,7 @@ opacity: 0.8;
 #mode-span{
 flex-direction: row !important;
 justify-content: space-between !important;
-margin: 10px 10px 0 10px;
+margin: 14px 10px 0 10px;
 }
 #mode-span div{
 display: flex !important;
@@ -683,18 +706,6 @@ margin-left: 5px;
 text-align: left;
 }
 
-@media(min-width: 850px){
-#buy-form span{	
-flex-direction: row;			
-}
-#address{
-width: calc(100% - 20px) !important;
-}
-#mode-span{
-width: calc(100% - 20px) !important;
-}}
-
-
 #buy-btn{
 background: #5865f2;
 padding: 11px 12px;
@@ -702,8 +713,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 4px;
-margin-right: 8px;
-margin-top: 1.5rem;
+margin: 1.7rem auto 0 auto;
 width: 100%;
 border: none;
 color: #fff;
@@ -716,5 +726,16 @@ font-size: 16px;
 margin-left: 5px;
 }
 
+
+@media(min-width: 850px){
+#buy-form span{	
+flex-direction: row;			
+}
+#address{
+width: calc(100% - 20px) !important;
+}
+#mode-span{
+width: calc(100% - 20px) !important;
+}}
 
 

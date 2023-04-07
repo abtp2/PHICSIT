@@ -27,6 +27,8 @@ font-family: arial;
 --footlbg: #f6f6f6;
 --footdbg: #192232;
 --secmax: 1000px;
+--linvert: invert(0);
+--dinvert: invert(1);
 }
 @media(min-width: 1440px){
 :root{--secmax: 1100px;
@@ -43,6 +45,7 @@ font-family: arial;
 
 --cardbg: var(--cardlbg);
 --footbg: var(--footlbg);
+--invert: var(--linvert);
 }
 .dark-theme{
 --bg: var(--dbg);
@@ -55,6 +58,7 @@ font-family: arial;
 
 --cardbg: var(--carddbg);
 --footbg: var(--footdbg);
+--invert: var(--dinvert);
 }
 
 
