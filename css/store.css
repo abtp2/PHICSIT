@@ -2,12 +2,12 @@
 width: 90%;
 max-width: calc(var(--secmax) + 2rem);
 overflow-x: hidden;
-padding: 90px 0 0 0;
+padding: 70px 0 0 0;/* 90px */
 position: sticky;
 top: 0;
 margin: 0 auto;
 z-index: 5;
-background: var(--bg);
+background: transparent;
 overflow: visible;
 }
 #first div{
@@ -16,8 +16,8 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 background: var(--cardbg);
-padding: 8px 1rem;
-border-radius: 8px;
+padding: 10px 1rem;
+border-radius: 0 0 8px 8px;
 border: 0.5px solid var(--sdw);
 box-shadow: 0 8px 12px -10px var(--lsdw);
 }
@@ -115,13 +115,28 @@ opacity: 0.8;
 width: 100%;
 max-width: calc(var(--secmax) + 2rem);
 overflow-x: hidden;
-margin: 2rem auto 0 auto;
+margin: 1rem auto 0 auto;
 }
 #second h4{
 font-weight: 500;
 font-size: 17px;
 text-align: center;		
 }
+.banner{
+width: 90% !important;
+max-width: calc(var(--secmax) - 4rem) !important;
+border-radius: 3px;
+overflow: hidden;
+margin: 10px auto 1rem auto !important;
+}
+.banner img{
+width: 100% !important;
+margin: 0 auto !important;	
+}
+@media(min-width: 1000px){
+.banner{
+border-radius: 8px;
+}}
 .row{
 width: 100%;
 max-width: calc(var(--secmax) + 2rem);
@@ -131,7 +146,7 @@ justify-content: center;
 align-items: flex-start;
 align-content: flex-start;
 flex-wrap: wrap;
-margin: 0 auto;
+margin: 0 auto 0 auto;
 }
 .card{
 width: 19rem;
@@ -156,14 +171,14 @@ width: 100%;
 .flickity-button{
 background: transparent; display: none !important;
 }
-.flickity-page-dots{ 
-bottom: 4px !important; 
+.row .flickity-page-dots{ 
+bottom: 4px !important;
 }
 .flickity-page-dots .dot{
 width: 9px !important;
 height: 9px !important;
 margin: 0 4px !important;
-opacity: 1;
+opacity: 18px;
 border: 1.5px solid var(--dbg) !important;
 background: transparent !important;
 }
@@ -673,6 +688,10 @@ margin: 14px 10px 0 10px;
 border: none;
 border-bottom: 0.1px solid var(--font);
 }
+#buy-form input:focus{
+border-color: #5865f2;
+border-width: 2px;
+}
 #buy-form input::placeholder{
 color: var(--font);
 opacity: 0.8;
@@ -687,7 +706,6 @@ display: flex !important;
 flex-direction: row !important;
 align-items: flex-start !important;
 width: 100%;
-white-space: nowrap;
 text-align: left !important;
 margin: 8px 0 0 0;
 padding: 0 5px;
@@ -706,6 +724,23 @@ margin-left: 5px;
 text-align: left;
 }
 
+#buy-form label{
+width: fit-content;
+text-align: left;
+display: flex;
+align-items: center;
+/* background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2)), linear-gradient(#5865f2, #5865f2 ); */
+margin: 0 auto 0 0;
+font-size: 14.5px;
+padding: 9px 5px;
+border-radius: 4px;
+color: var(--font);
+}
+#buy-form label p{
+font-weight: 500;
+margin-left: 5px;
+}
+
 #buy-btn{
 background: #5865f2;
 padding: 11px 12px;
@@ -713,7 +748,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 4px;
-margin: 1.7rem auto 0 auto;
+margin: 12px auto 0 auto;
 width: 100%;
 border: none;
 color: #fff;
@@ -735,6 +770,12 @@ flex-direction: row;
 width: calc(100% - 20px) !important;
 }
 #mode-span{
+width: calc(100% - 20px) !important;
+}
+#buy-form label{
+margin-left: 10px;
+}
+#buy-btn{
 width: calc(100% - 20px) !important;
 }}
 
