@@ -1,6 +1,6 @@
 const concateSearch = [
 {
-text: "Best programming language to learn in 2023",
+text: "Best programming language to learn in 2023 ~ Jyoti Bhasin",
   img: "../img/jyoti.jpg", 
   link: "index.html"
 },

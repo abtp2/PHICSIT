@@ -615,13 +615,13 @@ color: #03aaab;
 
 .code-box pre{
 width: 100%;
-opacity: 0.9;
+opacity: 0.95;
 }
 .code-box pre code{
 width: calc(100% - 0.4rem);
 margin: 0 auto;
 overflow: scroll;
-font-size: 13px;
+font-size: 14px;
 font-weight: 400;
 line-height: 1.65;
 letter-spacing: 0.2px;
