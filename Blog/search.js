@@ -1,28 +1,8 @@
 const concateSearch = [
 {
-text: "Hello I am Jyoti Bhasin and I Impressive Thinking about the latest",
+text: "Best programming language to learn in 2023",
   img: "../img/jyoti.jpg", 
-  link: "b2.html"
-},
-{
-  text: "Hello I am Deependra Gaur, i am founder of phicsit",
-  img: "../img/deependraGaur.jpeg", 
-  link: "b3.html"	
-},
-{
-  text: "Hello I am phicsit and I Impressive Thinking about the latest",
-  img: "../img/logo.jpg", 
-  link: "b2.html"	
-},
-{
-  text: "Hello I am Ashutosh Pandey, from wideQutar",
-  img: "../img/ashu.jpg", 
-  link: "b3.html"	
-},
-{
-  text: "VimalX, bolo zubaan kesari",
-  img: "../img/vimal.jpg", 
-  link: "b3.html"	
+  link: "index.html"
 },
 ];
 
@@ -136,4 +116,3 @@ function debounce(func, wait) {
 
 document.getElementById("search-int").addEventListener("input", debounce(updateSearchResults, 50));
 document.getElementById("search-form").onsubmit = (e) =>{e.preventDefault();}
-

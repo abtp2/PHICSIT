@@ -58,6 +58,7 @@ window.onload = function(){
 var y = localStorage.getItem("theme");
 var x = document.getElementById("bx-moon");
 document.getElementById("copy-date").innerHTML = new Date().getFullYear();
+document.getElementById("comment-count").innerHTML = document.getElementsByClassName("comment").length;
 
 if(y =="dark"){
 document.body.classList.add("dark-theme");
@@ -142,6 +143,14 @@ Name:"Ashutosh Pandey",
 Img:"../img/ashu.jpg",
 About:"Aspiring front-end developer and self-taught coder. Dedicated to building websites that not only look great but also function flawlessly."
 }
+var JyotiAuthor = {
+Name:"Jyoti Bhasin",
+Img:"../img/jyoti.jpg",
+About:`Enthusiastic Coder/Technical Content Writer.
+Building a better tomorrow with every line of code`,
+}
+
+
 
 
 function author(x){

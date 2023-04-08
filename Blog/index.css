@@ -257,7 +257,7 @@ margin-left: 5px;
 color: #5865f2;
 }
 #search-result::-webkit-scrollbar{
-width: 8px;
+width: 5px;
 background: var(--bg);
 border-radius: 0 10px 10px 0;
 }
@@ -490,7 +490,7 @@ font-weight: 600;
 .main-heading{
 text-align: left;
 line-height: 1.5;
-font-size: 26px;
+font-size: 24px;
 font-family: 'Source Serif Pro', serif;
 font-weight: 400 !important;
 letter-spacing: 0.5px;
@@ -499,7 +499,7 @@ letter-spacing: 0.5px;
 text-align: left;
 line-height: 1.7;
 font-size: 15px;	
-font-weight: 399;
+font-weight: 400;
 font-family: sans-serif;
 }
 .main-li{
@@ -1003,7 +1003,6 @@ pointer-events: none !important;
 #HCB_comment_box{
 padding: 2.2rem 3.5rem !important;
 }}	
-
 
 
 
