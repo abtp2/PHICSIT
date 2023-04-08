@@ -360,6 +360,15 @@ cellAlign: 'center',
 wrapAround: true,
 });
 });
+
+var imageSlider = document.querySelectorAll('.banner');
+imageSlider.forEach(elem => {
+var flkty = new Flickity( elem, { 
+cellAlign: 'center', 
+wrapAround: true,
+autoPlay: 2500,
+});
+});
 }
 
 
