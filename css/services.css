@@ -153,11 +153,11 @@ border: 6px solid #4e65eb;
 
 .card img{
 font-size: 50px;
-width: 75px;
-height: 75px;
+width: 70px;
+height: 70px;
 background: #5865f2;
-padding: 10px;
 color: #fff;
+padding: 10px;
 border-radius: 100%;
 display: flex;
 align-items: center;
@@ -165,8 +165,9 @@ justify-content: center;
 }
 
 .card h1{
-margin-top: 1.5rem;
-font-size: 24px;
+margin-top: 1.2rem;
+margin-bottom: 5px;
+font-size: 22px;
 opacity: 0.9;
 }
 .card span{
@@ -185,10 +186,10 @@ margin-right: 8px;
 }
 
 .card p{
-margin-top: 10px;
-font-size: 15.4px;
+margin-top: 12px;
+font-size: 15px;
 opacity: 0.75;
-line-height: 1.5;
+line-height: 1.55;
 }
 .card button{
 width: 160px;
@@ -200,7 +201,7 @@ font-size: 15px;
 font-weight: 500;
 letter-spacing: 0.2px;
 border: none;
-margin-top: 12px;
+margin-top: 17px;
 }
 .unavailable{
 background: var(--sdw) !important;
