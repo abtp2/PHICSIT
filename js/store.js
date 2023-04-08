@@ -363,6 +363,10 @@ wrapAround: true,
 }
 
 
+
+
+
+
 /* function to display all the cards */
 function showCards(){
 var cards = document.getElementsByClassName("row")[0].querySelectorAll(".card");
