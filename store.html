@@ -99,9 +99,16 @@
 
 <!-- second section -->
 <section id="second">
-<h4 style="display: none;">No items founded 😌</h4>
-
 <div class="row">
+<div class="banner main-carousel">
+<img src="img/banner1.jpg">
+<img src="img/banner2.jpg">
+<img src="img/banner1.jpg">
+<img src="img/banner2.jpg">
+</div>
+<h4 style="display: none;margin-top: 1rem;">No items founded 😌</h4>
+
+
 <!--<div class="card">
 		<div class="main-carousel">
 		<img src="img/book.png" class="available carousel-cell">
@@ -174,25 +181,23 @@
 <h1>Order Summary :</h1>	
 <span>
  <select id="states" required>
- <option>Select State</option>
- <option value="up">Uttar Pradesh</option>
- <option value="uk">Uttarakhand</option>
- <option value="him">Himanchal Pradesh</option>
- <option value="pun">Punjab</option>
- <option value="del">Delhi</option>
- <option value="har">Haryana</option>
- <option value="raj">Rajasthan</option>
- <option value="guj">Gujrat</option>
- <option value="jha">Jharkhand</option>
+ <option value="up">State : Uttar Pradesh</option>
+ <option value="uk">State : Uttarakhand</option>
+ <option value="him">State : Himanchal Pradesh</option>
+ <option value="pun">State : Punjab</option>
+ <option value="del">State : Delhi</option>
+ <option value="har">State : Haryana</option>
+ <option value="raj">State : Rajasthan</option>
+ <option value="guj">State : Gujrat</option>
+ <option value="jha">State : Jharkhand</option>
  </select>	
  
- <select id="quantity" required>
- <option>Quantity</option>
- <option value="1">1</option>
- <option value="2">2</option>
- <option value="3">3</option>
- <option value="4">4</option>
- <option value="5">5</option>
+ <select id="quantity" onchange="getValue()" required>
+ <option value="1">Quantity : 1</option>
+ <option value="2">Quantity : 2</option>
+ <option value="3">Quantity : 3</option>
+ <option value="4">Quantity : 4</option>
+ <option value="5">Quantity : 5</option>
  </select>
 </span>
 
@@ -212,6 +217,10 @@
 <div><input type="radio" name="mode" id="mode-pay" checked required><p>Online Payment</p></div>
 <div><input type="radio" name="mode" id="mode-cod" required><p>Cash On Delivery</p></div>
 </span>
+<br>
+<label>Amount : <p id="bill-amt">₹88</p></label>
+<label>Delivery charge : <p id="bill-del">₹88</p></label>
+<label>Total amount : <p id="bill-total">₹8888</p></label>
 <button id="buy-btn" type="submit">Proceed to Buy <i class="bx bx-link-external"></i></button>
 </div>
 </form>
