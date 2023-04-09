@@ -535,3 +535,12 @@ document.getElementById("nav-closer").click();
 function goShow(x){
 document.querySelector(x).style.top = "0px";	document.getElementById("nav-closer").click();		
 }
+
+
+document.querySelectorAll(".card-link").forEach((selector) =>{
+selector.onclick = () =>{
+window.location ="services.html";
+}});
+
+
+
