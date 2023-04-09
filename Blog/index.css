@@ -311,6 +311,7 @@ border: 0.5px solid var(--sdw);
 box-shadow: 0 0 20px 0.5px var(--lsdw);
 }
 .author-box{
+width: fit-content;
 display: flex;
 align-items: center;
 }
@@ -487,6 +488,14 @@ font-weight: 600;
 
 
 
+.main-title{
+text-align: left;
+line-height: 1.6;
+font-size: 28px;
+font-family: fantasy;
+font-weight: 600 !important;
+letter-spacing: 0.5px;
+}
 .main-heading{
 text-align: left;
 line-height: 1.5;
@@ -1003,7 +1012,6 @@ pointer-events: none !important;
 #HCB_comment_box{
 padding: 2.2rem 3.5rem !important;
 }}	
-
 
 
 
