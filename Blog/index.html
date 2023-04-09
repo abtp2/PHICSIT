@@ -2,36 +2,32 @@
 <html lang="en">
 <head>
 				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>				
+				<link rel="icon" type="image/jpg" href="img/logo.jpg">
+				<link rel="stylesheet" href="css/components.css">				
+				<link rel="stylesheet" href="css/index.css">
+				<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+				<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>	
+				<link rel="stylesheet" href="css/aos.css">
+				<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+				<script type="text/javascript">
+				(function(){emailjs.init("6QG32tZ_YqRJ19Tf7");})();</script>
 				<title>PHICSIT</title>
-				<link rel="icon" type="image/jpg" href="../img/logo.jpg">
-				<link rel="stylesheet" href="../css/components.css">
-				<link rel="stylesheet" href="index.css">
-				<link rel="preconnect" href="https://fonts.googleapis.com">
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-				<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
-				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/tokyo-night-dark.min.css">
 </head>
 <body>
-<!-- anime balls -->				
-<div class="anime" id="anime2"></div>
-<div class="anime" id="anime1"></div>		
+<!-- <div id="overlay"></div> -->					
 				
-				
-
-
-<!-- navbar -->
 <nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
-      <div class="logo"><a href="index.html"><img src="../img/logo.jpg"></a></div>
+      <div class="logo"><a href="index.html"><img src="img/logo.jpg"></a></div>
       <div class="nav-links">
         <div class="sidebar-logo">
-          <span class="logo-name"><img src="../img/logo.jpg"></span>
+          <span class="logo-name"><img src="img/logo.jpg"></span>
           <i class="bx bx-x" id="nav-closer"></i>
         </div>
         <ul class="links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="#" class="active-link">Home</a></li>
       
           
           <li>
@@ -63,7 +59,7 @@
               <li><a href="#">Complete Website</a></li>
             </ul>
           </li> -->
-          <li><a href="Blog/index.html" class="active-link">Blogs</a></li>                    
+          <li><a href="Blog/index.html">Blogs</a></li>                    
           <li><a href="services.html">Services</a></li>
           <li><a href="store.html">Store</a></li>
           
@@ -82,73 +78,9 @@
 
 
 
-<!-- page scroll progress bar -->				
-<div id="scroll-progress">
- <div></div> 
-</div>				
+<!-- https://logo.uplead.com/flipkart.com  -->
 
 
-
-
-<!-- first main heading -->
-<div id="first-main-head">
- <form id="search-form">
- <span>
- <input type="text" id="search-int" placeholder="Search Articles..." required>
- <button type="submit"><i class="bx bx-search"></i></button>
- </span>
-<!-- search results --> 
- <div id="search-result">
- <!--  -->
- </div>
- </form>
-
-
- 
- <select id="cat-select">
- 	<option value="#">Categories</option>
- 	<option value="cat-WebDev.html">Web Development</option>
- 	<option value="#">Web Design</option>
- 	<option value="#">Programming</option>
- </select>
-</div>				
-				
-				
-
-<!-- navbar 
-<div id="first-logo-div">
-	<img src="../img/logo.jpg">
-	<div>
-	 <button onclick="goTo('../index.html')">Our Website</button>
-	 <button id="theme-toggler">Change Theme <i class="bx bx-moon" id="bx-moon"></i></button>
-	</div>
-</div>
- -->
-
-
-
-
-<!-- author div -->
-<div id="author-detail">
-<i class="bx bx-x"></i>
- <div id="author-img">
- <img src="">
- <span>
- <h1></h1>
- <p>---- Author</p></span>
- </div>
- 
- <p id="author-detail-p"></p>
- 
- <div id="author-links">
- <p>Find elsewhere :</p> 
- <span>
-  <a href="https://twitter.com/heyajyotii" class="bx bxl-twitter"></a>
-  <a href="https://www.linkedin.com/in/jyoti-bhasin-7840991ba" class="bx bxl-linkedin"></a>
- </span>
- </div>
-</div>
-<!-- author details div ended -->
 
 
 
@@ -156,235 +88,93 @@
 
 
 <!-- first section -->
-<section id="first" class="section">
-<div class="author-box" onclick="author(JyotiAuthor)">
- <img src="../img/jyoti.jpg">
- <span>
-  <h1>Jyoti Bhasin <i class="bx bx-link-external"></i></h1>
-  <p>---- Author</p>
- </span>
+<section id="first-sec">
+<div id="anime-left" class="anime"></div>
+<div id="anime-right" class="anime"></div>
+
+<div id="first-card">
+	<img src="img/logo.jpg" id="first-card-logo" class="animate__animated">	
+	<h1>PHICSIT</h1>
+	<p>Our community is a platform for personal and professional development, where individuals can learn new skills, access resources, and receive guidance in finding employment or pursuing entrepreneurial ventures.</p>	
+	<div id="first-card-buts">
+		<button onclick="goTo('#second-sec')">Get Started</button>
+		<button onclick="goTo('Blog/index.html')" class="new-bulb">Our Blogs</button>
+	</div>	
+	
+	<div id="first-social-icons">
+	<a href="#" class="bx bxl-facebook"></a>
+	<a href="https://twitter.com/PHICSIT" class="bx bxl-twitter"></a>
+	<a href="https://www.instagram.com/phicsit.in/" class="bx bxl-instagram-alt"></a>
+	<a href="#" class="bx bxl-linkedin"></a>
+	<a href="https://discord.gg/EhdhdA4F4H" class="bx bxl-discord-alt"></a>
+	</div>
+</div>				
+</section>
+
+
+
+
+
+<!-- second section-->
+<section id="second-sec">
+<div id="sec-head-box">
+<h1>OUR SERVICES</h1>				
+<p>what services we provide ?</p>
 </div>
-				
-<div class="date-box">
-	<p><i class="bx bx-calendar"></i><span>Date : </span>08-04-2023</p>
-	<p><i class="bx bx-book-content"></i><span>Title : </span>Best programming language to learn in 2023</p>		
-</div>			
 
-<!--  
-<h1 class="main-heading mt-8">Unlock the Power of Asynchronous Code</h1> -->
-<p class="main-para mt-8">
-What is the best programming language to learn in 2023? Seems like a tough question? Let's make it easier. Although there are a lot of languages like python, Java, JavaScript, CPP, kotlin etc, in high demand, you may choose to go with Python if you're a beginner and just want to get familiar with the basics of a programming language. It will be a good start. 
-</p>
-<p class="main-para mt-3">Here are seven reasons why beginners should consider learning Python:</p>
+<div id="second-row">
+<img src="img/index_service.png">
+<span>
+<h1>Why choose us ?</h1>		
+<p>Our freelance service is committed to providing the best possible service to our clients. We deliver high-quality work that meets the needs and expectations of our clients.<br>Let us know how we can help you!</p>		
+<button onclick="goTo('#second')">Choose services</button>
+</span>	
+</div>
 
 
-
-<h1 class="main-heading mt-8">1. Ease of learning :</h1>
-<p class="main-para mt-1">
-Python's clear and readable syntax makes it an ideal first programming language for beginners. In fact, many users are able to master the fundamentals of Python in just a few days. With numerous guides and tutorials available, it's easy to get started with Python.
-Below is the syntax for python : 
-</p>
-<div class="code-box mt-3">
- <div>
- <p>Python</p>
- <p class="copy-code">Copy <i class="bx bx-copy"></i></p>
- </div>				
-<pre><code class="language-python code">print("Hello, world !")
-
-# Output: Hello, world !</code></pre>
-</div><!-- code box -->
-
-
-
-
-
-<!--  
-<ul class="main-li">
-	<li>Better error handling: Promises provide a built-in way to handle errors, making it easier to write code that is robust and reliable.	</li>
-	<li>More readable code: By using Promises and Async/Await, you can write code that is more concise and easier to read, improving its overall quality.</li>
-	<li>Improved performance: Asynchronous code can significantly improve the performance of your applications, especially when dealing with I/O operations.</li>
-</ul> -->
-
-
-<h1 class="main-heading mt-8">2. Minimal coding required :</h1>
-<p class="main-para mt-1">
-Python takes a minimalist approach to programming, meaning that it requires less code than many other programming languages. This makes it an exciting option for developers around the world.
-</p>
-<div class="code-box mt-3">
- <div>
- <p>Python</p>
- <p class="copy-code">Copy <i class="bx bx-copy"></i></p>
- </div>				
-<pre><code class="language-python code">x = 8
-if x == 8:
-  print("Number is 8")
-else:
-  print("Number is not 8")
+<div class="row">
+   <div class="card carousel-cell">
+   <img src="img/c-web_dev.jpg"> 
+		<div class="card-body"> 
+		<h3>Web Development</h3> 
+		<p class="card-text">You can get interacted in web development through our startup with help of other peoples</p> 
+		<a class="card-link">Get Started</a></div></div>
 		
-# Output : Number is 8 
-</code></pre>
-</div><!-- code box -->
-
-
-
-<h1 class="main-heading mt-8">3. Constantly evolving :</h1>
-<p class="main-para mt-1">
-Python is a versatile language that is constantly evolving. Developers can easily stay up to date with the latest trends without having to re-learn everything from scratch. By learning Python, developers can expect significant career growth opportunities.
-</p>
-
-
-<h1 class="main-heading mt-8">4. High demand in the job market :</h1>
-<p class="main-para mt-1">
-Python is one of the most sought-after programming language skills in the job market today. As new technologies like AI, ML, and data science continue to emerge, the demand for Python skills is only increasing. Companies around the world are actively seeking tech professionals with expertise in Python.
-</p>
-
-
-<h1 class="main-heading mt-8">5. Strong community support :</h1>
-<p class="main-para mt-1">
-Python has the largest community of developers among all trending programming languages today. The open-source nature of Python has enabled the community to create numerous useful software programs and tools, making it an even more attractive language to learn.
-</p>
-
-
-<h1 class="main-heading mt-8">6. Versatility :</h1>
-<p class="main-para mt-1">
-Python is a multi-purpose language which can be used for a wide range of applications, such as web development, data analysis, artificial intelligence, machine learning, and much more.
-</p>
-
-
-<h1 class="main-heading mt-8">7. Cross-Platform :</h1>
-<p class="main-para mt-1">
-Python is a cross-platform language. This means that Python can be used on different operating systems be it: Windows, Mac, and Linux. This makes it easier for developers to write code that can be used across different platforms.
-</p>
-
-
-
-<h1 class="main-heading mt-8">Conclusion :</h1>
-<p class="main-para mt-1">
-Python has proven to be a highly advantageous programming language, making it an excellent choice for anyone looking to learn a programming language and the above reasons undoubtedly demonstrate the benefits and practicality of learning Python as a programming language in 2023.
-</p>
-
-
-
-<!-- code box 
-<div class="code-box mt-6">
- <div>
- <p>Javascript</p>
- <p class="copy-code">Copy <i class="bx bx-copy"></i></p>
- </div>				
-<pre><code class="language-javascript code">const myPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Data resolved successfully!");
-  }, 2000);
-});
-</code></pre>
+		<div class="card carousel-cell">
+   <img src="img/c-web_dev.jpg"> 
+		<div class="card-body"> 
+		<h3>Web Development</h3> 
+		<p class="card-text">You can get interacted in web development through our startup with help of other peoples</p> 
+		<a class="card-link">Get Started</a></div></div>
+		
+		<div class="card carousel-cell">
+   <img src="img/c-web_dev.jpg"> 
+		<div class="card-body"> 
+		<h3>Web Development</h3> 
+		<p class="card-text">You can get interacted in web development through our startup with help of other peoples</p> 
+		<a class="card-link">Get Started</a></div></div>
+		
+		<div class="card carousel-cell">
+   <img src="img/c-web_dev.jpg"> 
+		<div class="card-body"> 
+		<h3>Web Development</h3> 
+		<p class="card-text">You can get interacted in web development through our startup with help of other peoples</p> 
+		<a class="card-link">Get Started</a></div></div>
+		
+		<div class="card carousel-cell">
+   <img src="img/c-web_dev.jpg"> 
+		<div class="card-body"> 
+		<h3>Web Development</h3> 
+		<p class="card-text">You can get interacted in web development through our startup with help of other peoples</p> 
+		<a class="card-link">Get Started</a></div></div>
+		
+		<div class="card carousel-cell">
+   <img src="img/c-web_dev.jpg"> 
+		<div class="card-body"> 
+		<h3>Web Development</h3> 
+		<p class="card-text">You can get interacted in web development through our startup with help of other peoples</p> 
+		<a class="card-link">Get Started</a></div></div>
 </div>
-
-code box ended -->
-<!--  
-<p class="main-para mt-4">
-The code above creates a Promise that will resolve after 2 seconds, returning the string "Data resolved successfully!". We can then use the then() method to handle the resolved value of the Promise:
-</p> -->
-
-<!-- code box 
-<div class="code-box mt-6">
- <div>
- <p>Javascript</p>
- <p class="copy-code">Copy <i class="bx bx-copy"></i></p>
- </div>				
-<pre><code class="language-javascript code">myPromise.then(data => {
-  console.log(data);
-}).catch(error => {
-  console.error(error);
-});
-</code></pre>
-</div>
- code box ended -->
-
-<!--  
-<h1 class="main-heading mt-8">Async/Await in JavaScript :</h1>
-<p class="main-para mt-1">
-Async/Await is a newer feature in JavaScript that provides a more concise way to work with Promises. Async functions return a Promise by default, and we can use the await keyword to pause the function execution until the Promise is resolved. Here's an example:
-</p> -->
-
-
-<!-- code box 
-<div class="code-box mt-6">
- <div>
- <p>Javascript</p>
- <p class="copy-code">Copy <i class="bx bx-copy"></i></p>
- </div>				
-<pre><code class="language-javascript code">async function getData() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-  const data = await response.json();
-  return data;
-}
-
-getData().then(data => {
-  console.log(data);
-}).catch(error => {
-  console.error(error);
-});
-</code></pre>
-</div>
- code box ended -->
-
-
-<!--  
-<p class="main-para mt-4">
-The code above defines an async function that fetches data from a remote API using the fetch() method. We use the await keyword to pause the function execution until the Promise returned by the fetch() method is resolved. Once the Promise is resolved, we can access the response data using the json() method.
-</p>
-
-<h1 class="main-heading mt-8">Conclusion :</h1>
-<p class="main-para mt-1">
-Asynchronous programming is an essential concept in JavaScript that allows us to write code that can handle multiple tasks simultaneously. Promises and Async/Await provide a more elegant and concise way to work with asynchronous code, making our code more readable and maintainable. By mastering these concepts, you can write more efficient and robust JavaScript code.
-</p> -->
-
-<!--  
-<div class="table-responsive mt-8">
-<table class="table table-borderless">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>        
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july</td>
-      </tr>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john</td>
-      </tr>
-    </tbody>
-</table>
-</div>  -->
-
-
-<!-- likes button -->
-<div id="like-button-box">
-	<h1>We hope you love this post :</h1>
-	 <main>
-	 <div data-lyket-type="updown" data-lyket-id="my-1-post" data-lyket-color-icon="var(--font)" data-lyket-color-primary="var(--likebg)"
-data-lyket-color-secondary="var(--likebg)" data-lyket-color-highlight="#5865f2" id="like-button"></div>
-	 <span onclick="goTo('#comment-box')"><i class="bx bxs-message-rounded-dots"></i><p id="comment-count">1</p></span>
-	 </main>
-</div>
-<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_7dadf66d40d6cf16ca31d7408c710e"></script>
 </section>
 
 
@@ -392,98 +182,54 @@ data-lyket-color-secondary="var(--likebg)" data-lyket-color-highlight="#5865f2" 
 
 
 
-<!-- Past Blogs -->
-<section id="past-blogs">
-<div class="sec-head">
-<h1>Our Past Blogs</h1>			
-<p>See what type of blogs we have posted till now</p>	
-</div>	
-
-
-<div id="past-div">
-		<div class="row">
-		<div class="card">
-		<img src="../img/vimal.jpg">
-		 <span>
-		 <p><i class="bx bx-calendar"></i>Date : 16-02-2007</p>
-		 <p><i class="bx bx-stopwatch"></i>6 mins read</p>
-		 </span>
-		<h1>Kan kan mai kesar ka swaad, Bolo jubaan kesari</h1>
-		<button>Read more</button>
-		</div><!-- card end -->
-		
-		<div class="card">
-		<img src="../img/vimal.jpg">
-		 <span>
-		 <p><i class="bx bx-calendar"></i>Date : 16-02-2007</p>
-		 <p><i class="bx bx-stopwatch"></i>6 mins read</p>
-		 </span>
-		<h1>Kan kan mai kesar ka swaad, Bolo jubaan kesari</h1>
-		<button>Read more</button>
-		</div><!-- card end -->
-		
-		<div class="card">
-		<img src="../img/vimal.jpg">
-		 <span>
-		 <p><i class="bx bx-calendar"></i>Date : 16-02-2007</p>
-		 <p><i class="bx bx-stopwatch"></i>6 mins read</p>
-		 </span>
-		<h1>Kan kan mai kesar ka swaad, Bolo jubaan kesari</h1>
-		<button>Read more</button>
-		</div><!-- card end -->
-		
-		<div class="card">
-		<img src="../img/vimal.jpg">
-		 <span>
-		 <p><i class="bx bx-calendar"></i>Date : 16-02-2007</p>
-		 <p><i class="bx bx-stopwatch"></i>6 mins read</p>
-		 </span>
-		<h1>Kan kan mai kesar ka swaad, Bolo jubaan kesari</h1>
-		<button>Read more</button>
-		</div><!-- card end -->
-		
-		<div class="card">
-		<img src="../img/vimal.jpg">
-		 <span>
-		 <p><i class="bx bx-calendar"></i>Date : 16-02-2007</p>
-		 <p><i class="bx bx-stopwatch"></i>6 mins read</p>
-		 </span>
-		<h1>Kan kan mai kesar ka swaad, Bolo jubaan kesari</h1>
-		<button>Read more</button>
-		</div><!-- card end -->
-		
-		<div class="card">
-		<img src="../img/vimal.jpg">
-		 <span>
-		 <p><i class="bx bx-calendar"></i>Date : 16-02-2007</p>
-		 <p><i class="bx bx-stopwatch"></i>6 mins read</p>
-		 </span>
-		<h1>Kan kan mai kesar ka swaad, Bolo jubaan kesari</h1>
-		<button>Read more</button>
-		</div><!-- card end -->
-		</div><!-- row end -->
-</div>			
-</section>
 
 
 
 
 
 
-<!-- comments box -->
-<!-- begin wwww.htmlcommentbox.com -->
-<div id="comment-box">
-<div class="sec-head">
-<h1>Comments</h1>			
-<p>See what type of blogs we have posted till now</p>	
-</div>	
 
- <div id="HCB_comment_box">PHICSIT comments loading...</div>
- <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24Oz1Zb5Ba%2FkzmtC50yGEOg."+"&opts=16798&num=10&ts=1679507209178");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+
+<!-- fourth section -->
+<section id="fourth-sec">
+<div id="sec-head-box">
+<h1>PROGRAMMING</h1>				
+<p>programming languages that we talk on ?</p>				
 </div>
 
 
+<div id="fourth-sec-row">
+  <div id="coding-lang">
+  	<div id="coding-one">
+  	  <span>
+  	  <h1>Language :</h1>
+  	  <select id="select-tag">
+  	<option value="c">C</option>
+  	<option value="c++">C++</option>
+  	<option value="c#">C#</option>
+  	<option value="python">Python</option>
+  	<option value="java">Java</option>
+  	<option value="kotlin">Kotlin</option>
+  	<option value="javascript">Javascript</option>
+  	<option value="swift">Swift</option>
+  	<option value="ruby">Ruby</option>
+  	<option value="php">PHP</option>
+  	<option value="matlab">Matlab</option>
+  	<option value="typescript">Typescript</option>
+  	<option value="sql">SQL</option>
+  	  </select>
+  	  </span>
+  	  
+  	  <span>
+  	  <h1>Show Numbers :</h1>
+  	  <div id="num_toggle"><div></div></div>
+  	  </span>
+  	</div>
+  	
+  	<div id="code-box"></div>  	
+  </div>  	
+</div>
+</section>
 
 
 
@@ -498,7 +244,7 @@ data-lyket-color-secondary="var(--likebg)" data-lyket-color-highlight="#5865f2" 
 <footer>
 <main>
 <div id="foot-head">
-  <img src="../img/logo.jpg">		
+  <img src="img/logo.jpg">		
   <!--  
   <p>A Startup that is Promoting and Helping Individuals in Creating Smart and Impressive Thinking.</p> -->
   <div>
@@ -546,16 +292,82 @@ data-lyket-color-secondary="var(--likebg)" data-lyket-color-highlight="#5865f2" 
 </div>
 
 
+
+
 <!-- back to top button -->
-<div id="back-to-top" onclick="goTo('#first-main-head')" title="Back to top">
+<div id="back-to-top" onclick="window.location='#first-sec'" title="Back to top">
  <i class="bx bxs-up-arrow"></i>
 </div>
 
 
 
-<script src="index.js"></script>
-<script src="search.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Initialize Swiper 
+<script>
+var swiper1 = new Swiper(".second-one-slide", { 
+loop: true,
+centeredSlides: true,
+slidesPerView: "auto",
+spaceBetween: 30,
+speed: 1000,
+autoplayStopOnLast: false,
+
+pagination:{ 
+el: ".swiper-pagination",
+clickable: true,}, 
+autoplay:{
+delay: 2800,
+disableOnInteraction: false, },
+});
+</script> -->
+
+
+
+
+<!-- editor js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.13.1/ace.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.13.1/ext-language_tools.min.js"></script>
+<script src="js/theme-github_dark.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.13.1/mode-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.13.1/worker-javascript.min.js"></script>
+
+
+
+<script>
+var imageSlider = document.querySelectorAll('.row');
+imageSlider.forEach(elem => {
+var flkty = new Flickity( elem, { 
+cellAlign: 'center', 
+autoPlay: 2000,
+wrapAround: true, 
+pauseAutoPlayOnHover: false,
+});
+});
+</script>
+<script src="js/index.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/sweetalert2@11.js"></script>
 </body>
 </html>
