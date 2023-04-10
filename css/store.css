@@ -149,7 +149,7 @@ flex-wrap: wrap;
 margin: 0 auto 0 auto;
 }
 .card{
-width: 19rem;
+width: 18rem;
 margin: 12px 12px;
 padding: 0.9rem;
 border-radius: 8px;
@@ -172,7 +172,7 @@ width: 100%;
 background: transparent; display: none !important;
 }
 .row .flickity-page-dots{ 
-bottom: 4px !important;
+bottom: 3px !important;
 }
 .flickity-page-dots .dot{
 width: 9px !important;
@@ -198,11 +198,12 @@ padding-bottom: 0 !important;
 .card div{
 width: 100%;
 border-radius: 8px;
-padding-bottom: 10px;
+padding-bottom: 18px;
 background: #fff;
 }
 .card div img{
 width: 100%;
+box-shadow: inset 0 0 5px 1px var(--sdw);
 }
 .card h1{
 font-size: 16px;
@@ -374,9 +375,10 @@ overflow-y: scroll !important;
 width: 100%;
 max-width: calc(var(--secmax) + 2rem);
 background: var(--cardbg);
-padding: 20px 0.8rem;
+padding: 13px 0.8rem;
 display: flex;
 align-items: center;
+justify-content: space-between !important;
 position: fixed;
 transform: translateX(-50%);
 left: 50%;
@@ -389,7 +391,7 @@ font-weight: 500;
 font-size: 17px;
 display: none;
 text-align: center;
-position: relative;
+position: absolute;
 top: 15%;
 left: 50%;
 transform: translateX(-50%);
@@ -407,9 +409,17 @@ padding-top: 5rem;
 display: flex; 
 align-items: center;
 }
+#cart-nav span:nth-of-type(2){
+padding: 10px;
+border-radius: 100%;
+}
+#cart-nav span:nth-of-type(2):hover{
+box-shadow: inset 0 0 0 50px rgba(0,0,0,0.08), inset 0 0 0 50px rgba(255,255,255,0.15);	
+}
 #cart-nav span i{
 font-size: 22px;	
 font-weight: 500;
+color: var(--font);
 }
 #cart-nav span p{
 font-size: 15px;	
@@ -615,14 +625,16 @@ font-size: 17px;
 margin-right: 4px;
 color: var(--font);
 }
-#buy-body select{
+#buy-body label{
+display: flex;
+align-items: center;
+font-size: 14.5px;
 margin-top: 14px;
-padding: 2px 4px;
-background: var(--cardbg);
-font-size: 14px;
-border-radius: 4px;
-outline: 1px solid #5865f2;
+color: #5865f2;
+font-weight: 401;
 }
+
+
 
 @media(min-width: 850px){
 #buy-box main{ 
@@ -702,7 +714,7 @@ justify-content: space-between !important;
 margin: 14px 10px 0 10px;
 }
 #mode-span div{
-display: flex !important;
+display: flex;
 flex-direction: row !important;
 align-items: flex-start !important;
 width: 100%;
