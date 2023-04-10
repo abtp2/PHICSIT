@@ -136,7 +136,8 @@
 <!-- cart-box -->
 <div id="cart-box">				
 <div id="cart-nav"><span id="cart-close"><i class="bx bx-arrow-from-right"></i><p>Back</p></span>
-<h1>Your Cart<h1>			
+<h1>Your Cart</h1>			
+<span id="cart-remove" title="🚫 Remove All"><i class="bx bx-trash"></i></span>
 </div>				
 <h4 style="display:none;">No items in the cart 🤥</h4>
 
@@ -173,6 +174,7 @@
 		<i class="bx bxs-star"></i>
 		<i class="bx bxs-star"></i>		
 		</main>
+		<label>Type : E-book</label>
 </div><!-- buy body ended -->
 </main>
 
@@ -335,6 +337,42 @@ if(result.isConfirmed){
   }) //swal ended
   }// Remove button onclick ended
 });
+}
+
+
+
+// to remove whole cart-nav 
+document.getElementById("cart-remove").onclick =()=>{
+if(localStorage.getItem("cartData") != null){
+Swal.fire({
+	title: '<h1 style="font-size: 22px;opacity: 0.75; ">Are you sure ?</h1>',
+	text: "You won't be able to revert this!",
+	icon: 'warning',
+	background: 'var(--footbg)',
+	color: 'var(--font)',
+	showCancelButton: true,
+	confirmButtonText: 'Yes, remove all!',
+	cancelButtonText: 'No, cancel!',
+	reverseButtons: true
+}).then((result) => {
+if(result.isConfirmed){
+  /* main removal */
+ localStorage.removeItem("cartData");
+var a = localStorage.getItem("cartData");
+document.getElementsByClassName("row")[1].innerHTML = a;
+toCheckNull();
+  /* main removal */ 
+
+  Swal.fire({
+	icon: 'success',
+	title: '<h1 style="font-size: 22px;opacity: 0.75; ">Removed !</h1>',
+	text: 'All items removed from cart.',
+	background: 'var(--footbg)',
+	color: 'var(--font)',
+	}); toCheckNull();}
+  }) //swal ended
+  }// Remove button onclick ended
+  
 }
 </script>	
 <script>
