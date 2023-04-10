@@ -62,7 +62,7 @@ window.onload = function(){
 var y = localStorage.getItem("theme");
 var x = document.getElementById("bx-moon");
 document.getElementById("first-card-logo").style.visibility ="visible";
-document.getElementById("first-card-logo").classList.add("animate__rollIn");
+//document.getElementById("first-card-logo").classList.add("animate__rollIn");
 
 if(y =="dark"){
 document.body.classList.add("dark-theme");

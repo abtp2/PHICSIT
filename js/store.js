@@ -168,12 +168,13 @@ document.querySelector("#first form input").value ="";
 /* 🔥🔥🔥🔥🔥🔥🔥 */
 const books =[
 {
-image: ["img/book.png", "img/book.png", "img/book.png"],
+image: ["img/book2.png", "img/book2.png", "img/book2.png"],
 title:"Rich Dad Poor Dad ~ Robert Kiyodaki",
 actualPrice: "375",
 offPrice: "450",
 rate: "4-5",
 availability: "available",
+type: "ebook",
 },
 
 {
@@ -183,6 +184,7 @@ actualPrice: "362",
 offPrice: "499",
 rate: "3",
 availability: "available",
+type: "hard",
 },
 
 {
@@ -192,6 +194,7 @@ actualPrice: "599",
 offPrice: "699",
 rate: "5",
 availability: "available",
+type: "hard",
 },
 
 {
@@ -201,6 +204,7 @@ actualPrice: "394",
 offPrice: "499",
 rate: "3",
 availability: "available",
+type: "hard",
 },
 
 {
@@ -210,6 +214,7 @@ actualPrice: "436",
 offPrice: "500",
 rate: "4-5",
 availability: "available",
+type: "hard",
 },
 
 {
@@ -219,6 +224,7 @@ actualPrice: "333",
 offPrice: "499",
 rate: "3",
 availability: "available",
+type: "hard",
 },
 
 {
@@ -228,6 +234,7 @@ actualPrice: "646",
 offPrice: "799",
 rate: "3",
 availability: "available",
+type: "hard",
 },
 
 {
@@ -237,6 +244,7 @@ actualPrice: "309",
 offPrice: "399",
 rate: "3",
 availability: "available",
+type: "hard",
 },
 
 {
@@ -246,6 +254,7 @@ actualPrice: "505",
 offPrice: "599",
 rate: "3",
 availability: "available",
+type: "hard",
 },
 
 {
@@ -255,6 +264,7 @@ actualPrice: "445",
 offPrice: "599",
 rate: "3",
 availability: "available",
+type: "hard",
 },
 
 {
@@ -264,6 +274,7 @@ actualPrice: "269",
 offPrice: "399",
 rate: "4-5",
 availability: "available",
+type: "hard",
 },
 
 {
@@ -273,6 +284,7 @@ actualPrice: "185",
 offPrice: "205",
 rate: "3",
 availability: "available",
+type: "hard",
 },
 ]
 //console.log(books[0].title);
@@ -292,6 +304,8 @@ availability: "available",
 for(i=0; i<books.length; i++){
 const elem = document.createElement("div");
 const discount = Math.trunc((parseInt(books[i].offPrice) - parseInt(books[i].actualPrice))/books[i].offPrice*100);
+// books Slider 
+
 
 elem.classList.add("card");
 elem.innerHTML =`<div class="${i} main-carousel">
@@ -299,7 +313,7 @@ elem.innerHTML =`<div class="${i} main-carousel">
 				<img src="${books[i].image[1]}" class="carousel-cell">
 				<img src="${books[i].image[2]}" class="carousel-cell">
 				</div>
-		<h1>${books[i].title}</h1>		
+		<h1 class="${books[i].type}">${books[i].title}</h1>		
 		<span><p>-${discount}%</p><p>₹${books[i].actualPrice}</p><p>${books[i].offPrice}</p></span>		
 		<main class="review star${books[i].rate}">
 		<p>Review :</p>
@@ -360,7 +374,7 @@ cellAlign: 'center',
 wrapAround: true,
 });
 });
-
+checkSlider();
 var imageSlider = document.querySelectorAll('.banner');
 imageSlider.forEach(elem => {
 var flkty = new Flickity( elem, { 
@@ -463,7 +477,14 @@ document.querySelector("#buy-body span p:nth-of-type(2)").innerHTML = event.curr
 document.querySelector("#buy-body span p:nth-of-type(3)").innerHTML = event.currentTarget.closest(".card").querySelector("span p:nth-of-type(3)").innerHTML;
 // for rate 
 document.querySelector("#buy-body main").className = event.currentTarget.closest(".card").querySelector("main").getAttribute("class");
-}
+// for type
+if(event.currentTarget.closest(".card").querySelector("h1").classList.contains("ebook")){
+document.querySelector("#buy-body label").innerHTML = "Type : E-book";
+document.querySelector("#mode-span").style.display ="none";
+}else{
+document.querySelector("#buy-body label").innerHTML = "Type : Hard Cover";
+document.querySelector("#mode-span").style.display ="flex";
+}}
 
 function cgImg(x){
 document.querySelector("#buy-head div img").src = x;
@@ -472,3 +493,24 @@ i.style.opacity = 0.5;
 });
 event.currentTarget.closest("img").style.opacity = 1;
 }
+
+
+
+
+
+function checkSlider(){
+document.getElementsByClassName("row")[0].querySelectorAll(".card").forEach(card => {
+if(card.querySelector("h1").classList.contains("ebook")){
+card.querySelector(".flickity-page-dots").style.display ="none";
+card.querySelector("div").style.paddingBottom ="0";
+}
+});
+}
+
+
+
+
+
+
+
+
