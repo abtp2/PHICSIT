@@ -318,7 +318,7 @@ margin: 0 14px;
 width: 100%;
 max-width: var(--secmax);
 padding-top: 7rem;
-margin: 1rem auto 0 auto;
+margin: 0rem auto 0 auto;
 }
 #second-row{
 width: 100%;
@@ -464,7 +464,7 @@ text-decoration:none;
 
 
 /* fourth section */
-#fourth-sec{
+/* #fourth-sec{
 width: 100%;	
 max-width: var(--secmax);
 overflow-x: hidden;
@@ -474,7 +474,7 @@ margin: 1rem auto 0 auto;
 #fourth-sec-row{
 width: 100%;
 margin-top: 4rem;
-}
+} */
 #coding-lang{
 width: 18rem;
 height: 450px;
@@ -622,9 +622,9 @@ z-index: -99999999;
 #fifth-sec{
 width: 100%;
 max-width: var(--secmax);
-padding: 2rem 0;
+padding: 2rem 0 1.5rem 0;
 border-radius: 3px;
-margin: 7rem auto 0 auto;
+margin: 6rem auto 0 auto;
 background: var(--cardbg);
 }
 #fifth-row{
@@ -646,7 +646,7 @@ width: 100%;
 display: flex; 
 flex-direction: column;
 text-align: left;
-margin: 2rem 0 0 0;
+margin: 1rem 0 0 0;
 }
 #fifth-row span h1{
 font-size: 24px;		
@@ -673,16 +673,20 @@ border: none;
 margin-top: 20px;
 }
 @media(min-width: 768px){
+#fifth-sec{
+padding-bottom: -10rem !important;
+}
 #fifth-row{
 flex-direction: row;
+padding: 0  !important;
 }				
 #fifth-row img{
-width: 40%;
-margin: 0 auto 0 1.2rem;
+width: 35%;
+margin: 0 1rem 0 auto;
 }
 #fifth-row span{
 width: 45%;
-margin: 0 1.2rem 0 auto;
+margin: 0 auto 0 1.2rem;
 justify-content: center;
 }}
 
@@ -699,9 +703,9 @@ justify-content: center;
 #sixth-sec{
 width: 100%;
 max-width: var(--secmax);
-padding: 2rem 0;
+padding: 2rem 0 1.5rem 0;
 border-radius: 3px;
-margin: 7rem auto 0 auto;
+margin: 4rem auto 0 auto;
 background: var(--cardbg);
 }
 #sixth-row{
@@ -723,7 +727,7 @@ width: 100%;
 display: flex; 
 flex-direction: column;
 text-align: left;
-margin: 2rem 0 0 0;
+margin: 1rem 0 0 0;
 }
 #sixth-row span h1{
 font-size: 24px;		
@@ -758,17 +762,170 @@ border: none;
 margin-top: 20px;
 }
 @media(min-width: 768px){
+#sixth-sec{
+padding-bottom: 0 !important;
+}
 #sixth-row{
 flex-direction: row;
+padding: 0 !important;
 }				
 #sixth-row img{
-width: 40%;
-margin: 0 auto 0 1.2rem;
+width: 35%;
+margin: 0 1rem 0 auto;
 }
 #sixth-row span{
 width: 45%;
 margin: 0 1.2rem 0 auto;
 justify-content: center;
 }}
+
+
+
+
+
+
+
+
+
+
+
+
+/* fifth section */
+#fourth-sec{
+width: 100%;
+max-width: var(--secmax);
+padding: 2rem 0 1.5rem 0;
+border-radius: 3px;
+margin: 6rem auto 0 auto;
+background: var(--cardbg);
+}
+#fourth-sec-row{
+width: 100%;
+display: flex;
+flex-direction: column;
+padding: 0 1.5rem;
+margin: 3rem auto 0 auto;
+align-items: center;
+justify-content: center;
+}
+#fourth-sec-row form{
+width: 100%;
+background: var(--bg);
+border-radius: 6px;
+padding: 1rem;
+}
+#fourth-sec-row form h1{
+font-weight: 401;
+font-size: 16px;
+color: var(--font);
+}
+#fourth-sec-row form h1 i{
+font-size: 21px;
+}
+#fourth-sec-row form p{
+font-weight: 400;
+font-size: 14px;
+margin-top: 5px;
+line-height: 1.5;
+color: var(--font);
+opacity: 0.7;
+}
+#fourth-sec-row form span{
+display: flex;
+align-items: center;
+margin-top: 14px;
+}
+#fourth-sec-row form input{
+width: 100%;
+height: 40px;
+background: var(--cardbg);
+padding: 10px 12px;
+outline: none;
+margin-right: 4px;
+border: 1.5px solid var(--sdw);
+border-radius: 4px;
+font-size: 14px;
+}
+#fourth-sec-row form input::placeholder{
+color: var(--font);
+opacity: 0.6;
+}
+#fourth-sec-row form button{
+background: #5865f2;
+color: #fff;
+font-weight: 401;
+height: 40px;
+padding: 8px 1.2rem;
+border: none;
+border-radius: 4px;
+font-size: 14px;
+}
+#fourth-sec-row form button i{
+font-size: 20px;
+}
+
+
+#fourth-div{
+width: 100%;
+background: var(--bg);
+border-radius: 6px;
+padding: 1rem;
+display: flex; 
+flex-direction: column;
+margin-top: 1rem;
+}
+#fourth-div h1{
+font-weight: 401;
+font-size: 16px;
+color: var(--font);
+margin-top: 6px;
+}
+#fourth-div span{
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-top: 8px;
+}
+#fourth-div span i{
+width: 38px;
+height: 38px;
+text-decoration: none;
+font-size: 20px;
+color: var(--font);
+margin: 0 6px 0 0;
+background: var(--bg);
+border-radius: 100%;
+padding: 10px;
+box-shadow: 0px 3px 6px 0.1px rgba(0,0,0,0.14), 0px 0px 0px 0.5px #949494;
+transform: scale(0.9);
+transition: background 0.3s;
+}
+#fourth-div span a{
+text-decoration: underline;
+color: var(--font);
+opacity: 0.8;
+}
+
+
+
+
+
+
+
+@media(min-width: 768px){
+#fourth-sec-row{
+flex-direction: row;
+justify-content: space-around;
+}
+#fourth-sec-row form{
+width: 45%;
+}
+#fourth-div{
+width: 45%;
+margin-top: 0;
+}}
+
+
+
 
 
