@@ -170,7 +170,7 @@ document.getElementById("back-to-top").style.display ="none";
 
 
 /* codes */
-
+/* 
 var editor = ace.edit("code-box"); 
 editor.setTheme("ace/theme/github_dark");
 editor.setReadOnly(true);
@@ -397,8 +397,8 @@ let myTypeScriptCode = `class Person {
 editor.setValue(myTypeScriptCode ,1);
 }
 }
-
-
+ */
+/* codes ended */
 
 
 
@@ -426,7 +426,7 @@ window.location = x;
 
 
 
-/* num_toggle */
+/* num_toggle 
 document.getElementById("num_toggle").onclick = function(){
 var x = document.getElementById("num_toggle");
 if(x.style.justifyContent ==="flex-end"){
@@ -436,7 +436,7 @@ editor.renderer.setShowGutter(false);
 else{
 x.style.justifyContent ="flex-end";
 editor.renderer.setShowGutter(true);
-}}
+}} */
 
 
 
@@ -495,7 +495,7 @@ color: 'var(--font)',
 confirmButtonText: 'Ok, done',
 focusConfirm: true,
 }).	then(function(){ 
-document.getElementById("news-submit").innerHTML ="Go";	
+document.getElementById("news-submit").innerHTML ="Send";	
 document.getElementById("news-email").value ="";
 });	 
 }
@@ -512,7 +512,7 @@ color: 'var(--font)',
 confirmButtonText: 'Ok, retry',
 focusConfirm: true,
 }).	then(function(){ 
-document.getElementById("news-submit").innerHTML ="Go";				
+document.getElementById("news-submit").innerHTML ="Send";				
 document.getElementById("news-email").value ="";
 });	 
 
