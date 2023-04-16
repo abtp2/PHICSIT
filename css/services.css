@@ -139,16 +139,18 @@ outline: 1.5px solid #5865f2;
 }
 
 .card i{
-font-size: 50px;
-width: 75px;
-height: 75px;
+font-size: 27px;
+font-style: normal;
+font-weight: 500;
+width: 68px;
+height: 68px;
 background: #5865f2;
 color: #fff;
 border-radius: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-border: 6px solid #4e65eb;
+border: 5px double var(--cardbg);
 }
 
 .card img{
