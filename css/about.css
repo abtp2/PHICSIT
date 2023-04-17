@@ -1,23 +1,12 @@
 /* first section */
 #first{
 width: 95%;	
+max-width: var(--secmax);
 overflow-x: hidden;
 padding: 85px 0 0 0;
 margin: 0 auto;
 }
-@media(min-width: 800px){
-#first{
-width: 80%;		
-margin: 1rem auto 1rem auto;
-}}
-@media(min-width: 1200px){
-#first{
-width: 70%;		
-}}
-@media(min-width: 1500px){
-#first{
-width: 60%;		
-}}
+
 
 .anime{
 width: 200px;
@@ -86,10 +75,10 @@ text-align: center;
 }
 #first-card-one p{
 font-size: 16px;
-text-align: justify;
-line-height: 1.7;
-margin-top: 1.2rem;
-opacity: 0.75;
+text-align: left;
+line-height: 1.9;
+margin-top: 1.5rem;
+opacity: 0.8;
 padding: 0 4vw;
 }
 
@@ -196,10 +185,10 @@ text-align: center;
 }
 #first-card-two div p{
 font-size: 16px;
-text-align: justify;
-line-height: 1.7;
-margin-top: 1.2rem;
-opacity: 0.75;
+text-align: left;
+line-height: 1.9;
+margin-top: 1.5rem;
+opacity: 0.8;
 padding: 0 4vw;
 }
 
@@ -238,14 +227,12 @@ text-align: center;
 }
 #first-card-three p{
 font-size: 16px;
-text-align: justify;
-line-height: 1.7;
-margin-top: 1.2rem;
-opacity: 0.75;
+text-align: left;
+line-height: 1.9;
+margin-top: 1.5rem;
+opacity: 0.8;
 padding: 0 4vw;
 }
-
-
 
 
 
