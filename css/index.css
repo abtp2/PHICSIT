@@ -625,7 +625,7 @@ max-width: var(--secmax);
 padding: 2rem 0 1.5rem 0;
 border-radius: 3px;
 margin: 6rem auto 0 auto;
-background: var(--cardbg);
+/* background: var(--cardbg); */
 }
 #fifth-row{
 width: 100%;
@@ -706,7 +706,7 @@ max-width: var(--secmax);
 padding: 2rem 0 1.5rem 0;
 border-radius: 3px;
 margin: 4rem auto 0 auto;
-background: var(--cardbg);
+/* background: var(--cardbg); */
 }
 #sixth-row{
 width: 100%;
@@ -797,7 +797,7 @@ max-width: var(--secmax);
 padding: 2rem 0 1.5rem 0;
 border-radius: 3px;
 margin: 6rem auto 0 auto;
-background: var(--cardbg);
+/* background: var(--cardbg); */
 }
 #fourth-sec-row{
 width: 100%;
@@ -810,9 +810,9 @@ justify-content: center;
 }
 #fourth-sec-row form{
 width: 100%;
-background: var(--bg);
+background: var(--cardbg);
 border-radius: 6px;
-padding: 1rem;
+padding: 1.4rem;
 border: 1.5px solid var(--lsdw);
 }
 #fourth-sec-row form h1{
@@ -846,6 +846,7 @@ margin-right: 4px;
 border: 1.5px solid var(--sdw);
 border-radius: 4px;
 font-size: 14px;
+color: var(--font);
 }
 #fourth-sec-row form input::placeholder{
 color: var(--font);
@@ -868,9 +869,9 @@ font-size: 20px;
 
 #fourth-div{
 width: 100%;
-background: var(--bg);
+background: var(--cardbg);
 border-radius: 6px;
-padding: 1rem;
+padding: 1.4rem;
 display: flex; 
 flex-direction: column;
 margin-top: 1rem;
