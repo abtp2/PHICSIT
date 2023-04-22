@@ -168,27 +168,7 @@ document.querySelector("#first form input").value ="";
 /* 🔥🔥🔥🔥🔥🔥🔥 */
 const books =[
 {
-image: ["img/book2.png", "img/book2.png", "img/book2.png"],
-title:"Rich Dad Poor Dad ~ Robert Kiyodaki",
-actualPrice: "375",
-offPrice: "450",
-rate: "4-5",
-availability: "available",
-type: "ebook",
-},
-
-{
-image: ["img/book.png", "img/book.png", "img/book.png"],
-title:"Doglapan: The Hard Truth about Life and Start-Ups",
-actualPrice: "362",
-offPrice: "499",
-rate: "3",
-availability: "available",
-type: "hard",
-},
-
-{
-image: ["img/book.png", "img/book.png", "img/book.png"],
+image: ["img/steve-1.png"],
 title:"Steve Jobs: The Exclusive Biography",
 actualPrice: "599",
 offPrice: "699",
@@ -198,13 +178,33 @@ type: "hard",
 },
 
 {
-image: ["img/book.png", "img/book.png", "img/book.png"],
+image: ["img/dogla-1.png", "img/dogla-2.png", "img/dogla-3.png"],
+title:"Doglapan: The Hard Truth about Life and Start-Ups",
+actualPrice: "362",
+offPrice: "499",
+rate: "3",
+availability: "available",
+type: "hard",
+},
+
+{
+image: ["img/elon-1.png", "img/elon-2.png"],
 title:"Elon Musk",
 actualPrice: "394",
 offPrice: "499",
 rate: "3",
 availability: "available",
 type: "hard",
+},
+
+{
+image: ["img/book2.png", "img/book2.png", "img/book2.png"],
+title:"Rich Dad Poor Dad ~ Robert Kiyodaki",
+actualPrice: "375",
+offPrice: "450",
+rate: "4-5",
+availability: "available",
+type: "ebook",
 },
 
 {
@@ -306,12 +306,27 @@ const elem = document.createElement("div");
 const discount = Math.trunc((parseInt(books[i].offPrice) - parseInt(books[i].actualPrice))/books[i].offPrice*100);
 // books Slider 
 
+var imgLen = books[i].image.length;
+console.log(imgLen);
+var imgSrc;
+if(imgLen == 1){
+imgSrc = `<img src="${books[i].image[0]}" class="carousel-cell">`;
+}
+if(imgLen == 2){
+imgSrc = `<img src="${books[i].image[0]}" class="carousel-cell">
+				<img src="${books[i].image[1]}" class="carousel-cell">`;
+}
+if(imgLen == 3){
+imgSrc = `<img src="${books[i].image[0]}" class="carousel-cell">
+				<img src="${books[i].image[1]}" class="carousel-cell">
+				<img src="${books[i].image[2]}" class="carousel-cell">`;	
+}
+
+
 
 elem.classList.add("card");
 elem.innerHTML =`<div class="${i} main-carousel">
-				<img src="${books[i].image[0]}" class="carousel-cell">
-				<img src="${books[i].image[1]}" class="carousel-cell">
-				<img src="${books[i].image[2]}" class="carousel-cell">
+				${imgSrc}
 				</div>
 		<h1 class="${books[i].type}">${books[i].title}</h1>		
 		<span><p>-${discount}%</p><p>₹${books[i].actualPrice}</p><p>${books[i].offPrice}</p></span>		
