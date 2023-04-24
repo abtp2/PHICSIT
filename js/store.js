@@ -198,17 +198,7 @@ type: "hard",
 },
 
 {
-image: ["img/book2.png", "img/book2.png", "img/book2.png"],
-title:"Rich Dad Poor Dad ~ Robert Kiyodaki",
-actualPrice: "375",
-offPrice: "450",
-rate: "4-5",
-availability: "available",
-type: "ebook",
-},
-
-{
-image: ["img/book.png", "img/book.png", "img/book.png"],
+image: ["img/atomic-1.png", "img/atomic-2.png"],
 title:"Atomic Habits: The life-changing million copy ~ James Clear",
 actualPrice: "436",
 offPrice: "500",
@@ -218,17 +208,7 @@ type: "hard",
 },
 
 {
-image: ["img/book.png", "img/book.png", "img/book.png"],
-title:"The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life",
-actualPrice: "333",
-offPrice: "499",
-rate: "3",
-availability: "available",
-type: "hard",
-},
-
-{
-image: ["img/book.png", "img/book.png", "img/book.png"],
+image: ["img/lean-1.png", "img/lean-2.png"],
 title:"The Lean Startup: How Constant Innovation creates Radically Successful Businesses Eric",
 actualPrice: "646",
 offPrice: "799",
@@ -238,20 +218,80 @@ type: "hard",
 },
 
 {
-image: ["img/book.png", "img/book.png", "img/book.png"],
-title:"Sapiens: A Brief History of Humankind",
-actualPrice: "309",
-offPrice: "399",
+image: ["img/subtle-1.png"],
+title:"The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life",
+actualPrice: "333",
+offPrice: "499",
 rate: "3",
 availability: "available",
 type: "hard",
 },
 
 {
-image: ["img/book.png", "img/book.png", "img/book.png"],
+image: ["img/fate-1-1.png", "img/fate-1-2.png"],
+title:"The Earesha's Fate : Part-1",
+actualPrice: "333",
+offPrice: "499",
+rate: "3",
+availability: "available",
+type: "hard",
+},
+
+{
+image: ["img/fate-2-1.png", "img/fate-2-2.png"],
+title:"The Earesha's Fate : Part-2",
+actualPrice: "333",
+offPrice: "499",
+rate: "3",
+availability: "available",
+type: "hard",
+},
+
+{
+image: ["img/fate-3-1.png", "img/fate-3-2.png"],
+title:"The Earesha's Fate : Part-3",
+actualPrice: "333",
+offPrice: "499",
+rate: "3",
+availability: "available",
+type: "hard",
+},
+
+{
+image: ["img/hard-1.png", "img/hard-2.png"],
 title:"The Hard Thing about Hard Thing: Building a Business When There are No Easy Awswers",
 actualPrice: "505",
 offPrice: "599",
+rate: "3",
+availability: "available",
+type: "hard",
+},
+
+{
+image: ["img/rich-1.png"],
+title:"Rich Dad Poor Dad ~ Robert Kiyodaki",
+actualPrice: "375",
+offPrice: "450",
+rate: "4-5",
+availability: "available",
+type: "hard",
+},
+
+{
+image: ["img/zero-1.png", "img/zero-2.png"],
+title:"Zero To One",
+actualPrice: "375",
+offPrice: "450",
+rate: "4-5",
+availability: "available",
+type: "ebook",
+},
+
+{
+image: ["img/book.png", "img/book.png", "img/book.png"],
+title:"Sapiens: A Brief History of Humankind",
+actualPrice: "309",
+offPrice: "399",
 rate: "3",
 availability: "available",
 type: "hard",
@@ -307,7 +347,6 @@ const discount = Math.trunc((parseInt(books[i].offPrice) - parseInt(books[i].act
 // books Slider 
 
 var imgLen = books[i].image.length;
-console.log(imgLen);
 var imgSrc;
 if(imgLen == 1){
 imgSrc = `<img src="${books[i].image[0]}" class="carousel-cell">`;
@@ -342,6 +381,13 @@ elem.innerHTML =`<div class="${i} main-carousel">
 		<button class="addcart-btn"><i class="bx bx-cart"></i>Add to cart</button></span>`;
 document.getElementsByClassName("row")[0].appendChild(elem);
 }
+
+/*  
+document.querySelectorAll(".card").forEach(elem =>{
+elem.onclick=(x)=>{event.target.closest(".main-carousel").requestFullscreen();}
+}); */
+
+
 
 
 
@@ -474,12 +520,30 @@ function buy(){
 document.body.style.overflowY ="hidden";
 slideDown(document.querySelector("#buy-box") , 400);
 document.getElementById("buy-box").scrollTo(0,0);
+alert(event.currentTarget.closest(".card").querySelectorAll("img").length);
+
+
+document.querySelector("#buy-head div img").src = event.currentTarget.closest(".card").querySelector("img:nth-of-type(1)").getAttribute("src");
+for(i=1;i<=event.currentTarget.closest(".card").querySelectorAll("img").length; i++){
+document.querySelector(`#buy-head span img:nth-of-type(${i})`).style.display ="flex";
+
+document.querySelector(`#buy-head span img:nth-of-type(${i})`).src = event.currentTarget.closest(".card").querySelector(`img:nth-of-type(${i})`).getAttribute("src");
+}
+
+
+
+
+
 
 // for buy carousel 
+/*
 document.querySelector("#buy-head div img").src = event.currentTarget.closest(".card").querySelector("img:nth-of-type(1)").getAttribute("src");
 document.querySelector("#buy-head span img:nth-of-type(1)").src = event.currentTarget.closest(".card").querySelector("img:nth-of-type(1)").getAttribute("src");
 document.querySelector("#buy-head span img:nth-of-type(2)").src = event.currentTarget.closest(".card").querySelector("img:nth-of-type(2)").getAttribute("src");
 document.querySelector("#buy-head span img:nth-of-type(3)").src = event.currentTarget.closest(".card").querySelector("img:nth-of-type(3)").getAttribute("src");
+ */
+
+
 
 
 // for h1
@@ -496,9 +560,11 @@ document.querySelector("#buy-body main").className = event.currentTarget.closest
 if(event.currentTarget.closest(".card").querySelector("h1").classList.contains("ebook")){
 document.querySelector("#buy-body label").innerHTML = "Type : E-book";
 document.querySelector("#mode-span").style.display ="none";
+document.querySelector("#address").style.display ="none";
 }else{
 document.querySelector("#buy-body label").innerHTML = "Type : Hard Cover";
 document.querySelector("#mode-span").style.display ="flex";
+document.querySelector("#address").style.display ="flex";
 }}
 
 function cgImg(x){
