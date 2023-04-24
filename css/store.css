@@ -528,6 +528,7 @@ box-shadow: 0 2px 5px 1px var(--sdw);
 margin: 0 10px;
 border-radius: 6px;
 outline: 0.1px solid var(--dsdw);
+display: none;
 }
 #buy-head span img:nth-of-type(2){
 opacity: 0.5;
