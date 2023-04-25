@@ -121,7 +121,7 @@ font-weight: 900;
 font-size: 16px;				
 text-align: center;
 margin-top: 1.5rem;
-opacity: 0.7;
+opacity: 0.8;
 line-height: 1.6;
 padding: 0 5vw;
 }
@@ -385,7 +385,9 @@ width: 100%;
 display: none;
 }
 .flickity-page-dots{
-margin-top: 5px;
+margin-top: 0px !important;
+position: relative !important;
+background: transparent;
 }
 .flickity-page-dots .dot{
 width: 11px !important;
@@ -444,9 +446,9 @@ opacity: 0.8;
 }
 .card-link{
 font-weight:400;
-font-size:14px;
-padding: 8px 12px;
-border-radius:3px;
+font-size:13px;
+padding: 8.5px 16px;
+border-radius: 5px;
 background: #5865f2; 
 color:#fff;
 text-decoration:none;

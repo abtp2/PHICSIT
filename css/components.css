@@ -1,12 +1,34 @@
 @import url("../icons/boxicons.css");
 @import url("../css/animate.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
 
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: arial;
+font-family: 'Roboto', sans-serif !important;
 }
+#sec-head-box p{
+font-family: cursive !important;
+}
+#sec-head-box h1{
+font-weight: 900 !important;
+font-family: arial !important;
+}
+.sec-head p{
+font-family: cursive !important;
+}
+.sec-head h1{
+font-weight: 900 !important;
+font-family: arial !important;
+}
+h1,button{
+font-family: arial !important;
+}
+
 :root{
 --lbg: #fff;
 --lfont: #111111;
