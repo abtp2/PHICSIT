@@ -508,6 +508,7 @@ buy();
 document.getElementById("buy-close").onclick = () =>{
 document.body.style.overflowY ="auto";
 slideUp(document.querySelector("#buy-box") , 400);
+resetBuy();
 }
 
 
@@ -520,7 +521,6 @@ function buy(){
 document.body.style.overflowY ="hidden";
 slideDown(document.querySelector("#buy-box") , 400);
 document.getElementById("buy-box").scrollTo(0,0);
-alert(event.currentTarget.closest(".card").querySelectorAll("img").length);
 
 
 document.querySelector("#buy-head div img").src = event.currentTarget.closest(".card").querySelector("img:nth-of-type(1)").getAttribute("src");
@@ -590,6 +590,13 @@ card.querySelector("div").style.paddingBottom ="0";
 
 
 
+/* to reset buy box */
+function resetBuy(){
+document.querySelectorAll("#buy-head span img").forEach(img => {
+img.style.display ="none";		
+});
+document.querySelector("#buy-box form").reset();
+}
 
 
 
