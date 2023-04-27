@@ -110,6 +110,10 @@ color: var(--font);
 filter: blur(2px);
 opacity: 0.8;
 }
+.loader > *:not(#loader){
+visibility: hidden;
+opacity: 0;
+}
 
 
 /* 
