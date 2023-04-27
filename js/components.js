@@ -117,6 +117,31 @@ function getLocalStorageKeyByValue(value) {
 
 
 
+// custom function for fade out with opacity 
+function fadeOut(element, duration, callback) {
+  let opacity = 1;
+  var elem = document.querySelector(element);
+  const interval = 50; // ms
+  const steps = duration / interval;
+  let count = 0;
+  const fadeOutInterval = setInterval(() => {
+    opacity -= 1 / steps;
+    elem.style.opacity = opacity;
+    count++;
+    if (count >= steps) {
+      clearInterval(fadeOutInterval);
+      elem.style.display = "none";
+      if (typeof callback === 'function') {
+        callback();
+      }      
+    }
+  }, interval);
+}
+
+
+
+
+
 
 
 

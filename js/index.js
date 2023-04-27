@@ -1,3 +1,7 @@
+function doShowBody(){document.body.classList.remove("loader");}
+function skipLoader(){fadeOut("#loader", "0", doShowBody)}
+
+
 /* navbar */
   // search-box open close js code
 let navbar = document.querySelector(".navbar");
@@ -62,6 +66,12 @@ window.onload = function(){
 var y = localStorage.getItem("theme");
 var x = document.getElementById("bx-moon");
 document.getElementById("first-card-logo").style.visibility ="visible";
+//loader
+
+fadeOut("#loader", "1500", doShowBody);
+
+
+
 //document.getElementById("first-card-logo").classList.add("animate__rollIn");
 
 if(y =="dark"){
