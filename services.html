@@ -6,6 +6,8 @@
 				<link rel="icon" type="image/jpg" href="img/logo.jpg">
 				<link rel="stylesheet" href="css/components.css">
 				<link rel="stylesheet" href="css/services.css">
+				<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+				<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>	
 				<link rel="stylesheet" href="css/aos.css">
 				<link rel="preconnect" href="https://fonts.googleapis.com">
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,7 +89,7 @@
 <!-- first section -->
 <section id="first">
 <div>
-<img src="img/services.png">
+<img src="img/services2.png">
 
 <span>
 <h1>Why choose us ?</h1>		
@@ -199,14 +201,59 @@
 
 <!-- third section -->
 <section id="third">
-<div id="test-box">
-  <div class="test">
-  		
-  </div>		
+<div class="sec-head">
+<h1>Testimonials</h1>			
+<p>What our customers reviewed for our services</p>	
+</div>	
+
+
+<div id="test-box" class="main-carousel">
+  <div class="test carousel-cell">
+  <i class="bx bxs-quote-alt-left"></i>
+  <p>At first, it may be intimidating to see all of the available courses. Pick a track that interests you and work through it at your own pace.</p>
+  <span><h1>Ashutosh Pandey</h1><h2>Railroad Engineer</h2></span>
+  </div>	
+  
+  <div class="test carousel-cell">
+  <i class="bx bxs-quote-alt-left"></i>
+  <p>At first, it may be intimidating to see all of the available courses. Pick a track that interests you and work through it at your own pace.</p>
+  <span><h1>Ashutosh Pandey</h1><h2>Railroad Engineer</h2></span>
+  </div>	
+  
+  <div class="test carousel-cell">
+  <i class="bx bxs-quote-alt-left"></i>
+  <p>At first, it may be intimidating to see all of the available courses. Pick a track that interests you and work through it at your own pace.</p>
+  <span><h1>Ashutosh Pandey</h1><h2>Railroad Engineer</h2></span>
+  </div>	
+  
+  <div class="test carousel-cell">
+  <i class="bx bxs-quote-alt-left"></i>
+  <p>At first, it may be intimidating to see all of the available courses. Pick a track that interests you and work through it at your own pace.</p>
+  <span><h1>Ashutosh Pandey</h1><h2>Railroad Engineer</h2></span>
+  </div>	
+  
+  <div class="test carousel-cell">
+  <i class="bx bxs-quote-alt-left"></i>
+  <p>At first, it may be intimidating to see all of the available courses. Pick a track that interests you and work through it at your own pace.</p>
+  <span><h1>Ashutosh Pandey</h1><h2>Railroad Engineer</h2></span>
+  </div>	
+  
+  <div class="test carousel-cell">
+  <i class="bx bxs-quote-alt-left"></i>
+  <p>At first, it may be intimidating to see all of the available courses. Pick a track that interests you and work through it at your own pace.</p>
+  <span><h1>Ashutosh Pandey</h1><h2>Railroad Engineer</h2></span>
+  </div>	
 </div>			
 </section>
 
-
+<script>
+var flkty = new Flickity( document.querySelector(".main-carousel"), { 
+cellAlign: 'center', 
+autoPlay: 2500,
+wrapAround: true, 
+pauseAutoPlayOnHover: false,
+});
+</script>
 
 
 
@@ -288,6 +335,10 @@
 <!-- copyright box -->
 <div id="foot-copy">
 <p>Copyright <i class="bx bx-copyright"></i> <span id="copy-date"></span> PHICSIT . All Rights Reserved</p>				
+</div>
+<!-- back to top button -->
+<div id="back-to-top" onclick="window.location='#first-sec'" title="Back to top">
+ <i class="bx bxs-up-arrow"></i>
 </div>
 
 
