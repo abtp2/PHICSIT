@@ -113,6 +113,22 @@ window.location = x;
 
 
 
+window.onscroll = () =>{
+const val = window.scrollY / 8;
+/* for back to top button */
+if(val > 150){
+document.getElementById("back-to-top").style.display ="flex";	
+}
+else{
+document.getElementById("back-to-top").style.display ="none";	
+}};
+
+
+
+
+
+
+
 
 
 
