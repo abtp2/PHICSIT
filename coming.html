@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+				<title>PHICSIT</title>
+				<link rel="icon" type="image/jpg" href="../img/logo.jpg">
+				<link rel="stylesheet" href="../icons/boxicons.css">
+				<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="head-div">
+ <img src="img/logo.jpg" onclick="goTo('../index.html')">		
+ 	<p id="comingTitle"></p>
+</div>		
+
+
+<section id="first">
+ <p>Coming soon....</p>			
+</section>
+
+
+
+<style>
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box; 
+}
+:root{
+--lbg: #fff;
+--lfont: #111111;
+--dbg: #111520;
+--dfont: #d9dce3;
+--lsdw: rgba(0,0,0,0.1);
+--dsdw: rgba(255,255,255,0.1);
+/* card bg */
+--clbg: rgba(255, 255, 255, 0.26); 
+--cdbg: rgba(17, 21, 32, 0.29);
+
+--cardlbg: #fff;
+--carddbg: #192232;
+
+--footlbg: #f6f6f6;
+--footdbg: #192232;
+--secmax: 1000px;
+}
+@media(min-width: 1440px){
+:root{
+--secmax: 1100px;		
+}}
+
+
+.light-theme{
+--bg: var(--lbg);
+--font: var(--lfont);
+--sdw: var(--lsdw);
+/* card */
+--cbg: var(--clbg);
+
+--cardbg: var(--cardlbg);
+--footbg: var(--footlbg);
+}
+.dark-theme{
+--bg: var(--dbg);
+--font: var(--dfont);
+--sdw: var(--dsdw);
+/* card */
+--cbg: var(--cdbg);
+
+--cardbg: var(--carddbg);
+--footbg: var(--footdbg);
+}
+
+
+
+body{
+background: var(--bg);
+}
+#head-div{
+width: 100%;
+display: flex; 
+flex-direction: column;
+align-items: center;
+max-width: var(--secmax);
+padding: 1rem 0;
+margin: 0 auto;
+}
+#head-div img{
+width: 100px;		
+height: 100px;	
+border-radius: 100%;
+margin-top: 6px;
+padding: 8px;
+box-shadow: 0px 0.5px 3px 0.5px rgba(0,0,0,0.25), 0px 0.5px 2px 0.5px rgba(255,255,255,0.4);
+}
+#head-div h1{
+font-size: 25px;
+margin-top: 1rem;
+background: linear-gradient(20deg, #00d1d1, #5865f2);
+-webkit-text-fill-color: transparent; 
+-webkit-background-clip: text;
+font-family: 'Source Serif Pro', serif;
+border-right: 3px solid #5865f2;
+border-left: 3px solid #03aaab;
+padding: 0 10px;
+}
+#head-div p{
+font-size: 16px;
+margin-top: 20px;
+font-weight: 401;
+font-family: fantasy;
+color: var(--font);
+}
+#head-div p span{
+font-weight: 900;
+}
+
+
+
+
+#first{
+width: 85%;
+max-width: 350px;
+background: var(--cardbg);
+padding: 1.8rem 6vw;
+margin: 1.7rem auto 0 auto;
+border: 0.5px solid var(--sdw);
+box-shadow: 0 0 20px 0.5px var(--lsdw);
+border-radius: 10px; 
+}
+#first p{
+font-family: arial;
+text-align: center; 
+color: var(--font);
+opacity: 0.8;
+}
+</style>		
+
+
+
+
+
+
+<script>
+window.onload = function(){
+var y = localStorage.getItem("theme");
+var coming = sessionStorage.getItem("comingTitle");
+if(y =="dark"){
+document.body.classList.add("dark-theme");
+document.body.classList.remove("light-theme");
+}else if(y =="light"){
+document.body.classList.add("light-theme");
+document.body.classList.remove("dark-theme");
+}else{
+document.body.classList.add("light-theme");
+document.body.classList.remove("dark-theme");
+}
+
+
+if(coming){
+document.getElementById("comingTitle").innerHTML = "<span>Page</span> - " + coming;
+}}
+
+
+/* custom goto function */
+function goTo(x){
+window.location = x;
+}
+</script>
+<script src="js/components.js"></script>
+</body>
+</html>
