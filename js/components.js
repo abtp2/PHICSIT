@@ -159,3 +159,16 @@ x.classList.add("matched");
 }
 
 
+
+
+
+/* coming soon */
+function coming(x){
+sessionStorage.setItem("comingTitle", x);
+window.location ="coming.html";
+alert('going');
+}
+
+
+
+

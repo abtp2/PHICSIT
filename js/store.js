@@ -582,8 +582,8 @@ event.currentTarget.closest("img").style.opacity = 1;
 function checkSlider(){
 document.getElementsByClassName("row")[0].querySelectorAll(".card").forEach(card => {
 if(card.querySelector("h1").classList.contains("ebook")){
-card.querySelector(".flickity-page-dots").style.display ="none";
-card.querySelector("div").style.paddingBottom ="0";
+//card.querySelector(".flickity-page-dots").style.display ="none";
+//card.querySelector("div").style.paddingBottom ="0";
 }
 });
 }
@@ -595,6 +595,7 @@ function resetBuy(){
 document.querySelectorAll("#buy-head span img").forEach(img => {
 img.style.display ="none";		
 });
+document.querySelector("#buy-head span img:nth-of-type(1)").click();
 document.querySelector("#buy-box form").reset();
 }
 
