@@ -825,6 +825,15 @@ width: 55rem !important;
 
 
 
+#foot-links a{
+transition: all 0.4s;
+}
+#foot-links a:hover{
+color: #5865f2;
+margin-left: 0.7rem;
+font-weight: 500 !important;
+opacity: 1 !important;
+}
 
 
 
