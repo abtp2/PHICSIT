@@ -173,6 +173,7 @@ background: transparent; display: none !important;
 }
 .row .flickity-page-dots{ 
 bottom: 3px !important;
+border-radius: 0 0 8px 8px;
 }
 .flickity-page-dots .dot{
 width: 9px !important;
@@ -197,9 +198,13 @@ padding-bottom: 0 !important;
 
 .card div{
 width: 100%;
-border-radius: 8px;
 padding-bottom: 18px;
-background: #fff;
+border-radius: 8px;
+background: transparent;
+}
+.card .main-carousel{
+background: #dbdbdb !important;
+border-radius: 8px;
 }
 .card div img{
 width: 100%;
