@@ -168,7 +168,7 @@ document.querySelector("#first form input").value ="";
 /* 🔥🔥🔥🔥🔥🔥🔥 */
 const books =[
 {
-image: ["img/steve-1.png"],
+image: ["img/ex.png"],
 title:"Steve Jobs: The Exclusive Biography",
 actualPrice: "599",
 offPrice: "699",
