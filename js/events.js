@@ -61,7 +61,9 @@ jsArrow.onclick = function() {
 window.onload = function(){
 var y = localStorage.getItem("theme");
 var x = document.getElementById("bx-moon");
-
+document.querySelectorAll("#seventh-row .card").forEach( elem =>{
+elem.click();
+});
 
 if(y =="dark"){
 document.body.classList.add("dark-theme");
