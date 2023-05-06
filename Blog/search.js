@@ -2,6 +2,12 @@ const concateSearch = [
 {
 text: "Best programming language to learn in 2023 ~ Jyoti Bhasin",
   img: "../img/jyoti.jpg", 
+  link: "06-05-2023.html"
+},
+
+{
+text: "The ultimate guide to upskilling for an AI-integrated future ~ Sanjay Vivekanandan",
+  img: "../img/ashu.jpg", 
   link: "index.html"
 },
 ];

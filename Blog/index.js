@@ -149,6 +149,14 @@ Img:"../img/jyoti.jpg",
 About:`Enthusiastic Coder/Technical Content Writer.
 Building a better tomorrow with every line of code`,
 }
+var SanjayAuthor = {
+Name:"Sanjay Vivekanandan",
+Img:"../img/ashu.jpg",
+About:`A medical student with a knack for writing engaging blog content. As a content writer specializing in blogs, I love crafting articles that are informative.`,
+}
+
+
+
 
 
 
