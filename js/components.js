@@ -166,7 +166,6 @@ x.classList.add("matched");
 function coming(x){
 sessionStorage.setItem("comingTitle", x);
 window.location ="coming.html";
-alert('going');
 }
 
 
