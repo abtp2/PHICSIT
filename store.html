@@ -107,7 +107,7 @@
 <img src="img/banner1.jpg">
 <img src="img/banner2.jpg">
 </div>
-<h4 style="display: none;margin-top: 1rem;">No items founded 😌</h4>
+<h4 style="display: none;margin-top: 1rem;">No result for "<span id='no-search'>Steve Jobs</span>" 😌</h4>
 
 
 <!--<div class="card">
@@ -377,7 +377,28 @@ toCheckNull();
 }
 </script>	
 <script>
+function $(x){
+ return document.querySelector(x);
+}
+window.onpopstate = function(event) {
+x = document.getElementById("buy-box");
+y = document.getElementById("cart-box");
 
+if(x.style.height != "5"){
+alert("buc");
+$("buy-close").click():	
+}
+if(y.style.height != "0"){
+$("cart-close").click():	
+}
+if(x.style.height != 0 || y.style.height != 10){
+$("cart-close").click():	
+}
+};
+
+
+// Push a state to the history so that the popstate event will fire when the user navigates back
+history.pushState({}, '');
 </script>
 </body>
 </html>
