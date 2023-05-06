@@ -5,10 +5,11 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
 				<link rel="icon" type="image/jpg" href="img/logo.jpg">
 				<link rel="stylesheet" href="css/components.css">
+				<link rel="stylesheet" href="css/aos.css">
 				<link rel="stylesheet" href="css/events.css">
 				<title>PHICSIT</title>
 </head>
-<body>				
+<body class="dark-theme">				
 <nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
@@ -22,7 +23,7 @@
           <li><a href="index.html">Home</a></li>
       
           
-          <li>
+        <!--   <li>
             <a href="#">Career</a>
             <i class='bx bxs-chevron-down htmlcss-arrow arrow'></i>
             <ul class="htmlCss-sub-menu sub-menu">
@@ -30,6 +31,7 @@
               <li><a href="internships.html">Internships</a></li>
               <li><a href="webinars.html">Webinars</a></li>
          <!-- <li><a href="#">Freelance</a></li> -->
+         <!--  
               <li class="more">
                 <span><a href="#">More</a>
                 <i class='bx bxs-chevron-right arrow more-arrow'></i>
@@ -40,7 +42,7 @@
                 </ul>
               </li>
             </ul>
-          </li>
+          </li> -->
           <!--  
           <li>
             <a href="#">Webinars</a>
@@ -52,17 +54,19 @@
               <li><a href="#">Complete Website</a></li>
             </ul>
           </li> -->
-          <li><a href="Blog/index.html">Blogs</a></li>                    
-          <li><a href="services.html">Services</a></li>
-          <li><a href="store.html">Store</a></li>
+          <li><a href="#second">About</a></li>                    
+          <li><a href="#third">Themes</a></li>
+          <li><a href="#fourth">Prizes</a></li>
           
           
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#fifth">Mentors</a></li>
+          <li><a href="#timeline">Timelines</a></li>
+          <li><a href="#sixth">Sponsors</a></li>
+          <li><a href="#seventh">FAQs</a></li>
         </ul>
       </div>
       <div class="search-box" title="Toggle Theme">
-        <i class="bx bx-moon" id="bx-moon"></i>
+     <!-- <i class="bx bx-moon" id="bx-moon"></i> -->
       </div>      
     </div>
   </nav>
@@ -88,7 +92,12 @@
 </div>		
 
 <div id="register-bt">
-<button>Register Now!</button>
+<button><div 
+	class="apply-button" 
+	data-hackathon-slug="YOUR-HACKATHON-SLUG" 
+	data-button-theme="light"
+	style="height: 44px; width: 312px"
+></div></button>
 </div>
 </section> 
   
@@ -122,25 +131,23 @@ Grand finale-Top teams from the Prototyping Round will compete at the IITM campu
 <p id="third-para">Some themes which are available for you to choose a theme for this Hackathon.</p>
 
 <div id="third-row">
-			<div class="card">
+			<div class="card" data-aos="zoom-in" data-aos-duration="600">
 			<img src="https://unsplash.it/500">
 			<h1>Agriculture Farming</h1>
 			<p>This is a dummy text to illustrate the themes of this Hackathon.</p>
-			<button>Try it !</button>
+			<!-- <button>Try it !</button> -->
 			</div>
 			
-			<div class="card">
+			<div class="card" data-aos="zoom-in" data-aos-duration="600">
 			<img src="https://unsplash.it/500">
 			<h1>Agriculture Farming</h1>
 			<p>This is a dummy text to illustrate the themes of this Hackathon.</p>
-			<button>Try it !</button>
 			</div>
 			
-			<div class="card">
+			<div class="card" data-aos="zoom-in" data-aos-duration="600">
 			<img src="https://unsplash.it/500">
 			<h1>Agriculture Farming</h1>
 			<p>This is a dummy text to illustrate the themes of this Hackathon.</p>
-			<button>Try it !</button>
 			</div>
 </div>	
 </section>
@@ -155,17 +162,17 @@ Grand finale-Top teams from the Prototyping Round will compete at the IITM campu
 <p id="fourth-para">Some themes which are available for you to choose a theme for this Hackathon.</p>
 
 <div id="fourth-row">
-		 <div class="card">
+		 <div class="card" data-aos="zoom-in" data-aos-duration="600">
 		 	<img src="https://unsplash.it/600">
 		 	<h1>Prize - ₹1,00,000</h1>
 		 </div>
 		 
-		 <div class="card">
+		 <div class="card" data-aos="zoom-in" data-aos-duration="600">
 		 	<img src="https://unsplash.it/600">
 		 	<h1>Prize - ₹1,00,000</h1>
 		 </div>
 		 
-		 <div class="card">
+		 <div class="card" data-aos="zoom-in" data-aos-duration="600">
 		 	<img src="https://unsplash.it/600">
 		 	<h1>Prize - ₹1,00,000</h1>
 		 </div>
@@ -188,21 +195,21 @@ Grand finale-Top teams from the Prototyping Round will compete at the IITM campu
 <p id="fifth-para">Some themes which are available for you to choose a theme for this Hackathon.</p>
 
 <div id="fifth-row">
-		 <div class="card">
+		 <div class="card" data-aos="zoom-in" data-aos-duration="600">
 		 	<img src="https://unsplash.it/800">
 		 	<h1>Ashutosh Pandey</h1>
 		 	<h2>Web Developer</h2>
 		 	<h3>Railroad Engineer at GetWeb</h3>
 		 </div>
 		 
-		 <div class="card">
+		 <div class="card" data-aos="zoom-in" data-aos-duration="600">
 		 	<img src="https://unsplash.it/800">
 		 	<h1>Ashutosh Pandey</h1>
 		 	<h2>Web Developer</h2>
 		 	<h3>Railroad Engineer at GetWeb</h3>
 		 </div>
 		 
-		 <div class="card">
+		 <div class="card" data-aos="zoom-in" data-aos-duration="600">
 		 	<img src="https://unsplash.it/800">
 		 	<h1>Ashutosh Pandey</h1>
 		 	<h2>Web Developer</h2>
@@ -225,6 +232,7 @@ Grand finale-Top teams from the Prototyping Round will compete at the IITM campu
 <h1>Events Timeline</h1>			
 </div>
 <p id="time-para">Some themes which are available for you to choose a theme for this Hackathon.</p>
+<br>
 
 <ul>
     <li>
@@ -269,15 +277,15 @@ Grand finale-Top teams from the Prototyping Round will compete at the IITM campu
 <p id="sixth-para">Some themes which are available for you to choose a theme for this Hackathon.</p>
 
 <div id="sixth-row">
-		 <div class="card">
+		 <div class="card" data-aos="zoom-in" data-aos-duration="600">
 		 	<img src="https://hackopitch.iitmparadox.org/img/Polygon_Logo-White.png">
 		 </div>
 		 
-		 <div class="card">
+		 <div class="card" data-aos="zoom-in" data-aos-duration="600">
 		 	<img src="https://hackopitch.iitmparadox.org/img/Polygon_Logo-White.png">
 		 </div>
 		 
-		 <div class="card">
+		 <div class="card" data-aos="zoom-in" data-aos-duration="600">
 		 	<img src="https://hackopitch.iitmparadox.org/img/Polygon_Logo-White.png">
 		 </div>
 </div>
@@ -372,25 +380,6 @@ Grand finale-Top teams from the Prototyping Round will compete at the IITM campu
 <a href="">Adversitise Wtih Us</a>
 </div>
 
-
-<!--  
-<div id="foot-contact" class="foot-pp">
-<h1>Contact Us</h1>
-<span>
-	<i class="bx bxs-envelope" onclick="window.location='mailto:phicsit.community@gmail.com'"></i>
-	<a href="mailto:phicsit.community@gmail.com">phicsit.community@gmail.com</a>
-</span>
-</div> -->
-
-<!--  
-<div id="foot-news" class="foot-pp">
-<h1>Our Newsletter</h1>
-<p>Subscribe to get our newsletter</p>
-<form onsubmit="newsMail()">
-	<input type="email" id="news-email" required>
-	<button type="submit" id="news-submit">Go</button>
-</form>
-</div> -->
 </div>
 </main>
 </footer>
@@ -416,16 +405,22 @@ Grand finale-Top teams from the Prototyping Round will compete at the IITM campu
 document.querySelectorAll("#seventh-row .card").forEach( elem =>{
 elem.onclick =(e)=>{
 const x = e.currentTarget.closest(".card").querySelector("p");
-function hide(){slideDown(x, 200)}
+const y = e.currentTarget.closest(".card").querySelector("h1 i");
+//function hide(){slideDown(x, 200)}
+//setTimeout(hide, 2000);
 
   if(x.style.display !=="none"){
   slideUp(x, 200);
+  y.style.transform ="rotate(0)";
   }
   if(x.style.display ==="none"){
-  elem.querySelectorAll("p").forEach( all =>{slideUp(all, 200, hide)});
+  //elem.querySelectorAll("p").forEach( all =>{slideUp(all, 200)});
+  slideDown(x, 200);
+  y.style.transform ="rotate(90deg)";
   }
 
 }});								
 </script>
+<script src="js/aos.js"></script>
 </body>
 </html>

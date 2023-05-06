@@ -13,13 +13,14 @@
 <body>
 
 <div id="head-div">
- <img src="img/logo.jpg" onclick="goTo('../index.html')">		
- 	<p id="comingTitle"></p>
+ <img src="img/logo.jpg" onclick="goTo('../index.html')">
+ <p id="home">Go to <a href="index.html">Home</a> page</p>
 </div>		
 
 
 <section id="first">
- <p>Coming soon....</p>			
+ <img src="img/services.png">
+ <p><span id="comingTitle"></span>coming soon....</p>			
 </section>
 
 
@@ -90,8 +91,8 @@ padding: 1rem 0;
 margin: 0 auto;
 }
 #head-div img{
-width: 100px;		
-height: 100px;	
+width: 120px;		
+height: 120px;	
 border-radius: 100%;
 margin-top: 6px;
 padding: 8px;
@@ -115,28 +116,44 @@ font-weight: 401;
 font-family: fantasy;
 color: var(--font);
 }
-#head-div p span{
+#head-div p a{
 font-weight: 900;
+color: #5865f2; 
 }
 
 
 
 
 #first{
-width: 85%;
-max-width: 350px;
+width: 80%;
+max-width: 340px;
 background: var(--cardbg);
-padding: 1.8rem 6vw;
+padding: 1rem 1vw;
 margin: 1.7rem auto 0 auto;
 border: 0.5px solid var(--sdw);
 box-shadow: 0 0 20px 0.5px var(--lsdw);
 border-radius: 10px; 
+display: flex; 
+flex-direction: column;
+align-items: center;
+}
+#first img{
+width: 80%;
 }
 #first p{
 font-family: arial;
 text-align: center; 
+font-weight: 500;
+margin-top: 10px;
+font-size: 17px;
 color: var(--font);
-opacity: 0.8;
+opacity: 0.85;
+}
+#home{
+text-align: center;
+font-size: 15px;
+color: var(--font);
+margin-top: 2rem;
 }
 </style>		
 
@@ -161,10 +178,13 @@ document.body.classList.remove("dark-theme");
 }
 
 
-if(coming){
-document.getElementById("comingTitle").innerHTML = "<span>Page</span> - " + coming;
-}}
 
+const urlParams = new URLSearchParams(window.location.search);
+const searchQuery = urlParams.get('q');
+
+if(window.location.search !==""){
+document.getElementById("comingTitle").innerHTML = searchQuery + " ";
+}}
 
 /* custom goto function */
 function goTo(x){
