@@ -38,6 +38,7 @@ document.body.classList.remove("overlay-dark");
 
 
 // sidebar submenu open close js code
+/*
 let htmlcssArrow = document.querySelector(".htmlcss-arrow");
 htmlcssArrow.onclick = function() {
  navLinks.classList.toggle("show1");
@@ -47,7 +48,6 @@ moreArrow.onclick = function() {
  navLinks.classList.toggle("show2");
 }
 
-/*  
 let jsArrow = document.querySelector(".js-arrow");
 jsArrow.onclick = function() {
  navLinks.classList.toggle("show3");
@@ -60,25 +60,15 @@ jsArrow.onclick = function() {
 /* onload window */
 window.onload = function(){
 var y = localStorage.getItem("theme");
-var x = document.getElementById("bx-moon");
+//var x = document.getElementById("bx-moon");
 document.querySelectorAll("#seventh-row .card").forEach( elem =>{
 elem.click();
 });
 
-if(y =="dark"){
+if(y){
 document.body.classList.add("dark-theme");
 document.body.classList.remove("light-theme");
-x.classList.replace("bx-moon", "bxs-sun");
-}	
-else if(y =="light"){
-document.body.classList.add("light-theme");
-document.body.classList.remove("dark-theme");
-x.classList.replace("bxs-sun", "bx-moon");
-}	
-else{
-document.body.classList.add("light-theme");
-document.body.classList.remove("dark-theme");
-x.classList.replace("bxs-sun", "bx-moon");
+//x.classList.replace("bx-moon", "bxs-sun");
 }				
 }
 
@@ -86,7 +76,7 @@ x.classList.replace("bxs-sun", "bx-moon");
 
 
 /* theme toggler */
-document.getElementById("bx-moon").onclick = function(){
+/*  document.getElementById("bx-moon").onclick = function(){
 var x = document.getElementById("bx-moon");
 var body = document.body;
 
@@ -103,7 +93,7 @@ body.classList.add("light-theme");
 x.classList.replace("bxs-sun", "bx-moon");
 localStorage.setItem("theme", "light");
 }
-}
+} */
 
 
 window.onscroll = () =>{
