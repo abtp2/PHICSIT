@@ -171,3 +171,34 @@ window.location ="coming.html";
 
 
 
+
+
+
+
+
+/* social media links */
+document.addEventListener("DOMContentLoaded", (event) => {
+"use-strict";
+const f =".bxl-facebook";
+const t =".bxl-twitter";
+const i =".bxl-instagram-alt";
+const l =".bxl-linkedin";
+const d =".bxl-discord-alt";
+if(document.querySelector("body").innerHTML.includes("bxl-facebook")){
+document.querySelectorAll(f).forEach(elem =>{
+elem.href ="https://www.facebook.com/PHICSIT";
+});
+document.querySelectorAll(t).forEach(elem =>{
+elem.href ="https://twitter.com/PHICSIT";
+});
+document.querySelectorAll(i).forEach(elem =>{
+elem.href ="https://www.instagram.com/phicsit.in";
+});
+document.querySelectorAll(l).forEach(elem =>{
+elem.href ="coming.html?q=LinkedIn Page";
+});
+document.querySelectorAll(d).forEach(elem =>{
+elem.href ="https://discord.gg/EhdhdA4F4H";
+});
+}});
+
