@@ -179,6 +179,7 @@ window.location ="coming.html";
 /* social media links */
 document.addEventListener("DOMContentLoaded", (event) => {
 "use-strict";
+document.head.innerHTML +=`<meta name="theme-color" content="#5865f2">`;
 const f =".bxl-facebook";
 const t =".bxl-twitter";
 const i =".bxl-instagram-alt";

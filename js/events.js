@@ -116,15 +116,16 @@ else{
 document.getElementById("back-to-top").style.display ="none";	
 }
 
-/* for register button */
+
+/* for register button 
 if(val > 60 && window.matchMedia("(max-width: 600px)").matches){
 document.getElementById("register-bt").style.display ="block";	
 }
 else{
 document.getElementById("register-bt").style.display ="none";	
-}};
-
-
+}
+ */
+};
 
 
 
