@@ -121,4 +121,9 @@ function debounce(func, wait) {
 }
 
 document.getElementById("search-int").addEventListener("input", debounce(updateSearchResults, 50));
-document.getElementById("search-form").onsubmit = (e) =>{e.preventDefault();}
+document.getElementById("search-form").onsubmit = (e) =>{
+e.preventDefault();
+document.getElementById("search-int").focus();
+if(document.querySelector("#search-result").innerHTML!=""){
+document.querySelector("#search-result .search-res-div").click();
+}}

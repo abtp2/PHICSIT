@@ -53,6 +53,12 @@ jsArrow.onclick = function() {
  navLinks.classList.toggle("show3");
 }
  */
+document.addEventListener("DOMContentLoaded", (event) => {
+ "use-strict";
+document.head.innerHTML +=`<meta name="theme-color" content="#5865f2">`;
+}); 
+ 
+ 
 /* onload window */
 window.onload = function(){
 var y = localStorage.getItem("theme");
