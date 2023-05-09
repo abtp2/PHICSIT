@@ -36,6 +36,12 @@ font-size: 26px;
 
 
 
+nav li a{
+font-size: 16px !important;
+font-weight: 401 !important;
+padding: 4px 0 !important;
+}
+
 
 /* first section */
 #first{
@@ -213,13 +219,12 @@ box-shadow: 0 1px 2px 0.1px var(--lsdw);
 margin: 0.8rem;
 }
 #third-row .card img{
-width: 85px;
-height: 85px;
+width: 100%;
+height: 150px;
+border-radius: 6px;
 margin: 0 auto 0.5rem auto;
-border-radius: 100%;
 background: transparent;
 box-shadow: 0 1px 2px 0.1px var(--sdw);
-border: 5px solid var(--sdw);
 }
 #third-row .card h1{
 font-size: 20px;
@@ -346,13 +351,11 @@ box-shadow: 0 1px 2px 0.1px var(--lsdw);
 margin: 0.8rem;
 }
 #fifth-row .card img{
-width: 110px;
-height: 110px;
+width: 100%;
+height: 150px;
 margin: 0 auto 0.5rem auto;
-border-radius: 100%;
-background: transparent;
+border-radius: 6px;
 box-shadow: 0 1px 2px 0.1px var(--sdw);
-border: 5px solid var(--sdw);
 }
 #fifth-row .card h1{
 font-size: 20px;
@@ -373,6 +376,17 @@ color: var(--font);
 opacity: 0.8;
 line-height: 1.7;
 font-weight: 500;
+}
+#fifth-row .card button{
+padding: 7.5px 1.2rem;
+background: #5865f2;
+border-radius: 4px;
+color: #fff;
+font-weight: 500;
+font-size: 14.5px;
+border: none;
+margin: 15px 0 0 0;
+box-shadow: 0 1.2px 1px 1px var(--sdw);
 }
 
 
