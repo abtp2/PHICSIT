@@ -47,7 +47,7 @@ padding: 4px 0 !important;
 #first{
 width: 100%;
 max-width: var(--secmax);
-padding: 110px 1.2rem 50px 1.2rem;
+padding: 90px 1.2rem 50px 1.2rem;
 margin: 0 auto;
 border-bottom: 0.5px solid var(--sdw);
 display: flex;
@@ -59,6 +59,10 @@ align-items: center;
 width: 100%;
 border-radius: 4px;
 }
+@media(min-width: 800px){
+#first img{
+height: 350px;
+}}
 #first-row{
 width: 100%;
 display: flex; 
@@ -423,7 +427,7 @@ margin-top: 1.5rem;
 }
 #sixth-row .card{
 width: 18rem;
-background: var(--cardbg);
+background: var(--cardlbg);
 padding: 1.1rem;
 border-radius: 4px;
 border: 0.1px solid var(--sdw);
@@ -435,7 +439,6 @@ justify-content: center;
 }
 #sixth-row .card img{
 width: 50%;
-filter: invert(40%);
 margin: 0 auto 0.5rem auto;
 background: transparent;
 }
