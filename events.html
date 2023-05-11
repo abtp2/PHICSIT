@@ -72,7 +72,12 @@
  
 <!-- first section --> 
 <section id="first">
-<img src="img/banner1.jpg">		
+<picture> 
+ <source srcset="img/event-mob.png" media="(max-width: 450px)"/> 
+ 	<source srcset="img/event-pc.png" media="(min-width: 450px)"/>
+ 	<img src="img/event-pc.png" alt="example"/>
+</picture>		
+
 <div id="first-row">
 		<div>
 		<h1>Soft CodeHack 1.0</h1>
