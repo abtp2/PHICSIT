@@ -1,3 +1,17 @@
+nav{
+background: var(--cardbg) !important;
+height: 80px;
+}
+.navbar .logo img{
+width: 68px;		
+height: 68px;	
+border-radius: 100%;
+margin-top: 6px;
+padding: 4px;
+box-shadow: 0px 0.5px 3px 0.5px rgba(0,0,0,0.25), 0px 0.5px 2px 0.5px rgba(255,255,255,0.4);
+}
+
+
 .sec-head{
 width: 100%;
 display: flex;
@@ -47,9 +61,8 @@ padding: 4px 0 !important;
 #first{
 width: 100%;
 max-width: var(--secmax);
-padding: 90px 1.2rem 50px 1.2rem;
+padding: 100px 1.2rem 50px 1.2rem;
 margin: 0 auto;
-border-bottom: 0.5px solid var(--sdw);
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -84,7 +97,9 @@ margin-top: 2px;
 opacity: 0.85;
 }
 #first-row div:nth-of-type(1) h1{
-color: #5865f2;
+background: linear-gradient(20deg, #00d1d1, #5865f2);
+-webkit-text-fill-color: transparent; 
+-webkit-background-clip: text;
 font-weight: 900;
 font-size: 22px;
 }
@@ -206,7 +221,7 @@ color: var(--font);
 width: 100%;
 display: flex;
 flex-wrap: wrap;
-align-items: center;
+align-items: flex-start;
 justify-content: center;
 margin-top: 1.5rem;
 }
@@ -279,7 +294,7 @@ color: var(--font);
 width: 100%;
 display: flex;
 flex-wrap: wrap;
-align-items: center;
+align-items: flex-start;
 justify-content: center;
 margin-top: 1.5rem;
 }
@@ -291,22 +306,24 @@ border-radius: 4px;
 border: 0.1px solid var(--sdw);
 box-shadow: 0 1px 2px 0.1px var(--lsdw);
 margin: 0.8rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 #fourth-row .card img{
-width: 85px;
-height: 85px;
-margin: 0 auto 0.5rem auto;
+width: 80%;
+margin: 0 auto 1rem auto;
 border-radius: 100%;
 background: transparent;
-box-shadow: 0 1px 2px 0.1px var(--sdw);
-border: 5px solid var(--sdw);
 }
 #fourth-row .card h1{
-font-size: 20px;
+font-size: 18px;
 color: var(--font);
 opacity: 0.9;
 line-height: 1.7;
 font-weight: 600;
+text-align: center;
 }
 
 
@@ -650,12 +667,14 @@ background: linear-gradient(20deg, #00d1d1, #5865f2);
   background: var(--cardbg);
   position: relative;
   padding-inline: 1.5rem;
+  line-height: 1.6;
 }
 #timeline ul li .title {
   overflow: hidden;
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  opacity: 2 !important;
 }
 #timeline ul li .descr {
   padding-block-end: 1.5rem;
