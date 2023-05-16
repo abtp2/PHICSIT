@@ -203,3 +203,30 @@ elem.href ="https://discord.gg/EhdhdA4F4H";
 });
 }});
 
+
+
+
+
+
+
+
+/* To make PHICSIT contenteditable */
+function makeEdit(){
+main = document.getElementById("makeEdit");
+main.focus();
+main.click();
+main.oninput =(x)=>{
+x = main.value.toLowerCase();
+
+if(x==="ashu"){
+document.body.contentEditable = true;
+}
+
+main.onblur =()=>{main.value="";}
+}}
+
+
+
+
+
+
