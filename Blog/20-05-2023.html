@@ -11,6 +11,24 @@
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 				<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/tokyo-night-dark.min.css">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+			<script>
+			window.jsPDF = window.jspdf.jsPDF;
+var docPDF = new jsPDF();
+function demoFromHTML(){
+var elementHTML = document.querySelector("#first");
+docPDF.html(elementHTML, {
+ callback: function(docPDF) {
+  docPDF.save('HTML Linuxhint web page.pdf');
+ },
+ x: 15,
+ y: 15,
+ width: 170,
+ windowWidth: 650
+});
+}
+			</script>
 </head>
 <body>
 <!-- anime balls -->				
@@ -158,7 +176,8 @@
 
 <!-- first section -->
 <section id="first" class="section">
-<h1 class="main-title">The ultimate guide to upskilling for an AI-integrated future</h1>
+<i id="download-menu" class="bx bx-dots-vertical-rounded" onclick="demoFromHTML();"></i>
+<h1 class="main-title">Artificial Intelligence & Fate of the Future White Coats</h1>
 
 
 <div class="author-box mt-4" onclick="author(SanjayAuthor)">
@@ -178,46 +197,71 @@
 
 
 <p class="main-para mt-7">
-To begin with, some of you might be thinking that you already know what this blog contains, but my sole 
-purpose here is to open your minds to a whole new spectrum of upskilling. Read carefully to grasp and 
-empower yourself.
+It is no doubt that artificial intelligence has been finding its way into every possible work field 
+imaginable, and yes, it has dug its nose into the revered domain of health care too. However, will AI 
+really replace our doctors? Will it be our ally on its course? Stay tuned to find out.Future with AI: 
+<span class="br">&nbsp;</span>
+There has been a paradigm shift within the medical field with the integration of AI, and the same trend is 
+predicted to continue for the foreseeable future. The health care market for AI is increasing at a rate of 
+40% and is expected to reach $15.6 billion by 2030. AI has the potential to improve patient outcomes by 
+30% to 40% while reducing treatment costs by up to 50%, as per research conducted by the firm Frost & 
+Sullivan.
+<span class="br">&nbsp;</span>
+From patient self-service chat bots to computer-aided detection (CAD) systems for diagnosis and image 
+data analysis to identify microbes in drug discovery, AI is already increasing convenience and efficiency, 
+reducing costs and errors, and making it easier for more patients to receive the health care they need.
+<span class="br">&nbsp;</span>
+So, let's head straight into the benefits that AI could provide in the medical industry:
 </p>
 
 
 
-<h1 class="main-heading mt-9">INTRODUCTION :</h1>
-<p class="main-para mt-1">
-As the world seems to rapidly evolve with the advent of artificial intelligence (AI), it’s becoming 
-seemingly evident to stay ahead of the curve in terms of gaining skills and knowledge. Upskilling, which 
-means nothing but the process of acquiring new skills or amplifying existing ones, is becoming, or rather, 
-has already become, a critical component of staying afloat in today’s workforce arena. 
+
+
+
+
+
+
+<p class="main-para mt-2">
+<b>1.</b> Diagnosis and Treatment: AI can help doctors diagnose complications rapidly and more accurately. AI 
+can analyse with ease vast amounts of data and provide insights into complex medical issues that 
+mankind cannot process. AI algorithms have been developed to detect and analyse medical images, such 
+as X-rays, CT scans, MRIs, etc., to identify abnormalities left out by human radiologists. 
 <span class="br">&nbsp;</span>
-AI continues to disrupt industries and change the nature of work, and it is set to displace nearly 85 
-million jobs worldwide by 2025 (YUP, YOU HEARD ME RIGHT). This is the perfect time and the perfect
-place to be in order to get ahead of our global neighbours.
+<b>Evidence :</b> Srinivasu et al. (2021) used an AI algorithm to perform automated segmentation of CT scan 
+images to identify abnormalities in the human liver. It was observed that the proposed approach
+outperformed the classical methodology in the majority of the cases with an accuracy of 78%.
 </p>
 
-
-
-
-
-
-<h1 class="main-heading mt-8">THE REASON WHY YOU CAME :</h1>
-<p class="main-para mt-1">
-Now Coming to our topic of "upskilling" in the context of an AI-integrated future, it simply means 
-learning new skills that complement or enhance the work that machines can do rather than trying to 
-compete with them. I want to make sure I get one thing straight through every thick cranial box: artificial 
-intelligence is a human-made entity for the betterment of life. Keeping that in mind, humans can never 
-be completely replaced by AI. 
+<p class="main-para mt-2">
+<b>2.</b> Predictive analytics:By analysing the medical history of patients, AI algorithms function to predict the 
+likelihood of developing extreme conditions, such as myocardial infarction or diabetes, and also suggest 
+appropriate preventive measures.
 <span class="br">&nbsp;</span>
-Soft skills such as creativity, emotional intelligence, and critical thinking are at the core of upskilling, as 
-they cannot be automated with ease. Upskilling isn’t just beneficial for individuals; it’s also important for 
-businesses and society as a whole. By equipping workers with the skills they need to succeed, we can 
-reduce inequality and create a more equitable and prosperous society.
+<b>Evidence :</b> A study published in the journal Diabetes Care found that an AI algorithm was able to 
+accurately predict the onset of type 2 diabetes with a success rate of 94%.
+</p>
+
+<p class="main-para mt-2">
+<b>3.</b> Personalised Medicine: AI models have already been developed to help doctors devise a personalised 
+treatment plan for patients. AI identifies the best course of treatment for a particular condition, taking
+into account factors such as the patient’s age, sex, and medical history. 
 <span class="br">&nbsp;</span>
-With all that being said, I'm sure that now there must be a ‘million dollar question’ rolling at the tip of 
-your tongues: "What are the methods of upskilling and how do I gain access to them?" Do not worry, 
-because I’ve got you covered.
+<b>Evidence :</b> In an experimental study conducted by the University of North Carolina Lineberger 
+Comprehensive Cancer Centre, an AI model was able to provide actionable treatment recommendations
+for nearly 96% of the patients diagnosed with pre-terminal-stage cancer.
+</p>
+
+				
+<p class="main-para mt-2">
+<b>4.</b> Administrative Tasks: AI can be used as an administrative agent, as AI-powered chatbots are widely 
+being implemented to answer patient questions and schedule appointments, reducing the workload for 
+administrative staff. 
+<span class="br">&nbsp;</span>
+<b>Evidence :</b> A study published in the journal ‘NPJ Digital Medicine’ found that an AI chatbot was able to appropriately respond to and resolve patient queries in 77% of cases. The chatbot also managed to 
+handle a high volume of patient queries, which ended up saving loads of time for the administrative 
+staff. Now, before we come to a conclusion, there are two sides to every coin, so it's only fair to look into 
+the negatives of AI in healthcare.
 </p>
 
 				
@@ -226,54 +270,65 @@ because I’ve got you covered.
 
 
 
-<h1 class="main-heading mt-8">YOUR 5-STEP SOLUTION :</h1>
+<h1 class="main-heading mt-8">THE CLOUD IN THE SILVER LINING :</h1>
 <p class="main-para mt-1">
-So, here are 5 of the best proven methods for upskilling in an AI-integrated future, simplified for you:
-Identify the skills that are in demand:
-</p>
-<ul class="main-li style-none mt-3">
-	<li>1) The number one key to success in any field imaginable This can be done by vigorously researching and 
-staying up-to-date with emerging trends and technologies.</li>
-	<li>2) Take advantage of employer-sponsored training programmes. Take advantage of these opportunities 
-to learn new skills and gain valuable certifications that can enhance your career prospects.</li>
-	<li>3) Pursue online learning opportunities: We live in the goddamn 21st century, so why not use online 
-learning as it can be a flexible and cost-effective way to upskill, and many platforms offer self-paced courses that allow you to learn at your own pace?</li>
-  <li>5) Practise and apply new skills: All comes to ruin without this step. The most effective way to upskill is to 
-practise and apply your new skills in real-world settings. Consider taking on freelance or volunteer 
-projects that allow you to gain practical experience and build your portfolio.</li>
-</ul>
-<p class="main-para mt-4">With these 5 methods, followed by the TOP 1%, you can develop the goodies needed to stay competitive 
-in an AI-integrated future. However, it is important to remember that the process of upskilling is a 
-lifelong one and needs to be constantly reviewed and followed with commitment.
+<b>* Bias:</b> A major challenge faced by AI is bias in the data used to train AI algorithms. This leads to 
+inaccurate or unfair predictions and exacerbates inequalities.
 <span class="br">&nbsp;</span>
-I wouldn’t usually do this on any of my other blogs, but as this is a very important and urgent subject to 
-be addressed, I’m sure a quick summary could be of some help.</p>
+<b>* Privacy and security concerns:</b> AI algorithms rely heavily on sensitive patient data, raising concerns 
+about privacy and security. There is a breachable risk of exposure to personal health information.
+<span class="br">&nbsp;</span> 
+<b>* Limited human interaction:</b> The appearance of AI in healthcare limits human interaction between 
+patients and healthcare professionals. Resulting in less empathetic care and missed opportunities for 
+identifying important nonverbal cues. 
+<span class="br">&nbsp;</span>
+<b>* Lack of Accountability:</b> It is almost next to impossible to hold AI accountable for any negative outcome 
+in patient treatment. 
+<span class="br">&nbsp;</span>
+<b>* Technical limitations:</b> Although AI has shown promise in many areas of healthcare, it is not a panacea 
+(a solution for all difficulties or diseases). There exist technical limitations, such as the inability of AI 
+algorithms to interpret complex medical information and a lack of transparency in arriving at the 
+solution. 
+<span class="br">&nbsp;</span>
+After weighing the pros and cons cautiously, the time has finally come to answer the question, "Will AI 
+replace our doctors?" 
+<span class="br">&nbsp;</span>
+Put simply, the answer is no. (It’s funny seeing your shocked expressions.) Let me explain why AI cannot 
+replace professionals: 
+<span class="br">&nbsp;</span>
+No matter the benefits provided, AI heavily lacks the ability to provide the empathy and compassion that 
+often form the very core of building a strong doctor-patient relationship. Furthermore, human doctors 
+possess a level of clinical judgement and decision-making ability that AI models are still incapable of. 
+<span class="br">&nbsp;</span>
+With all that being said, it does not necessarily mean that AI in healthcare is unwelcome; the role of 
+doctors is likely to evolve exponentially as AI becomes more prevalent in healthcare.
+</p>
 
 
 
 
-
-
-
-<h1 class="main-heading mt-8">Summary (for the lazy ones out there) :</h1>
+<h1 class="main-heading mt-8">SUMMARY :</h1>
 <p class="main-para mt-1">
-Upskilling is an essential part of thriving in an AI-integrated future. By continuously learning new skills 
-and improving existing ones, workers can stay competitive, relevant, and valuable in an increasingly 
-automated world.
+To summarise, doctors and AI integrated together can help bring about a better future rather than 
+relying on either one. Doctors need to upskill to work alongside AI systems, interpret the data they 
+provide, and make decisions based on that data.
+<span class="br">&nbsp;</span>
+<b>BASELINE :</b>
 </p>
-<ul class="main-li style-none mt-3">
-	<li>1) Identify the skills that are in demand.</li>
-	<li>2) Take advantage of employer-sponsored training programmes.</li>
-	<li>3) Pursue online learning opportunities.</li>
-	<li>4) Seek mentorship and guidance.</li>
-	<li>5) Practise and apply new skills.</li>
-</ul>
-<p class="main-para mt-4">Different methods of upskilling may be more appropriate for different individuals, depending on their 
-learning style, career goals, and personal circumstances.
-<span class="br">&nbsp;</span>
-Baseline: The most important thing is to take action and commit to continuous and relentless efforts.
-<span class="br">&nbsp;</span>
-I would like to conclude with a famous quote, "I am Still Learning," by Michelangelo at the age of 87.</p>
+<p class="main-para mt-0">
+AI carries certain abilities that cannot be achieved by mankind, and similarly, AI can never replace the 
+doctor-patient relationship, empathy, and clinical judgement offered by us humans. In order to have a better future, both must go hand in hand.
+<span class="br">&nbsp;</span> 
+"Human plus AI is far more powerful than either one alone." — Kai-Fu Lee, technology executive and venture capitalist.
+</p>
+
+
+
+
+
+
+
+
 
 
 
