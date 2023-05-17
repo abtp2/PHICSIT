@@ -225,3 +225,54 @@ function progressBarScroll(){
       scrolled = (winScroll / height) * 100;
   document.querySelector("#scroll-progress div").style.width = scrolled + "%";
 }
+
+
+
+
+
+
+
+
+/* download blog */
+function downloadBlog(){
+fetch(`https://api.screenshotmachine.com/?key=0b15d9&url={window.location.href}&dimension=1024x768&cacheLimit=0&selector=%23first`)
+  .then(response => response.blob())
+  .then(blob => {
+    const url = URL.createObjectURL(blob);
+
+    // Create a temporary link element
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'PHICSIT_Blog.png';
+
+    // Simulate a click to trigger the download
+    link.click();
+
+    // Clean up the URL object
+    URL.revokeObjectURL(url);
+  })
+  .catch(error => {
+    alert('Error: ', error);
+  });
+}
+
+
+
+/* share blog */
+function shareBlog(){
+var topic = document.getElementsByClassName("main-title")[0].innerHTML;
+  if (navigator.share) {
+    const shareData = {
+      title: 'PHICSIT Blogs',
+      text: `Check out this amazing blog on topic {topic}`,
+      url: window.location.href,
+      files: [new File(['image data'], 'image.png', { type: 'image/png' })],
+    };
+
+    navigator.share(shareData)
+      .then(() => console.log('Shared successfully'))
+      .catch((error) => console.error('Error sharing:', error));
+  } else {
+    console.log('Web Share API is not supported.');
+  }
+}
