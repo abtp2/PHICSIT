@@ -1,5 +1,6 @@
 .author-overlay > *:not(#author-detail){
 filter: blur(6px);
+pointer-events: none;
 opacity: 0.4;
 }
 .search-overlay > *:not(#first-main-head, #nav){
@@ -26,6 +27,21 @@ background: #229af0 !important;
 color: #fff !important;
 background: #2c67b3 !important;
 }
+
+
+
+
+
+#download{
+position: relative;
+}
+#download i{
+font-size: 26px;
+}
+#down-menu{
+display: none;
+font-size: 15px;
+} 
 
 
 
@@ -710,6 +726,9 @@ vertical-align: middle;
 #like-button-box{
 margin-top: 3rem;
 }
+#like-button-box i{
+opacity: 0.8;
+}
 #like-button-box h1{
 font-size: 17px;
 margin-bottom: 15px;
@@ -718,19 +737,37 @@ font-family: fantasy;
 #like-button-box main{
 display: flex;
 align-items: center;
-border: 2px solid var(--sdw);
-padding: 0 2px;
-border-radius: 10px;
 margin-top: 10px;
 width: fit-content;
 }
 #like-button-box main span{
+border: 2px solid var(--sdw);
+padding: 0 2px;
+border-radius: 6px;
 display: flex;
 align-items: center;
-padding: 6px 12px;
+padding: 6px 15px;
 }
 #like-button-box main i{
 font-size: 20px;
+}
+#like-button-box main div{
+border: 2px solid var(--sdw);
+padding: 0 2px;
+border-radius: 6px;
+display: flex;
+align-items: center;
+padding: 6px 13px;
+margin-right: 0.5rem;
+}
+#like-button-box main div i{
+font-size: 20px;
+}
+#like-button-box main div i:nth-of-type(2){
+margin-left: 1.2rem;
+}
+#like-button-box main div i:hover{
+color: #5865f2;
 }
 #like-button-box main span p{
 font-size: 15px !important;
@@ -738,6 +775,13 @@ color: var(--font) !important;
 font-weight: 600 !important;
 margin-left: 12px !important;
 }
+
+
+
+
+
+
+
 #like-button{
 font-size: 14px !important;
 margin-left: -6px !important;

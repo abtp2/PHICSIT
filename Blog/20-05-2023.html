@@ -11,24 +11,6 @@
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 				<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/tokyo-night-dark.min.css">
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
-			<script>
-			window.jsPDF = window.jspdf.jsPDF;
-var docPDF = new jsPDF();
-function demoFromHTML(){
-var elementHTML = document.querySelector("#first");
-docPDF.html(elementHTML, {
- callback: function(docPDF) {
-  docPDF.save('HTML Linuxhint web page.pdf');
- },
- x: 15,
- y: 15,
- width: 170,
- windowWidth: 650
-});
-}
-			</script>
 </head>
 <body>
 <!-- anime balls -->				
@@ -176,7 +158,6 @@ docPDF.html(elementHTML, {
 
 <!-- first section -->
 <section id="first" class="section">
-<i id="download-menu" class="bx bx-dots-vertical-rounded" onclick="demoFromHTML();"></i>
 <h1 class="main-title">Artificial Intelligence & Fate of the Future White Coats</h1>
 
 
@@ -373,8 +354,11 @@ doctor-patient relationship, empathy, and clinical judgement offered by us human
 <div id="like-button-box">
 	<h1>We hope you love this post :</h1>
 	 <main>
-	 <div data-lyket-type="updown" data-lyket-id="my-1-post" data-lyket-color-icon="var(--font)" data-lyket-color-primary="var(--likebg)"
-data-lyket-color-secondary="var(--likebg)" data-lyket-color-highlight="#5865f2" id="like-button"></div>
+  <div id="down-menu">
+  <i class="bx bx-share-alt" onclick="shareBlog()"></i>
+  <i class="bx bx-download" onclick="downloadBlog()"></i>
+  </div>
+
 	 <span onclick="goTo('#comment-box')"><i class="bx bxs-message-rounded-dots"></i><p id="comment-count">1</p></span>
 	 </main>
 </div>
