@@ -235,7 +235,11 @@ function progressBarScroll(){
 
 /* download blog */
 function downloadBlog(){
-fetch(`https://api.screenshotmachine.com/?key=0b15d9&url={window.location.href}&dimension=1024x768&cacheLimit=0&selector=%23first`)
+var url = window.location.href;
+var link =`https://api.screenshotmachine.com/?key=0b15d9&url={url}&dimension=1024xfull&cacheLimit=0&hide=%23like-button-box&selector=%23first`;
+
+
+fetch(link)
   .then(response => response.blob())
   .then(blob => {
     const url = URL.createObjectURL(blob);
@@ -260,13 +264,13 @@ fetch(`https://api.screenshotmachine.com/?key=0b15d9&url={window.location.href}&
 
 /* share blog */
 function shareBlog(){
-var topic = document.getElementsByClassName("main-title")[0].innerHTML;
+var topic = "Check out this amazing blog on topic" + document.getElementsByClassName("main-title")[0].innerHTML;
   if (navigator.share) {
     const shareData = {
       title: 'PHICSIT Blogs',
-      text: `Check out this amazing blog on topic {topic}`,
+      text: ``,
       url: window.location.href,
-      files: [new File(['image data'], 'image.png', { type: 'image/png' })],
+      files: [new File(['image data'], 'jyoti-b1.png', { type: 'image/png' })],
     };
 
     navigator.share(shareData)
